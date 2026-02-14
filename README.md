@@ -1,1 +1,1 @@
-# mk-plaza.github.io
+# MKPlaza.github.io
