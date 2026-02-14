@@ -42,37 +42,37 @@ body, html {
 header {
     position: fixed; top: 0; left: 0; width: 100%; height: 80px;
     background: var(--glass); backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 30px; z-index: 2000; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    padding: 0 40px; z-index: 2000; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
-.header-left { display: flex; align-items: center; gap: 20px; }
+.header-left { display: flex; align-items: center; gap: 20px; flex: 1; }
 
 .header-right { 
     display: flex !important; 
     align-items: center; 
     justify-content: flex-end; 
-    min-width: 80px;
+    flex: 1;
     height: 100%;
 }
 
 .menu-toggle { font-size: 28px; color: var(--mk-gold); cursor: pointer; transition: 0.3s; }
-.logo-text { font-size: 20px; font-weight: 900; letter-spacing: var(--letter-spacing); color: var(--mk-gold); cursor: pointer; }
+.logo-text { font-size: 20px; font-weight: 900; letter-spacing: var(--letter-spacing); color: var(--mk-gold); cursor: pointer; margin-left: 10px; }
 .header-icon-main { height: 42px; width: auto; filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4)); }
 
 .settings-trigger {
-    display: inline-block !important;
-    font-size: 32px !important;
+    display: block !important;
+    font-size: 30px !important;
     color: var(--mk-gold) !important;
-    transition: transform 0.4s var(--fluid-ease), color 0.3s ease;
     cursor: pointer;
-    z-index: 2100;
+    transition: transform 0.4s var(--fluid-ease), filter 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.3));
 }
 
 .settings-trigger:hover {
-    transform: rotate(90deg);
-    color: var(--white) !important;
+    transform: rotate(90deg) scale(1.1);
+    filter: drop-shadow(0 0 12px var(--mk-gold));
 }
 
 #side-nav {
@@ -132,14 +132,15 @@ header {
 
 .modal-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4); display: none; align-items: center; justify-content: flex-end;
+    background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: flex-end;
     padding-right: 50px; z-index: 3000;
 }
 .modal-overlay.active { display: flex; }
 
 .modal-content {
-    width: 350px; background: var(--glass-heavy); backdrop-filter: blur(20px);
-    border: 1px solid var(--mk-gold); border-radius: 15px; padding: 25px;
+    width: 350px; background: rgba(10, 17, 40, 0.95); backdrop-filter: blur(20px);
+    border: 2px solid var(--mk-gold); border-radius: 15px; padding: 25px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
 }
 
 .select-input {
