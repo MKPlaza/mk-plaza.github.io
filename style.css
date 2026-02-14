@@ -48,20 +48,31 @@ header {
 }
 
 .header-left { display: flex; align-items: center; gap: 20px; }
-.header-right { display: flex; align-items: center; justify-content: flex-end; min-width: 50px; }
+
+.header-right { 
+    display: flex !important; 
+    align-items: center; 
+    justify-content: flex-end; 
+    min-width: 80px;
+    height: 100%;
+}
 
 .menu-toggle { font-size: 28px; color: var(--mk-gold); cursor: pointer; transition: 0.3s; }
 .logo-text { font-size: 20px; font-weight: 900; letter-spacing: var(--letter-spacing); color: var(--mk-gold); cursor: pointer; }
 .header-icon-main { height: 42px; width: auto; filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4)); }
 
 .settings-trigger {
+    display: inline-block !important;
+    font-size: 32px !important;
+    color: var(--mk-gold) !important;
     transition: transform 0.4s var(--fluid-ease), color 0.3s ease;
     cursor: pointer;
+    z-index: 2100;
 }
 
 .settings-trigger:hover {
     transform: rotate(90deg);
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 #side-nav {
