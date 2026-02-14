@@ -5,7 +5,6 @@ const repeatBtn = document.getElementById('repeatBtn');
 const wrapper = document.getElementById('playerWrapper');
 const favicon = document.getElementById('favicon');
 const contentFrame = document.getElementById('main-content');
-const injectionPoint = document.getElementById('content-injection-point');
 const navItems = document.querySelectorAll('.nav-item');
 
 const themes = {
@@ -27,26 +26,15 @@ const cloaks = {
     drive: { title: "My Drive - Google Drive", icon: "https://ssl.gstatic.com/docs/doclist/images/drive_2020q4_32dp.png" }
 };
 
-// CONTENT LOADING LOGIC
-function executeExternalJS(url, element) {
-    showToast("Initializing Neural Link...");
-    
-    navItems.forEach(item => item.classList.remove('selected'));
-    if(element) element.classList.add('selected');
-    toggleSideNav();
-
-    // Create script element
-    const script = document.createElement('script');
-    script.src = url;
-    script.type = 'text/javascript';
-    
-    script.onload = () => {
-        showToast("Access Granted");
-        injectionPoint.style.display = 'block';
-    };
-
-    script.onerror = () => showToast("Link Severed (Error)");
-    document.body.appendChild(script);
+function initiateCloak() {
+    const targetKey = document.getElementById('cloakTarget').value;
+    const data = cloaks[targetKey];
+    if (data) {
+        document.title = data.title;
+        favicon.href = data.icon;
+        showToast(`Cloak Active: ${data.title}`);
+        toggleSettings();
+    }
 }
 
 function loadContent(url, element) {
@@ -59,13 +47,11 @@ function loadContent(url, element) {
 }
 
 function resetHome() {
-    location.reload(); 
+    contentFrame.classList.remove('active');
+    contentFrame.src = '';
+    navItems.forEach(item => item.classList.remove('selected'));
+    showToast("Returning to Base");
 }
-
-// UI HELPERS
-function toggleSideNav() { document.getElementById('side-nav').classList.toggle('active'); }
-function toggleSettings() { document.getElementById('settingsModal').classList.toggle('active'); }
-function toggleVisibility() { wrapper.classList.toggle('collapsed'); }
 
 function showToast(msg) {
     const toast = document.getElementById('toast');
@@ -77,27 +63,16 @@ function showToast(msg) {
 function applyPreset(key) {
     const t = themes[key];
     const root = document.documentElement;
+    const body = document.body;
     root.style.setProperty('--mk-midnight', t.midnight);
     root.style.setProperty('--mk-blue', t.blue);
     root.style.setProperty('--mk-gold', t.gold);
     root.style.setProperty('--mk-silver', t.silver);
     root.style.setProperty('--mk-eye-glow', t.eyes);
-    if (t.pixel) document.body.classList.add('pixel-theme');
-    else document.body.classList.remove('pixel-theme');
+    if (t.pixel) body.classList.add('pixel-theme');
+    else body.classList.remove('pixel-theme');
 }
 
-function initiateCloak() {
-    const targetKey = document.getElementById('cloakTarget').value;
-    const data = cloaks[targetKey];
-    if (data) {
-        document.title = data.title;
-        favicon.href = data.icon;
-        showToast(`Cloak Protocol: ${data.title}`);
-        toggleSettings();
-    }
-}
-
-// MUSIC PLAYER LOGIC
 let currentIndex = 0;
 const baseUrl = "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/theme-songs/";
 const playlist = [
@@ -137,6 +112,10 @@ function toggleRepeat() {
     audio.loop = !audio.loop; 
     repeatBtn.style.color = audio.loop ? "var(--mk-gold)" : "var(--mk-silver)"; 
 }
+
+function toggleVisibility() { wrapper.classList.toggle('collapsed'); }
+function toggleSettings() { document.getElementById('settingsModal').classList.toggle('active'); }
+function toggleSideNav() { document.getElementById('side-nav').classList.toggle('active'); }
 
 audio.onended = () => { if (!audio.loop) changeTrack(1); };
 window.onload = () => { applyPreset('original'); loadSong(0); };
