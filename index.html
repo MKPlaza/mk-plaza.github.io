@@ -4,40 +4,435 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MK-Plaza | Media Hub</title>
-    <base href="https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/">
-    <link id="favicon" rel="icon" type="image/x-icon" href="Meta_Knight_Logo.webp">
+    <!-- Favicon link -->
+    <link id="favicon" rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Meta_Knight_Logo.webp">
+    <!-- Google Fonts: Cinzel Decorative and Pixel Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            /* Default Meta Knight Palette */
+            --mk-midnight: #0a1128;
+            --mk-blue: #1a237e;
+            --mk-gold: #ffd700; 
+            --mk-silver: #e0e0e0;
+            --mk-eye-glow: #ffeb3b;
+            
+            --glass: rgba(10, 17, 40, 0.4); 
+            --glass-heavy: rgba(10, 17, 40, 0.6); 
+            --neon: var(--mk-gold);
+            --white: var(--mk-silver);
+            --fluid-ease: cubic-bezier(0.65, 0, 0.35, 1);
+            --nav-bg-img: url('nung');
+            
+            /* Dynamic Font Variables */
+            --main-font: 'Cinzel Decorative', serif;
+            --text-transform: none;
+            --letter-spacing: 3px;
+        }
+
+        .pixel-theme {
+            --main-font: 'Press Start 2P', cursive;
+            --text-transform: uppercase;
+            --letter-spacing: 1px;
+        }
+
+        body, html {
+            margin: 0; padding: 0; height: 100%; width: 100%;
+            background: var(--mk-midnight) url('https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/sean-gorman-galactabattle.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: var(--main-font);
+            overflow: hidden;
+            color: var(--white);
+            transition: all 0.5s ease;
+        }
+
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 80px;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            z-index: 2000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .header-left { display: flex; align-items: center; gap: 20px; min-width: 200px; }
+        
+        /* Menu Toggle Button */
+        .menu-toggle {
+            font-size: 28px;
+            color: var(--mk-gold);
+            cursor: pointer;
+            transition: 0.3s;
+            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+        }
+        .menu-toggle:hover { transform: scale(1.1); color: var(--mk-eye-glow); }
+
+        .logo-text { 
+            font-size: 20px; 
+            font-weight: 900; 
+            letter-spacing: var(--letter-spacing); 
+            text-transform: uppercase; 
+            color: var(--mk-gold); 
+            text-shadow: 0 0 12px rgba(255, 215, 0, 0.3); 
+        }
+        .pixel-theme .logo-text { font-size: 14px; }
+        
+        .header-icon-main { height: 42px; width: auto; filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4)); }
+
+        /* Sidebar Navigation */
+        #side-nav {
+            position: fixed;
+            top: 80px; /* Below header */
+            left: 0;
+            height: calc(100% - 80px);
+            width: 260px;
+            background: var(--glass-heavy);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(255, 215, 0, 0.15);
+            transform: translateX(-100%); /* Hidden by default */
+            transition: transform 0.4s var(--fluid-ease);
+            z-index: 900; /* Below music player (1000) */
+            display: flex;
+            flex-direction: column;
+            padding: 30px 20px;
+            gap: 20px;
+            box-shadow: 10px 0 30px rgba(0,0,0,0.5);
+        }
+
+        #side-nav.active {
+            transform: translateX(0);
+        }
+
+        .nav-item {
+            position: relative;
+            display: flex;
+            flex-direction: row; /* Horizontal layout for sidebar */
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            text-decoration: none;
+            color: var(--white);
+            background-image: linear-gradient(rgba(10, 17, 40, 0.6), rgba(10, 17, 40, 0.7)), var(--nav-bg-img);
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            padding: 10px 25px;
+            border-radius: 12px;
+            width: 100%;
+            height: 60px;
+            transition: all 0.4s var(--fluid-ease);
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+        }
+
+        .nav-item i {
+            font-size: 24px; color: var(--mk-eye-glow);
+            filter: drop-shadow(0 0 8px rgba(255, 235, 59, 0.4));
+            position: relative; z-index: 2; transition: opacity 0.3s ease;
+            margin: 0;
+        }
+
+        .nav-item span { 
+            font-size: 13px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: var(--letter-spacing); 
+            position: relative; 
+            z-index: 2; 
+            text-shadow: 1px 1px 2px black;
+        }
+        .pixel-theme .nav-item span { font-size: 9px; }
+
+        .nav-item:hover {
+            border-color: var(--mk-gold);
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4), inset 0 0 5px rgba(255, 215, 0, 0.1);
+            background-image: linear-gradient(rgba(26, 35, 126, 0.4), rgba(26, 35, 126, 0.4)), var(--nav-bg-img);
+        }
+
+        .header-right { min-width: 200px; display: flex; justify-content: flex-end; align-items: center; gap: 20px; }
+        .settings-trigger { font-size: 24px; color: var(--mk-silver); opacity: 0.7; transition: 0.3s; cursor: pointer; }
+        .settings-trigger:hover { opacity: 1; color: var(--mk-gold); transform: rotate(45deg); }
+
+        .master-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            display: flex;
+            align-items: center;
+            transition: left 0.8s var(--fluid-ease);
+            z-index: 1000; /* Above sidebar */
+        }
+
+        .master-container.collapsed {
+            left: -415px; 
+        }
+
+        .player-pill {
+            height: 54px;
+            width: 400px;
+            background: rgba(10, 17, 40, 0.85);
+            backdrop-filter: blur(20px);
+            border-radius: 100px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 0 10px 0 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
+        .track-display {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-right: 15px;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            position: relative;
+        }
+
+        .track-name {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--mk-silver);
+            animation: marquee 12s linear infinite;
+            padding-left: 100%;
+        }
+        .pixel-theme .track-name { font-size: 9px; line-height: 1.5; }
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-200%); }
+        }
+
+        .controls { display: flex; gap: 2px; align-items: center; }
+
+        .btn {
+            background: none; border: none; color: var(--mk-silver); cursor: pointer;
+            width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; transition: 0.2s; font-size: 14px;
+        }
+        .btn:hover { color: var(--mk-gold); }
+
+        .toggle-btn {
+            width: 40px;
+            height: 40px;
+            margin-left: 12px;
+            background: rgba(10, 17, 40, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--mk-silver);
+            transition: transform 0.8s var(--fluid-ease), border-color 0.3s;
+        }
+        
+        .master-container.collapsed .toggle-btn span {
+            display: inline-block;
+            transform: rotate(180deg);
+        }
+
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.1); 
+            display: none; 
+            align-items: center; 
+            justify-content: flex-end; 
+            padding-right: 50px;
+            z-index: 3000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .modal-overlay.active { display: flex; opacity: 1; pointer-events: auto; }
+        
+        .modal-content {
+            width: 350px; 
+            background: var(--glass-heavy);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px; 
+            position: relative;
+            transform: translateX(40px) scale(0.95);
+            transition: transform 0.4s var(--fluid-ease), opacity 0.3s;
+            font-family: var(--main-font);
+            color: var(--mk-silver);
+            box-shadow: -10px 10px 40px rgba(0,0,0,0.6);
+            opacity: 0;
+        }
+        
+        .modal-overlay.active .modal-content { 
+            transform: translateX(0) scale(1); 
+            opacity: 1;
+        }
+        
+        .modal-header {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,215,0,0.15);
+            padding-bottom: 10px;
+        }
+        
+        .modal-header h2 {
+            margin: 0; 
+            font-size: 15px; 
+            color: var(--mk-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pixel-theme .modal-header h2 { font-size: 10px; }
+
+        .setting-section { margin-bottom: 25px; }
+        
+        .section-title { 
+            font-size: 11px; 
+            color: var(--mk-eye-glow); 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            margin-bottom: 15px; 
+            font-weight: 700; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--mk-gold), transparent);
+            opacity: 0.2;
+        }
+        .pixel-theme .section-title { font-size: 8px; }
+        
+        .setting-row { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px;
+            margin-bottom: 12px; 
+            padding: 12px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 215, 0, 0.05);
+        }
+        .setting-row span { font-size: 12px; opacity: 0.8; }
+        .pixel-theme .setting-row span { font-size: 8px; }
+
+        .btn-theme { 
+            background: var(--mk-blue); 
+            color: var(--white); 
+            border: 1px solid rgba(255, 215, 0, 0.4); 
+            padding: 10px; 
+            width: 100%; 
+            border-radius: 6px; 
+            font-weight: 700; 
+            margin-top: 5px; 
+            cursor: pointer; 
+            font-family: inherit;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 10px;
+            transition: all 0.3s;
+        }
+        .btn-theme:hover {
+            background: var(--mk-gold);
+            color: var(--mk-midnight);
+            border-color: var(--mk-gold);
+        }
+
+        .select-input { 
+            background: rgba(10, 17, 40, 0.8); 
+            border: 1px solid rgba(255, 215, 0, 0.3); 
+            color: var(--white); 
+            padding: 8px 12px; 
+            border-radius: 6px; 
+            width: 100%; 
+            font-family: inherit;
+            cursor: pointer;
+            outline: none;
+            font-size: 11px;
+        }
+        .pixel-theme .select-input { font-size: 8px; }
+
+        .close-btn {
+            font-size: 20px;
+            color: var(--mk-silver);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .close-btn:hover { color: var(--mk-gold); transform: scale(1.1); }
+
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--mk-gold);
+            color: var(--mk-midnight);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 900;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transform: translateY(100px);
+            transition: transform 0.4s var(--fluid-ease);
+            z-index: 5000;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        #toast.visible { transform: translateY(0); }
+    </style>
 </head>
 <body>
-    <iframe id="main-content" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
     <header>
         <div class="header-left">
             <i class="ph-bold ph-list menu-toggle" onclick="toggleSideNav()"></i>
-            <img src="Meta_Knight_Logo.webp" alt="Logo" class="header-icon-main">
-            <div class="logo-text" onclick="resetHome()">MK-Plaza</div>
+            <img src="https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Meta_Knight_Logo.webp" alt="Logo" class="header-icon-main">
+            <div class="logo-text">MK-Plaza</div>
         </div>
+
+        <!-- Center nav removed -->
+
         <div class="header-right">
             <i class="ph-bold ph-gear settings-trigger" onclick="toggleSettings()"></i>
-            <i class="ph-bold ph-user-circle user-icon"></i>
+            <i class="ph-bold ph-user-circle" style="font-size: 24px; opacity: 0.5;"></i>
         </div>
     </header>
 
+    <!-- Collapsible Sidebar -->
     <div id="side-nav">
-        <div class="nav-item" id="nav-movies" onclick="loadContent('https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/MKPlaza%27s%20M0v13s%20Hub.html', this)">
-            <i class="ph-bold ph-film-strip"></i><span>Movies</span>
-        </div>
+        <div class="nav-item"><i class="ph-bold ph-film-strip"></i><span>Movies</span></div>
         <div class="nav-item"><i class="ph-bold ph-television"></i><span>TV Shows</span></div>
         <div class="nav-item"><i class="fa-solid fa-dragon"></i><span>Anime</span></div>
         <div class="nav-item"><i class="ph-bold ph-book-open-text"></i><span>Manga</span></div>
         <div class="nav-item"><i class="ph-bold ph-game-controller"></i><span>Games</span></div>
     </div>
 
+    <!-- Music Player -->
     <div class="master-container" id="playerWrapper">
         <div class="player-pill">
             <div class="track-display">
@@ -50,17 +445,19 @@
                 <button class="btn" id="repeatBtn" onclick="toggleRepeat()">↻</button>
             </div>
         </div>
-        <button class="toggle-btn" onclick="toggleVisibility()">
-            <span>❮</span>
+        <button class="toggle-btn" onclick="toggleVisibility()" title="Toggle Player">
+            <span style="font-family: serif;">❮</span>
         </button>
     </div>
 
+    <!-- Settings Modal -->
     <div class="modal-overlay" id="settingsModal" onclick="if(event.target === this) toggleSettings()">
         <div class="modal-content">
             <div class="modal-header">
                 <h2><i class="ph-bold ph-terminal-window"></i> Configuration</h2>
                 <i class="ph ph-x close-btn" onclick="toggleSettings()"></i>
             </div>
+            
             <div class="setting-section">
                 <div class="section-title"><i class="ph-bold ph-palette"></i> Knight Presets</div>
                 <div class="setting-row">
@@ -78,6 +475,7 @@
                     <button class="btn-theme" onclick="applyPreset('original')">Reset Identity</button>
                 </div>
             </div>
+
             <div class="setting-section">
                 <div class="section-title"><i class="ph-bold ph-eye-slash"></i> Cloak Protocol</div>
                 <div class="setting-row">
@@ -96,7 +494,114 @@
     </div>
 
     <div id="toast">Protocol Active</div>
+
     <audio id="audioPlayer"></audio>
-    <script src="script.js"></script>
+
+    <script>
+        const audio = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const title = document.getElementById('song-title');
+        const repeatBtn = document.getElementById('repeatBtn');
+        const wrapper = document.getElementById('playerWrapper');
+        const favicon = document.getElementById('favicon');
+
+        const themes = {
+            original: { midnight: '#0a1128', blue: '#1a237e', gold: '#ffd700', silver: '#e0e0e0', eyes: '#ffeb3b', pixel: false },
+            classic: { midnight: '#2a1b4d', blue: '#f62413', gold: '#f1bb01', silver: '#6055a1', eyes: '#fdff9a', pixel: true },
+            dark: { midnight: '#111827', blue: '#374151', gold: '#9ca3af', silver: '#4b5563', eyes: '#ef4444', pixel: false },
+            galacta: { midnight: '#2d0a1a', blue: '#be185d', gold: '#f472b6', silver: '#fce7f3', eyes: '#ffffff', pixel: false },
+            morpho: { midnight: '#1a0505', blue: '#7f1d1d', gold: '#f97316', silver: '#fb923c', eyes: '#ffffff', pixel: false },
+            mecha: { midnight: '#0f172a', blue: '#1e3a8a', gold: '#38bdf8', silver: '#94a3b8', eyes: '#7dd3fc', pixel: false },
+            phantom: { midnight: '#1e1b4b', blue: '#4338ca', gold: '#818cf8', silver: '#c7d2fe', eyes: '#a5f3fc', pixel: false },
+            parallel: { midnight: '#171717', blue: '#262626', gold: '#404040', silver: '#a3a3a3', eyes: '#525252', pixel: false }
+        };
+
+        const cloaks = {
+            classroom: { title: "Classes", icon: "https://ssl.gstatic.com/classroom/favicon.png" },
+            desmos: { title: "Desmos | Graphing Calculator", icon: "https://www.desmos.com/favicon.ico" },
+            canvas: { title: "Dashboard", icon: "https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e1062957c5.ico" },
+            google: { title: "Google", icon: "https://www.google.com/favicon.ico" },
+            drive: { title: "My Drive - Google Drive", icon: "https://ssl.gstatic.com/docs/doclist/images/drive_2020q4_32dp.png" }
+        };
+
+        function initiateCloak() {
+            const targetKey = document.getElementById('cloakTarget').value;
+            const data = cloaks[targetKey];
+            if (data) {
+                document.title = data.title;
+                favicon.href = data.icon;
+                showToast(`Cloak Active: ${data.title}`);
+                toggleSettings();
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.classList.add('visible');
+            setTimeout(() => toast.classList.remove('visible'), 3000);
+        }
+
+        function applyPreset(key) {
+            const t = themes[key];
+            const root = document.documentElement;
+            const body = document.body;
+            root.style.setProperty('--mk-midnight', t.midnight);
+            root.style.setProperty('--mk-blue', t.blue);
+            root.style.setProperty('--mk-gold', t.gold);
+            root.style.setProperty('--mk-silver', t.silver);
+            root.style.setProperty('--mk-eye-glow', t.eyes);
+            if (t.pixel) body.classList.add('pixel-theme');
+            else body.classList.remove('pixel-theme');
+            document.getElementById('themeSelector').value = key;
+        }
+
+        let currentIndex = 0;
+        const baseUrl = "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/theme-songs/";
+        const playlist = [
+            "1-48. VS. Waning Masked Dedede & Waxing Masked Meta Knight.mp3",
+            "Galacta Knight Battle - Kirby Super Star Ultra.mp3",
+            "Inner Struggle (Vs. Mecha Knight) - Kirby_ Planet Robobot OST [067].mp3",
+            "Kirby & The Amazing Mirror - Dark Meta Knight Battle.mp3",
+            "Meta Knight Battle - Kirby Star Allies Music.mp3",
+            "Meta Knight's Revenge Theme - Super Smash Bros. Ultimate.mp3",
+            "Sword of the Surviving Guardian - Kirby and the Forgotten Land OST [038].mp3",
+            "VS. Aeon Hero - Super Kirby Clash Music.mp3"
+        ];
+
+        function loadSong(index) {
+            audio.src = baseUrl + encodeURIComponent(playlist[index]);
+            title.innerText = playlist[index].replace('.mp3', '');
+        }
+
+        function togglePlay() {
+            if (audio.paused) { 
+                audio.play().catch(() => {}); 
+                playBtn.innerText = "။"; 
+            } else { 
+                audio.pause(); 
+                playBtn.innerText = "▶"; 
+            }
+        }
+
+        function changeTrack(dir) {
+            currentIndex = (currentIndex + dir + playlist.length) % playlist.length;
+            loadSong(currentIndex); 
+            audio.play().catch(() => {}); 
+            playBtn.innerText = "။";
+        }
+
+        function toggleRepeat() { 
+            audio.loop = !audio.loop; 
+            repeatBtn.style.color = audio.loop ? "var(--mk-gold)" : "var(--mk-silver)"; 
+        }
+
+        function toggleVisibility() { wrapper.classList.toggle('collapsed'); }
+        function toggleSettings() { document.getElementById('settingsModal').classList.toggle('active'); }
+        function toggleSideNav() { document.getElementById('side-nav').classList.toggle('active'); }
+
+        audio.onended = () => { if (!audio.loop) changeTrack(1); };
+        window.onload = () => { applyPreset('original'); loadSong(0); };
+    </script>
 </body>
 </html>
