@@ -6,15 +6,16 @@
     <base href="https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/">
     <title>MK-Plaza | Media Hub</title>
     <link id="favicon" rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Meta_Knight_Logo.webp">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="content-injection-point"></div>
     <iframe id="main-content" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
     <header>
@@ -25,11 +26,12 @@
         </div>
         <div class="header-right">
             <i class="ph-bold ph-gear settings-trigger" onclick="toggleSettings()"></i>
+            <i class="ph-bold ph-user-circle" style="font-size: 24px; opacity: 0.5;"></i>
         </div>
     </header>
 
     <div id="side-nav">
-        <div class="nav-item" id="nav-movies" onclick="executeExternalJS('https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/MKPlaza%27s%20M0v13s%20Hub.js', this)">
+        <div class="nav-item" id="nav-movies" onclick="loadContent('https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/MKPlaza%27s%20M0v13s%20Hub.html', this)">
             <i class="ph-bold ph-film-strip"></i><span>Movies</span>
         </div>
         <div class="nav-item"><i class="ph-bold ph-television"></i><span>TV Shows</span></div>
@@ -50,7 +52,7 @@
                 <button class="btn" id="repeatBtn" onclick="toggleRepeat()">↻</button>
             </div>
         </div>
-        <button class="toggle-btn" onclick="toggleVisibility()">
+        <button class="toggle-btn" onclick="toggleVisibility()" title="Toggle Player">
             <span style="font-family: serif;">❮</span>
         </button>
     </div>
@@ -62,7 +64,7 @@
                 <i class="ph ph-x close-btn" onclick="toggleSettings()"></i>
             </div>
             <div class="setting-section">
-                <div class="section-title">Knight Presets</div>
+                <div class="section-title"><i class="ph-bold ph-palette"></i> Knight Presets</div>
                 <div class="setting-row">
                     <span>Active Theme Profile</span>
                     <select class="select-input" id="themeSelector" onchange="applyPreset(this.value)">
@@ -75,10 +77,11 @@
                         <option value="phantom">Phantom Meta Knight</option>
                         <option value="parallel">Parallel Meta Knight</option>
                     </select>
+                    <button class="btn-theme" onclick="applyPreset('original')">Reset Identity</button>
                 </div>
             </div>
             <div class="setting-section">
-                <div class="section-title">Cloak Protocol</div>
+                <div class="section-title"><i class="ph-bold ph-eye-slash"></i> Cloak Protocol</div>
                 <div class="setting-row">
                     <span>Deployment Target</span>
                     <select class="select-input" id="cloakTarget">
