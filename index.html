@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/">
+    <title>MK-Plaza | Media Hub</title>
+    <link id="favicon" rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Meta_Knight_Logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content-injection-point"></div>
+    <iframe id="main-content" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+    <header>
+        <div class="header-left">
+            <i class="ph-bold ph-list menu-toggle" onclick="toggleSideNav()"></i>
+            <img src="https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Meta_Knight_Logo.webp" alt="Logo" class="header-icon-main">
+            <div class="logo-text" onclick="resetHome()">MK-Plaza</div>
+        </div>
+        <div class="header-right">
+            <i class="ph-bold ph-gear settings-trigger" onclick="toggleSettings()"></i>
+        </div>
+    </header>
+
+    <div id="side-nav">
+        <div class="nav-item" id="nav-movies" onclick="executeExternalJS('https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/MKPlaza%27s%20M0v13s%20Hub.js', this)">
+            <i class="ph-bold ph-film-strip"></i><span>Movies</span>
+        </div>
+        <div class="nav-item"><i class="ph-bold ph-television"></i><span>TV Shows</span></div>
+        <div class="nav-item"><i class="fa-solid fa-dragon"></i><span>Anime</span></div>
+        <div class="nav-item"><i class="ph-bold ph-book-open-text"></i><span>Manga</span></div>
+        <div class="nav-item"><i class="ph-bold ph-game-controller"></i><span>Games</span></div>
+    </div>
+
+    <div class="master-container" id="playerWrapper">
+        <div class="player-pill">
+            <div class="track-display">
+                <span class="track-name" id="song-title">Initializing Halberd...</span>
+            </div>
+            <div class="controls">
+                <button class="btn" onclick="changeTrack(-1)">❮❮</button>
+                <button class="btn" id="playBtn" onclick="togglePlay()">▶</button>
+                <button class="btn" onclick="changeTrack(1)">❯❯</button>
+                <button class="btn" id="repeatBtn" onclick="toggleRepeat()">↻</button>
+            </div>
+        </div>
+        <button class="toggle-btn" onclick="toggleVisibility()">
+            <span style="font-family: serif;">❮</span>
+        </button>
+    </div>
+
+    <div class="modal-overlay" id="settingsModal" onclick="if(event.target === this) toggleSettings()">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="ph-bold ph-terminal-window"></i> Configuration</h2>
+                <i class="ph ph-x close-btn" onclick="toggleSettings()"></i>
+            </div>
+            <div class="setting-section">
+                <div class="section-title">Knight Presets</div>
+                <div class="setting-row">
+                    <span>Active Theme Profile</span>
+                    <select class="select-input" id="themeSelector" onchange="applyPreset(this.value)">
+                        <option value="original">Meta Knight (Original)</option>
+                        <option value="classic">Classic Meta Knight (8-Bit)</option>
+                        <option value="dark">Dark Meta Knight</option>
+                        <option value="galacta">Galacta Knight</option>
+                        <option value="morpho">Morpho Knight</option>
+                        <option value="mecha">Mecha Knight</option>
+                        <option value="phantom">Phantom Meta Knight</option>
+                        <option value="parallel">Parallel Meta Knight</option>
+                    </select>
+                </div>
+            </div>
+            <div class="setting-section">
+                <div class="section-title">Cloak Protocol</div>
+                <div class="setting-row">
+                    <span>Deployment Target</span>
+                    <select class="select-input" id="cloakTarget">
+                        <option value="classroom">Google Classroom</option>
+                        <option value="desmos">Desmos Graphing</option>
+                        <option value="canvas">Canvas Portal</option>
+                        <option value="google">Google Search</option>
+                        <option value="drive">My Drive - Google Drive</option>
+                    </select>
+                    <button class="btn-theme" onclick="initiateCloak()">Initialize Cloak</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast">Protocol Active</div>
+    <audio id="audioPlayer"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
