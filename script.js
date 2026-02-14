@@ -13,15 +13,21 @@ const themes = {
     classic: { midnight: '#2a1b4d', blue: '#f62413', gold: '#f1bb01', silver: '#6055a1', eyes: '#fdff9a', pixel: true },
     dark: { midnight: '#111827', blue: '#374151', gold: '#9ca3af', silver: '#4b5563', eyes: '#ef4444', pixel: false },
     galacta: { midnight: '#2d0a1a', blue: '#be185d', gold: '#f472b6', silver: '#fce7f3', eyes: '#ffffff', pixel: false },
-    morpho: { midnight: '#1a0505', blue: '#7f1d1d', gold: '#f97316', silver: '#fb923c', eyes: '#ffffff', pixel: false }
+    morpho: { midnight: '#1a0505', blue: '#7f1d1d', gold: '#f97316', silver: '#fb923c', eyes: '#ffffff', pixel: false },
+    mecha: { midnight: '#0f172a', blue: '#1e3a8a', gold: '#38bdf8', silver: '#94a3b8', eyes: '#7dd3fc', pixel: false },
+    phantom: { midnight: '#1e1b4b', blue: '#4338ca', gold: '#818cf8', silver: '#c7d2fe', eyes: '#a5f3fc', pixel: false },
+    parallel: { midnight: '#171717', blue: '#262626', gold: '#404040', silver: '#a3a3a3', eyes: '#525252', pixel: false }
 };
 
 const cloaks = {
     classroom: { title: "Classes", icon: "https://ssl.gstatic.com/classroom/favicon.png" },
-    google: { title: "Google", icon: "https://www.google.com/favicon.ico" }
+    desmos: { title: "Desmos | Graphing Calculator", icon: "https://www.desmos.com/favicon.ico" },
+    canvas: { title: "Dashboard", icon: "https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e1062957c5.ico" },
+    google: { title: "Google", icon: "https://www.google.com/favicon.ico" },
+    drive: { title: "My Drive - Google Drive", icon: "https://ssl.gstatic.com/docs/doclist/images/drive_2020q4_32dp.png" }
 };
 
-
+// CONTENT LOADING LOGIC
 function executeExternalJS(url, element) {
     showToast("Initializing Neural Link...");
     
@@ -29,7 +35,7 @@ function executeExternalJS(url, element) {
     if(element) element.classList.add('selected');
     toggleSideNav();
 
-    
+    // Create script element
     const script = document.createElement('script');
     script.src = url;
     script.type = 'text/javascript';
@@ -91,12 +97,18 @@ function initiateCloak() {
     }
 }
 
-
+// MUSIC PLAYER LOGIC
 let currentIndex = 0;
 const baseUrl = "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/theme-songs/";
 const playlist = [
+    "1-48. VS. Waning Masked Dedede & Waxing Masked Meta Knight.mp3",
+    "Galacta Knight Battle - Kirby Super Star Ultra.mp3",
+    "Inner Struggle (Vs. Mecha Knight) - Kirby_ Planet Robobot OST [067].mp3",
+    "Kirby & The Amazing Mirror - Dark Meta Knight Battle.mp3",
+    "Meta Knight Battle - Kirby Star Allies Music.mp3",
     "Meta Knight's Revenge Theme - Super Smash Bros. Ultimate.mp3",
-    "Meta Knight Battle - Kirby Star Allies Music.mp3"
+    "Sword of the Surviving Guardian - Kirby and the Forgotten Land OST [038].mp3",
+    "VS. Aeon Hero - Super Kirby Clash Music.mp3"
 ];
 
 function loadSong(index) {
