@@ -4,33 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MK-Plaza | Media Hub</title>
-    <!-- Favicon link -->
     <link id="favicon" rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Meta_Knight_Logo.webp">
-    <!-- Google Fonts: Cinzel Decorative and Pixel Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            /* Default Meta Knight Palette */
             --mk-midnight: #0a1128;
             --mk-blue: #1a237e;
             --mk-gold: #ffd700; 
             --mk-silver: #e0e0e0;
             --mk-eye-glow: #ffeb3b;
-            
             --glass: rgba(10, 17, 40, 0.4); 
             --glass-heavy: rgba(10, 17, 40, 0.6); 
             --neon: var(--mk-gold);
             --white: var(--mk-silver);
             --fluid-ease: cubic-bezier(0.65, 0, 0.35, 1);
             --nav-bg-img: url('nung');
-            
-            /* Dynamic Font Variables */
             --main-font: 'Cinzel Decorative', serif;
             --text-transform: none;
             --letter-spacing: 3px;
@@ -52,6 +44,19 @@
             transition: all 0.5s ease;
         }
 
+        #content-stage {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 80px);
+            z-index: 50;
+            display: none;
+        }
+
+        #content-stage.active { display: block; }
+        #content-stage iframe { width: 100%; height: 100%; border: none; }
+
         header {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 80px;
@@ -69,7 +74,6 @@
 
         .header-left { display: flex; align-items: center; gap: 20px; min-width: 200px; }
         
-        /* Menu Toggle Button */
         .menu-toggle {
             font-size: 28px;
             color: var(--mk-gold);
@@ -91,10 +95,9 @@
         
         .header-icon-main { height: 42px; width: auto; filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4)); }
 
-        /* Sidebar Navigation */
         #side-nav {
             position: fixed;
-            top: 80px; /* Below header */
+            top: 80px;
             left: 0;
             height: calc(100% - 80px);
             width: 260px;
@@ -102,9 +105,9 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-right: 1px solid rgba(255, 215, 0, 0.15);
-            transform: translateX(-100%); /* Hidden by default */
+            transform: translateX(-100%);
             transition: transform 0.4s var(--fluid-ease);
-            z-index: 900; /* Below music player (1000) */
+            z-index: 900;
             display: flex;
             flex-direction: column;
             padding: 30px 20px;
@@ -112,14 +115,12 @@
             box-shadow: 10px 0 30px rgba(0,0,0,0.5);
         }
 
-        #side-nav.active {
-            transform: translateX(0);
-        }
+        #side-nav.active { transform: translateX(0); }
 
         .nav-item {
             position: relative;
             display: flex;
-            flex-direction: row; /* Horizontal layout for sidebar */
+            flex-direction: row;
             align-items: center;
             justify-content: flex-start;
             gap: 20px;
@@ -176,12 +177,10 @@
             display: flex;
             align-items: center;
             transition: left 0.8s var(--fluid-ease);
-            z-index: 1000; /* Above sidebar */
+            z-index: 1000;
         }
 
-        .master-container.collapsed {
-            left: -415px; 
-        }
+        .master-container.collapsed { left: -415px; }
 
         .player-pill {
             height: 54px;
@@ -415,24 +414,24 @@
             <div class="logo-text">MK-Plaza</div>
         </div>
 
-        <!-- Center nav removed -->
-
         <div class="header-right">
             <i class="ph-bold ph-gear settings-trigger" onclick="toggleSettings()"></i>
             <i class="ph-bold ph-user-circle" style="font-size: 24px; opacity: 0.5;"></i>
         </div>
     </header>
 
-    <!-- Collapsible Sidebar -->
+    <div id="content-stage">
+        <iframe id="hub-frame"></iframe>
+    </div>
+
     <div id="side-nav">
-        <div class="nav-item"><i class="ph-bold ph-film-strip"></i><span>Movies</span></div>
+        <div class="nav-item" onclick="loadContent('movies')"><i class="ph-bold ph-film-strip"></i><span>Movies</span></div>
         <div class="nav-item"><i class="ph-bold ph-television"></i><span>TV Shows</span></div>
         <div class="nav-item"><i class="fa-solid fa-dragon"></i><span>Anime</span></div>
         <div class="nav-item"><i class="ph-bold ph-book-open-text"></i><span>Manga</span></div>
         <div class="nav-item"><i class="ph-bold ph-game-controller"></i><span>Games</span></div>
     </div>
 
-    <!-- Music Player -->
     <div class="master-container" id="playerWrapper">
         <div class="player-pill">
             <div class="track-display">
@@ -450,7 +449,6 @@
         </button>
     </div>
 
-    <!-- Settings Modal -->
     <div class="modal-overlay" id="settingsModal" onclick="if(event.target === this) toggleSettings()">
         <div class="modal-content">
             <div class="modal-header">
@@ -504,6 +502,8 @@
         const repeatBtn = document.getElementById('repeatBtn');
         const wrapper = document.getElementById('playerWrapper');
         const favicon = document.getElementById('favicon');
+        const contentStage = document.getElementById('content-stage');
+        const hubFrame = document.getElementById('hub-frame');
 
         const themes = {
             original: { midnight: '#0a1128', blue: '#1a237e', gold: '#ffd700', silver: '#e0e0e0', eyes: '#ffeb3b', pixel: false },
@@ -523,6 +523,15 @@
             google: { title: "Google", icon: "https://www.google.com/favicon.ico" },
             drive: { title: "My Drive - Google Drive", icon: "https://ssl.gstatic.com/docs/doclist/images/drive_2020q4_32dp.png" }
         };
+
+        function loadContent(type) {
+            if (type === 'movies') {
+                hubFrame.src = "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/MKPlaza's%20M0v13s%20Hub.html";
+                contentStage.classList.add('active');
+                toggleSideNav();
+                showToast("Loading Movies Hub...");
+            }
+        }
 
         function initiateCloak() {
             const targetKey = document.getElementById('cloakTarget').value;
