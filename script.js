@@ -63,18 +63,16 @@ function showToast(msg) {
 function applyPreset(key) {
     const t = themes[key];
     const root = document.documentElement;
-    const body = document.body;
     root.style.setProperty('--mk-midnight', t.midnight);
     root.style.setProperty('--mk-blue', t.blue);
     root.style.setProperty('--mk-gold', t.gold);
     root.style.setProperty('--mk-silver', t.silver);
     root.style.setProperty('--mk-eye-glow', t.eyes);
-    if (t.pixel) body.classList.add('pixel-theme');
-    else body.classList.remove('pixel-theme');
+    if (t.pixel) document.body.classList.add('pixel-theme');
+    else document.body.classList.remove('pixel-theme');
 }
 
 let currentIndex = 0;
-const baseUrl = "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/theme-songs/";
 const playlist = [
     "1-48. VS. Waning Masked Dedede & Waxing Masked Meta Knight.mp3",
     "Galacta Knight Battle - Kirby Super Star Ultra.mp3",
@@ -87,30 +85,26 @@ const playlist = [
 ];
 
 function loadSong(index) {
-    audio.src = baseUrl + encodeURIComponent(playlist[index]);
+    const songPath = "theme-songs/" + encodeURIComponent(playlist[index]);
+    audio.src = songPath;
     title.innerText = playlist[index].replace('.mp3', '');
 }
 
 function togglePlay() {
-    if (audio.paused) { 
-        audio.play().catch(() => {}); 
-        playBtn.innerText = "။"; 
-    } else { 
-        audio.pause(); 
-        playBtn.innerText = "▶"; 
-    }
+    if (audio.paused) { audio.play().catch(e => console.error(e)); playBtn.innerText = "။"; }
+    else { audio.pause(); playBtn.innerText = "▶"; }
 }
 
 function changeTrack(dir) {
     currentIndex = (currentIndex + dir + playlist.length) % playlist.length;
-    loadSong(currentIndex); 
-    audio.play().catch(() => {}); 
+    loadSong(currentIndex);
+    audio.play();
     playBtn.innerText = "။";
 }
 
-function toggleRepeat() { 
-    audio.loop = !audio.loop; 
-    repeatBtn.style.color = audio.loop ? "var(--mk-gold)" : "var(--mk-silver)"; 
+function toggleRepeat() {
+    audio.loop = !audio.loop;
+    repeatBtn.style.color = audio.loop ? "var(--mk-gold)" : "var(--mk-silver)";
 }
 
 function toggleVisibility() { wrapper.classList.toggle('collapsed'); }
