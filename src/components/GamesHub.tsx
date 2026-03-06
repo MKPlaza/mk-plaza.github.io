@@ -16,17 +16,13 @@ const iconMap: Record<string, any> = {
 
 export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame }: GamesHubProps) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [currentFilter, setCurrentFilter] = useState('ALL');
 
   const filteredGames = GAMES.filter(game => {
-    const matchesFilter = currentFilter === 'ALL' || game.platform === currentFilter;
     const matchesSearch = game.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       game.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
       game.system.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;
+    return matchesSearch;
   });
-
-  const filters = ['ALL', 'Nintendo', 'Sega', 'PlayStation', 'PC', 'Other'];
 
   return (
     <motion.div  
@@ -43,13 +39,13 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
         <div className="flex items-center justify-center gap-3 mt-4">
           <div className="h-px w-8 bg-white/10"></div>
           <span className="text-[11px] font-black tracking-[0.3em] uppercase text-neutral-400">
-            {filteredGames.length.toString().padStart(2, '0')} <span className="text-red-600/60">TITLES</span> IN THE {currentFilter} VAULT
+            {filteredGames.length.toString().padStart(2, '0')} <span className="text-red-600/60">TITLES</span> IN THE VAULT
           </span>
           <div className="h-px w-8 bg-white/10"></div>
         </div>
       </div>
 
-      <div className="relative max-w-2xl mx-auto mb-8">
+      <div className="relative max-w-2xl mx-auto mb-12">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--mk-gold)] w-5 h-5" />
         <input 
           type="text" 
@@ -58,22 +54,6 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full bg-white/5 border border-white/10 text-white py-4 pl-14 pr-6 rounded-full outline-none focus:border-[var(--mk-gold)]/50 focus:bg-white/10 transition-all font-medium"
         />
-      </div>
-
-      <div className="flex flex-wrap justify-center gap-2 mb-12">
-        {filters.map(filter => (
-          <button
-            key={filter}
-            onClick={() => setCurrentFilter(filter)}
-            className={`px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 border ${
-              currentFilter === filter 
-                ? 'bg-[var(--mk-gold)] border-yellow-200 text-[var(--mk-midnight)] scale-105 shadow-[0_10px_15px_-3px_rgba(255,204,0,0.3)]' 
-                : 'border-white/5 bg-white/5 text-neutral-500 hover:text-white'
-            }`}
-          >
-            {filter}
-          </button>
-        ))}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -135,7 +115,7 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
                 >
                   <div className="absolute inset-0 bg-[var(--mk-gold)] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
                   <span className="relative z-10 flex items-center justify-center gap-2 group-hover/btn:text-black transition-colors">
-                    LAUNCH GAME <Play className="w-3 h-3 fill-current" />
+                    LAUNCH GAME! <Play className="w-3 h-3 fill-current" />
                   </span>
                 </button>
               </div>
@@ -148,12 +128,12 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
         <div className="flex flex-col items-center justify-center py-20 text-center">
           <div className="text-neutral-600 text-6xl mb-6"><Box className="w-16 h-16 mx-auto" /></div>
           <h3 className="text-xl font-bold text-white mb-2">No data found in this sector</h3>
-          <p className="text-neutral-500 text-sm mb-8 italic">"Try a different search query or clear your filters"</p>
+          <p className="text-neutral-500 text-sm mb-8 italic">"Try a different search query"</p>
           <button 
-            onClick={() => { setSearchTerm(''); setCurrentFilter('ALL'); }}
+            onClick={() => setSearchTerm('')}
             className="px-6 py-3 border border-yellow-500/30 text-[var(--mk-gold)] text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-yellow-500/10 transition-all"
           >
-            Clear Search & Filters
+            Clear Search
           </button>
         </div>
       )}
