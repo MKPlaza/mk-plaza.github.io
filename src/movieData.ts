@@ -23,13 +23,6 @@ export const MOVIES: Movie[] = [
                 year: "2025"
             },
             {
-                title: "Diddy's Monsters Fall",
-                imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/MV5BY2YxNWIyYjUtZDQ3Ny00N2Q3LTgwZDUtYTE0NWE2ZGVmNTNmXkEyXkFqcGc%40._V1_.jpg",
-                link: "https://drive.google.com/file/d/1ptJdU8If1DhaevNXIVnvy8Ugx5jX9CFy/view?usp=sharing",
-                description: "Friends face unexpected monsters and overcome fears.",
-                year: "2023"
-            },
-            {
                 title: "Dog Man",
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/redraw-of-the-dog-man-movie-poster-in-the-comic-book-covers-v0-6fajo4f1dmbe1.jpeg",
                 link: "https://drive.google.com/file/d/1fGpb8UBbynGx9NaHDc5wPzYjjUAD7gLW/view",
