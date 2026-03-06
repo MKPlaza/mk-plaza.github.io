@@ -135,7 +135,7 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
                 >
                   <div className="absolute inset-0 bg-[var(--mk-gold)] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
                   <span className="relative z-10 flex items-center justify-center gap-2 group-hover/btn:text-black transition-colors">
-                    LAUNCH INTERFACE <Play className="w-3 h-3 fill-current" />
+                    LAUNCH GAME <Play className="w-3 h-3 fill-current" />
                   </span>
                 </button>
               </div>
