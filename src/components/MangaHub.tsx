@@ -17,7 +17,7 @@ export default function MangaHub({ favorites, onToggleFavorite }: MangaHubProps)
           MK-PLAZA MANGA
         </h1>
         <p className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">
-          Aetherium Archive v2.0
+          For those who like to read rather than watch
         </p>
       </div>
 
