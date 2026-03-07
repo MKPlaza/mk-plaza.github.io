@@ -1120,5 +1120,1349 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1SkaOLMWCv54rDi3qucWVFgtWEA0fdLZU/view?usp=sharing",
                 description: "As the deadly Culling Game starts, Special Grade sorcerer Yuta Okkotsu is assigned to carry out Yuji's execution for his perceived crimes. ",
                 year: "2025"
+            },
+            {
+                title: "A Charlie Brown Christmas",
+                imageUrl: "https://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/Charlie_Brown_Christmas.jpg",
+                link: "https://drive.google.com/file/d/1e2UIrJdsz_0k5tp2v0EnPZiPv2ZQSTzg/view?pli=1",
+                description: "Depressed Charlie Brown seeks the true meaning of Christmas.",
+                year: "1965"
+            },
+            {
+                title: "Avengers: Age of Ultron",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTZwDJnD6VKOhM-59yWOvQByIImoNRXM640JyqBsbdHuQBCCIB9",
+                link: "https://drive.google.com/drive/folders/1FHbiGbb_e4uUj6X481bPuFDkTjntbAJR",
+                description: "Avengers battle Ultron, an AI bent on human extinction.",
+                year: "2015"
+            },
+            {
+                title: "Alvin and the Chipmunks",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRa1kNJV5hBr1UGx7D-omlc-ZFEirHsRm1wABejHryTbeqVB-H0",
+                link: "https://drive.google.com/file/d/1uCRRJZj1GAaweX996uHbF2zxPoessmGW/view?usp=share_link",
+                description: "Songwriting trio of chipmunks find success and trouble.",
+                year: "2007"
+            },
+            {
+                title: "Alvin and the Chipmunks: The Squeakquel",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQIKclaI7YW-5HSEHOAAnoCpVsBwdw3h2L6AuVhcXoNkLdI0NUt",
+                link: "https://drive.google.com/file/d/1em55qHTtdrWD4Dox9CXs9r1042TLu_cu/view?usp=share_link",
+                description: "Chipmunks face competition from the Chipettes.",
+                year: "2009"
+            },
+            {
+                title: "Alvin and the Chipmunks: Chipwrecked",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTEgBfoMKFzJllW5yivFMb2wnEhGFRo4AeE0NRBLilRSLQgVlVt",
+                link: "https://drive.google.com/file/d/1LTKy48IbusfXsl5nSNDTd0M3A8B3aPke/view?usp=share_link",
+                description: "Chipmunks and Chipettes stranded on a remote island.",
+                year: "2011"
+            },
+            {
+                title: "Annie",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg_xl-rH6yTPj1MsxsDZeTyviIsx9EnoHaP59X7lvLfwuzvIdW",
+                link: "https://drive.google.com/file/d/1GYQqHUdyWMNQJKj4Sa8SGW0ZRX32D5og/view",
+                description: "Orphan Annie is taken in by billionaire Daddy Warbucks.",
+                year: "1982"
+            },
+            {
+                title: "A Bug's Life",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFPKSIe5pF7WxApS1lyxOd4KDNPKVjrDKVBb5ipmwMxl9RVgyO",
+                link: "https://drive.google.com/file/d/1AIq4OqiMWiY9zZSayF5VID7pfTwSH6BM/view",
+                description: "Misfit ant recruits circus bugs to save colony.",
+                year: "1998"
+            },
+            {
+                title: "A Christmas Carol",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXDWCJOxSUtbc6BbusJM3RQlvLlbSnG_y2wWXaosx_oei-H-Fv",
+                link: "https://drive.google.com/file/d/1hi5sfVVAYK5AsMis11QjD5JLvL5aUY0h/view?usp=drive_link",
+                description: "Miser Scrooge visited by three ghosts on Christmas Eve.",
+                year: "2009"
+            },
+            {
+                title: "Batman",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSgVLVUDjaApRj6nQ5xpoySyv-gG_TncIbOevadg7FA3fFeWjtq",
+                link: "https://drive.google.com/file/d/1P8z8U0j5UHxqTq0taTj18TgG6nZwSKYd/view",
+                description: "Batman battles the Joker in Gotham City.",
+                year: "1989"
+            },
+            {
+                title: "Batman Returns",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFaq9WRGgu9NHhu_0eXpDUMbXhhjPW-Bqra_BjHb_hbJEV6b8B",
+                link: "https://drive.google.com/file/d/1aeYtz38ljtxCCtuVs4x0zuUh2TWKf-K6/view",
+                description: "Batman faces Penguin and Catwoman.",
+                year: "1992"
+            },
+            {
+                title: "Batman Forever",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTL0DqRvUvd4ZQWoUJfg6KHYyGVpdq5KyndpKGlKsqXaRi8lSY2",
+                link: "https://drive.google.com/file/d/1YFYuZeG8EXxNkPdB7jIIGOFm7ULi349r/view",
+                description: "Batman and Robin battle Two-Face and the Riddler.",
+                year: "1995"
+            },
+            {
+                title: "Batman & Robin",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcROm4ebXJLoTE-cWtKmdpcZZG92uL12A4osTWlaK9U_weAuBS9k",
+                link: "https://drive.google.com/file/d/1uMzsWkDLeiE0X7M0rm5EUUx3y26yzhc2/view",
+                description: "Batman and Robin face Mr. Freeze and Poison Ivy.",
+                year: "1997"
+            },
+            {
+                title: "The Dark Knight Rises",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS6_QkPWTQbSeh8eaL_1K5f91tmJAL8P5v_l0yKjqhYaU5Fba2X",
+                link: "https://drive.google.com/file/d/1ssHaJjHmu-V5fTC4_AoyABD_KYB1dkNX/view",
+                description: "Batman returns to save Gotham from Bane.",
+                year: "2012"
+            },
+            {
+                title: "Batman Begins",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQMeTfhzIBOZTh_O2j6teKDzjnaZ0vH2JfNv44KrnpCFLYMSkE9",
+                link: "https://drive.google.com/file/d/1ZegfkrD50sGDUVJ-4d9IiBpR0MTmdphx/view",
+                description: "Origin story of Bruce Wayne becoming Batman.",
+                year: "2005"
+            },
+            {
+                title: "Batman: Return of the Joker",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTmi0HcmIVAgrumOd7EX8PCpzjE7kXJNX5VAO5LsFW_awJORi4Q",
+                link: "https://drive.google.com/file/d/1wEmEjdaO0dp1nonCewG8URl6YsQOk0ru/view",
+                description: "Terry McGinnis faces the original Joker.",
+                year: "2000"
+            },
+            {
+                title: "Beetlejuice",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEURmf4DoEhFWU8HCUj7hclvfAb3iqd3t6AswSVEn6DmnypiO8",
+                link: "https://drive.google.com/file/d/1fs2-oBGADuUeepkLX2V3zxNNUstHvBTs/view?usp=sharing",
+                description: "Ghost couple hires bio-exorcist to scare away family.",
+                year: "1988"
+            },
+            {
+                title: "Beetlejuice Beetlejuice",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTSFaafiBGhb6Y7dRHfr1rmKkbSQcr3RUiZNfIArPpwOvZ9WPT0",
+                link: "https://drive.google.com/file/d/1OsCtW4NUV94utDNxmFejUFoH6euf8Ind/view?usp=sharing",
+                description: "Beetlejuice returns to haunt the Deetz family again.",
+                year: "2024"
+            },
+            {
+                title: "Birds of Prey",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSLSTWWsDJh0QSv9tgF2_GKhzaTVtn9PnjxUH1Jv8xrH2rgSDvO",
+                link: "https://drive.google.com/file/d/1AShi8tLLzbPiPO6vDokf8ew-qBbzh5Pb/view?usp=sharing",
+                description: "Harley Quinn teams up with heroes to save girl.",
+                year: "2020"
+            },
+            {
+                title: "Boyz n the Hood",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT9RKSCGfUksDY4BHPsnQnVWmpLA4QE45VcQF3bHZnQYPuShPwS",
+                link: "https://drive.google.com/file/d/1fCv2dJuy8k_NQWAxbNRxqW0_zKetF-uy/view",
+                description: "Lives of three young men in South Central LA.",
+                year: "1991"
+            },
+            {
+                title: "The Blackening",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSchewZTTpUzZ1pc0NJv5WgaxzJZIJZae8_jjUs4q8xH4yYnEdb",
+                link: "https://drive.google.com/file/d/1VBG7WXqeiZ3BSvPuWUPCL1_iF9znvPI5/view?usp=sharing",
+                description: "Friends trapped in cabin with killer game.",
+                year: "2022"
+            },
+            {
+                title: "The Black Phone",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmv-gEI1UoFDwWp8YW9q_VNl07zUd6W0hfK8m9Nx5NDJHfBMM7",
+                link: "https://drive.google.com/file/d/140S8bCV6Ht2WticzegM_jfRayS2_Mvn_/view?usp=sharing",
+                description: "Abducted boy hears past victims on disconnected phone.",
+                year: "2021"
+            },
+            {
+                title: "Coraline",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIZmgYj_evmVo3En7TAGQ59EPhVFxrU0Jbp0-JtZ9-oH2Qkfeg",
+                link: "https://drive.google.com/file/d/1TFiL16cNmQmG5pSi-s6od4xgymFqK1kJ/view",
+                description: "Girl discovers parallel world with sinister secrets.",
+                year: "2009"
+            },
+            {
+                title: "Creed",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQBPPVNJsedotEncVKYqR5kzr-64FdBMo8Yz2mM0b2vRXdqDSxt",
+                link: "https://drive.google.com/file/d/1w9nVBGOKDax-xCr-caqekW4hcjRUQWZA/view?usp=drive_link",
+                description: "Apollo Creed's son trains with Rocky Balboa.",
+                year: "2015"
+            },
+            {
+                title: "Creed II",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRK47d574YOXxZBLKbzpU5X7wdSobBbo-yX_dL5ynJwOPbmLSCt",
+                link: "https://drive.google.com/file/d/1KnW-KW6LV-fH0S0R_2sbsEKkKhSFK-OP/view",
+                description: "Adonis Creed faces son of Ivan Drago.",
+                year: "2018"
+            },
+            {
+                title: "Creed III",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRmC62EfM6OLg4sXdCnYVVqTr41rNjBX4T7TuhgQxqeHR76ONKj",
+                link: "https://drive.google.com/file/d/1j8pGyNx9PHk_Gicns9JlDaX82qBIi1_m/view?usp=drive_link",
+                description: "Adonis faces childhood friend turned boxing rival.",
+                year: "2023"
+            },
+            {
+                title: "Coco",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcThbVbZLOG2S4gJp_tVSAjaEy8WMSMvNNoxHE6of7rd5TXS5mTu",
+                link: "https://drive.google.com/file/d/194M4dGCwh1hTxVM1-_axnLSdt4trnbK2/view?usp=sharing",
+                description: "Boy enters Land of the Dead to find family.",
+                year: "2017"
+            },
+            {
+                title: "Child's Play",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQfrrvtB4lkIc-azxeU_DurGHMixcW4iOiel5ajtiinH5RYqghw",
+                link: "https://drive.google.com/file/d/1FPO2K8Oqb1O3qm1qb57NhZHhaGCvQjAz/view?usp=sharing",
+                description: "Mother gives son doll possessed by serial killer.",
+                year: "1988"
+            },
+            {
+                title: "Corpse Bride",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQiVf-tXwc3xDT66-w2GOf4P-FHwN9CRW5fQlwSwAaj7CXfXFOR",
+                link: "https://drive.google.com/file/d/1AHqrYm4cItyiEquPHJV5z3H81Cc0cCfI/view?usp=sharing",
+                description: "Groom accidentally marries a dead bride.",
+                year: "2005"
+            },
+            {
+                title: "Captain Underpants: The First Epic Movie",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSrtfW-GLrbaeCM7OI8jtAznah1Z3dSWe8K39gsurQdfFMEQD5y",
+                link: "https://drive.google.com/file/d/1BW7yv_y4uk99Nsjbc--z1beQ_bYYmUXk/view?usp=share_link",
+                description: "Students hypnotize principal into thinking he's a hero.",
+                year: "2017"
+            },
+            {
+                title: "Dungeons & Dragons: Honor Among Thieves",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjzgH8k-lQVZeIEMFty27rVHbBXuOfkLG2UWnQmkPnzwtxDdoB",
+                link: "https://drive.google.com/file/d/1iX6QbaV3Oi_yGDvqRcFvrJ4_gzIOisnT/view",
+                description: "Thieves embark on epic quest to retrieve relic.",
+                year: "2023"
+            },
+            {
+                title: "Descendants: The Rise of Red",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTLX5aXrsAHJCBA4dw1YqSaAcfQsIIwLIppgysKhi6i6iTDcd6K",
+                link: "https://drive.google.com/file/d/14uIYHn4xepm1GLF2USxyBkUE6nQfueoE/view?usp=sharing",
+                description: "Daughter of Queen of Hearts teams up with Cinderella's daughter.",
+                year: "2024"
+            },
+            {
+                title: "Dune: Part Two",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSYcWh7tLxKT9zfhqv9pWB99jZgkp0kMELvBn8iAd6nBQ7KesxS",
+                link: "https://drive.google.com/file/d/14VeNSqVtt5gcibZOfjPcjkBoasPrpiEG/view?usp=drive_link",
+                description: "Paul Atreides unites with Fremen to seek revenge.",
+                year: "2024"
+            },
+            {
+                title: "The Mighty Ducks",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSamGBMl975zktkj-1jH-E7HicNIeQbspMZw7Hti3-d7QBX2jkr",
+                link: "https://drive.google.com/file/d/1MKL3dbjVCDH4cmnPtBoT8SeQeoK8bRYN/view?usp=drive_link",
+                description: "Lawyer sentenced to coach peewee hockey team.",
+                year: "1992"
+            },
+            {
+                title: "D2: The Mighty Ducks",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTQxQPA0hACkefqwiEIH9P_Y75jBBHUov1GLO2PccOyTYTKWUIa",
+                link: "https://drive.google.com/file/d/1xqucoWKrHYKgkPtIH504nV_QWrezUcC9/view?usp=drive_link",
+                description: "Ducks represent Team USA in Junior Goodwill Games.",
+                year: "1994"
+            },
+            {
+                title: "Elf",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT08ZFpbAwAL_jQFtQfMjut1_T6oNgxRCQiOPA6S1twJLXZq_Wi",
+                link: "https://drive.google.com/file/d/1-cJP_6uvuboesHkiYPgfIg49eKvsBsF0/view?usp=sharing",
+                description: "Human raised by elves searches for father in NYC.",
+                year: "2003"
+            },
+            {
+                title: "The Evil Dead",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeHkDzNZ__URsNeXrL_1PYGF11yj-Kb1fMIhjAF3vJuuOj4iIA",
+                link: "https://drive.google.com/file/d/1E2Epz2Y7Ji5xCnKT0RtqMz7r0ENBT4YB/view?usp=drivesdk",
+                description: "Friends release demons at remote cabin.",
+                year: "1981"
+            },
+            {
+                title: "Evil Dead II",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1j6j2DwCb5CGZdJWBsecYkNC9OmXP_9CbrSk9HvUn5QdPU9Ns",
+                link: "https://drive.google.com/file/d/1BklK_O-rTRNrk0q7xOhXt_LEiBmmYan8/view?usp=drivesdk",
+                description: "Ash battles demons in cabin again.",
+                year: "1987"
+            },
+            {
+                title: "8 Mile",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQKj1gi40z19Q1xgB8HDqUruRT0z9PtXjT7rs1iy9Zj-vgf3BBF",
+                link: "https://drive.google.com/file/d/13KF2oQ-b1WRvbjL0vMMAMlI0Vj8TYBuM/view?usp=sharing",
+                description: "Rapper tries to launch career in Detroit.",
+                year: "2002"
+            },
+            {
+                title: "Friday",
+                imageUrl: "",
+                link: "https://drive.google.com/file/d/1SKE9sQ-DnHRRVGxU10Qk2QJ1Ws2jvv5M/view?usp=share_link",
+                description: "Two friends spend Friday smoking and dealing with neighbors.",
+                year: "1995"
+            },
+            {
+                title: "Finding Nemo",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmPlQJ0P8q0Th4Widyxcr61BI9Ylv-8ZMwBgOxRTZMX_N4W8oO",
+                link: "https://drive.google.com/file/d/1jP7PoHapLf_S_n75Afdc0RvzSwRqPcwm/view?usp=sharing",
+                description: "Clownfish searches for captured son.",
+                year: "2003"
+            },
+            {
+                title: "Friday the 13th",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRCJMiZzQl60gseXR0r81HkVP4WMO0Oz5KBWLXuT-zkqm46hPIL",
+                link: "https://drive.google.com/file/d/1Tu0WxRUC-gADzYFEnSvudZ3MZ7Y735jH/view?usp=drive_link",
+                description: "Counselors murdered at Camp Crystal Lake.",
+                year: "1980"
+            },
+            {
+                title: "Friday the 13th Part 2",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ2K7lI4QBMqnIwqUFvcRWsgUtyylKtqE2GaWC8V0yVmUxr0hod",
+                link: "https://drive.google.com/file/d/1ROenMVwRyMGW0EIsf4Xg67EvRAAT5kcX/view?usp=drive_link",
+                description: "Jason Voorhees continues killing spree.",
+                year: "1981"
+            },
+            {
+                title: "Friday the 13th Part III",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTw6HUOhY4svwFpBOm6ettw5QeVvCbzz9dLo9Bv0oKEqFtGCPBF",
+                link: "https://drive.google.com/file/d/1Ak82TmSBG3_lpbUgsDq22AcZ5gzGvTTB/view?usp=drive_link",
+                description: "Jason terrorizes bikers and teens.",
+                year: "1982"
+            },
+            {
+                title: "Friday the 13th: The Final Chapter",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTLWqItlMh8EExhC5Qj0uxTsOYtS4wPqb0jXe3SsLmYHZLpIdck",
+                link: "https://drive.google.com/file/d/1M2OD-EPO3AjkzwYNvJLXCNe4B7y6bmM6/view?usp=drive_link",
+                description: "Jason returns to Crystal Lake morgue.",
+                year: "1984"
+            },
+            {
+                title: "Friday the 13th: A New Beginning",
+                imageUrl: " https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRBSz0VcvLfe196y7AvwiNI7oLvSePtZES_uxUTRv8-loYoNnl_",
+                link: "https://drive.google.com/file/d/1cB43qNpCCf90tHch87EC4hBywV0Ao5-V/view?usp=drive_link",
+                description: "Copycat killer at halfway house.",
+                year: "1985"
+            },
+            {
+                title: "Friday the 13th Part VI: Jason Lives",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQllcCCiLuWG-a0-dcYm2PdBGYbsgxh_rStL1DCAH2iPQnuBjg_",
+                link: "https://drive.google.com/file/d/1Yug3RMr7f8z5P7TjxWgRN0geoWL7UnU4/view?usp=drive_link",
+                description: "Tommy Jarvis accidentally resurrects Jason.",
+                year: "1986"
+            },
+            {
+                title: "Friday the 13th Part VII: The New Blood",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl2b73WIdF25DGByhxqolp6gHbGiErZ3benE7HIZ84X99F1g_P",
+                link: "https://drive.google.com/file/d/1CG5Te-vXcvPrEuJtQsN3HZigm6bz33Os/view?usp=drive_link",
+                description: "Telekinetic girl accidentally releases Jason.",
+                year: "1988"
+            },
+            {
+                title: "Friday the 13th Part VIII: Jason Takes Manhattan",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTzT4qnbBPOYOTNORJOCmR8_F69iYLStaCSjBhdEV8XsVrHF8YP",
+                link: "https://drive.google.com/file/d/1oRePBRxnrhk8feVEE3OtTNnE0Y70a4ZN/view?usp=drive_link",
+                description: "Jason stalks graduates on ship to New York.",
+                year: "1989"
+            },
+            {
+                title: "Jason Goes to Hell: The Final Friday",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSjbY6O1EVMWqooPvVojTr0JF6whQomlq6qNFZ1YKHuWWJvUY3Z",
+                link: "https://drive.google.com/file/d/1mvOr1kr0lX3XzbYIVJps-Mkz7UxjLUhP/view?usp=drive_link",
+                description: "Jason's spirit possesses others to kill.",
+                year: "1993"
+            },
+            {
+                title: "Jason X",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqqMkllrTF2Q0vVPkLNS2RtUCKIvf98OeZYtg3BDnFq8_Xsg_f",
+                link: "https://drive.google.com/file/d/1f_m_NTsYbbVFh1FBqXC1TOuS_4Yp6uSd/view?usp=drive_link",
+                description: "Jason frozen and awakened in future space.",
+                year: "2001"
+            },
+            {
+                title: "Frozen",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRtOzQ7EBgKQEtfGoCrVqTgNqCgvrvvqZiDGMwIzr9Zpl1YmGEt",
+                link: "https://drive.google.com/file/d/1XIuN4Zp35mW0iN4p0ME5APxH18-6Zqft/view?usp=drive_link",
+                description: "Princess sets off to find estranged sister with icy powers.",
+                year: "2013"
+            },
+            {
+                title: "Frozen II",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1TZavriAaHssS7E7_s1iM5QNLDQiGemN_okufuqpCb3eIOl3o",
+                link: "https://drive.google.com/file/d/1hpUpKEdeT9ta-8FjSpMUAXw17E-8uwIY/view?usp=drive_link",
+                description: "Elsa and Anna travel to ancient forest to find origin of powers.",
+                year: "2019"
+            },
+            {
+                title: "Good Burger",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTJMe_giUYZnRRte0Ffjp-rc99Spq2_VOF6WA4gjh0blDYqdJyy",
+                link: "https://drive.google.com/file/d/1jucPocCb8aq23Bh-GFLcniAk-k5UU-wC/view",
+                description: "Teenagers try to save fast food restaurant from closure.",
+                year: "1997"
+            },
+            {
+                title: "Good Burger 2",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6fOZznl8uNSlVMuRL_9rhjv-dKMLj7mKcEp8VN6VgKODD77Jw",
+                link: "https://drive.google.com/file/d/1TOjPbqSF5UqnPrn1zFqEWvkUeBNiyMax/view?usp=drive_link",
+                description: "Dexter and Ed reunite at Good Burger.",
+                year: "2023"
+            },
+            {
+                title: "Ghostbusters",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTprKyBsyOnMx2akR5sMxaQI-ZW-Azqq39biFuowDPJX6eaAFh2",
+                link: "https://drive.google.com/file/d/1Kur_TXv1AOx8hhs0qGc_IwZXKmWvD6Y7/view",
+                description: "Parapsychologists start ghost-catching business in NYC.",
+                year: "1984"
+            },
+            {
+                title: "Grease",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTOO07bZ2gSzP6RzqDJFUqm0FsgtwVNa07gU5Rcu2_kXNPUFJ1u",
+                link: "https://drive.google.com/file/d/1W77S931ShuhZ2RVeiNrfdQQUcR4pKsD0/view?usp=drive_link",
+                description: "Good girl and greaser fall in love in 1950s.",
+                year: "1978"
+            },
+            {
+                title: "Garfield: The Movie",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTnvG8s3BGX6PVrqXcH-X22X9aXb2Wvr7GfaUa68Upf_r6Xhjsp",
+                link: "https://drive.google.com/file/d/1xMRDhscsmtcrECXXuOsqpAADTHJ0FxGS/view",
+                description: "Lazy cat must rescue dog Odie.",
+                year: "2004"
+            },
+            {
+                title: "Hidden Figures",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQQF8_Sg5Rt8Bjl274YHnB4nT2q0o8bW6TCFYAucbtCtnyNyC9H",
+                link: "https://drive.google.com/file/d/1sfjv_SEQZQ4QPgPAeS8xckKHORr3gLiG/view",
+                description: "Black female mathematicians at NASA help launch astronaut.",
+                year: "2016"
+            },
+            {
+                title: "Hotel Transylvania",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSu1KjAyHvPR6U9qTaIN-XFOLRG5ke6KBWiIYEBsbKCY9KSUOj8",
+                link: "https://drive.google.com/file/d/1gZ4FVX5GLCSv2-i_sabXWhgl9u_3FeOB/view",
+                description: "Dracula operates high-end resort for monsters.",
+                year: "2012"
+            },
+            {
+                title: "Hotel Transylvania 2",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTf8LX6seZ1pdRKRwDPo7oZY-8dua0RuGOCcEQ6G_bAGSfeb1IN",
+                link: "https://drive.google.com/file/d/1LZI5E52J_R_Cx6f3EXLl-BAn6vuhUduD/view",
+                description: "Dracula worries his grandson isn't a vampire.",
+                year: "2015"
+            },
+            {
+                title: "Hotel Transylvania 3: Summer Vacation",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRyhcdiIgxpoGceo0W9XMQWWgj4IzD58vi4q8jLbtSulRZveYRF",
+                link: "https://drive.google.com/file/d/1aS3rHee1w5zNTGGmSFM57DSVlC1hSvIs/view",
+                description: "Monster family goes on luxury cruise.",
+                year: "2018"
+            },
+            {
+                title: "Hotel Transylvania: Transformania",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgEtsiUlUoB6Rp3uI_RhG-T20y7WvWEGL8uz_TK8ka5BD7gVlV",
+                link: "https://drive.google.com/file/d/1_Ujbv8ONdcmV8TrYw8WzTwdD93deiiZp/view",
+                description: "Dracula and friends transformed into humans.",
+                year: "2022"
+            },
+            {
+                title: "Hercules",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTiFBHW_mtPYUb1oaR5oLENwqhP-3s3bo2E58JZkuoIP1lUN8K-",
+                link: "https://drive.google.com/file/d/1sXad7VvXVn7qIilwdspq5RtjmInpa7mQ/view?usp=sharing",
+                description: "Son of Zeus must prove himself a true hero.",
+                year: "1997"
+            },
+            {
+                title: "Hamilton",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT-pSnQ05mF5LOfsau5VE_gDmQoZERJixfIpUJd86krYZ02wkyQ",
+                link: "https://drive.google.com/file/d/1c47Nko9vdJfe-KKF4nkpd-U-aMT_ZaQe/view?usp=sharing",
+                description: "Musical about life of American Founding Father Alexander Hamilton.",
+                year: "2020"
+            },
+            {
+                title: "Harry Potter and the Sorcerer's Stone",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQcZT3sdwr1NiJytvJb95icJJKPWpWRNv35l_uuVYxjlzBJS-hb",
+                link: "https://drive.google.com/file/d/1bJMKhvzwuVfAYECLheyA_h38T9oYvkgX/view?usp=drive_link",
+                description: "Orphan discovers he is a wizard and attends Hogwarts.",
+                year: "2001"
+            },
+            {
+                title: "Harry Potter and the Chamber of Secrets",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5CR-nVjDTALNu4lZS1-6e5rU70K7kG1luvw2NDpfpKPI40MJ1",
+                link: "https://drive.google.com/file/d/1AC6j5pNVDl6fcvdT3e3hsAUkkBU-o3xD/view?usp=drive_link",
+                description: "Harry ignores warnings not to return to Hogwarts.",
+                year: "2002"
+            },
+            {
+                title: "Harry Potter and the Prisoner of Azkaban",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT5NG-dDSzu9O4NRE8ZtIY1LiuoF3cYIBPy4MzXxK9UVzxnn4Xx",
+                link: "https://drive.google.com/file/d/1Zu15ykGtc1xxKIKfAeUV_L1vAbCt--zO/view?usp=drive_link",
+                description: "Harry learns about escaped prisoner Sirius Black.",
+                year: "2004"
+            },
+            {
+                title: "Harry Potter and the Goblet of Fire",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQynNka8fnGlaaWkc8FP2VD1Zu8kldj6GqQL4XH3UFZjWr5xT4r",
+                link: "https://drive.google.com/file/d/1yYxqmSv99zFBsJkT0cZYd4C4PTNC9bUU/view?usp=drive_link",
+                description: "Harry competes in dangerous Triwizard Tournament.",
+                year: "2005"
+            },
+            {
+                title: "Harry Potter and the Order of the Phoenix",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTT0_CEAvkHUMP09LzfSOwkPQ87R70DH51cqpi8LAD9Y-lJlZaX",
+                link: "https://drive.google.com/file/d/1eVK_s8Sp-Gvv1J65ocyLbwyqC7vkuoFK/view?usp=drive_link",
+                description: "Harry forms secret group to practice defense magic.",
+                year: "2007"
+            },
+            {
+                title: "Harry Potter and the Half-Blood Prince",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRUzubDECMqS6BWV8RT3r1BWxinjYWVXplxXIVVAdpbvaP6iJhJ",
+                link: "https://drive.google.com/file/d/1QfAnvJtU3oR7IV2CrN2qRx4vFThjbbe1/view?usp=drive_link",
+                description: "Harry discovers old book with mysterious notes.",
+                year: "2009"
+            },
+            {
+                title: "Harry Potter and the Deathly Hallows – Part 1",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuKvH7JMJC0qJ4YGX4h_O5hObauagk90fiJconjJ4fQ6S32SPI",
+                link: "https://drive.google.com/file/d/17UlhT2qVX10O8AksEEdWuaUqoVF78-oH/view?usp=drive_link",
+                description: "Harry, Ron, and Hermione hunt for Horcruxes.",
+                year: "2010"
+            },
+            {
+                title: "Harry Potter and the Deathly Hallows – Part 2",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRmfY22YsznTZ7ocT4Q4f_13aoowRRhrtssBb6QIE9vWjvbvyqu",
+                link: "https://drive.google.com/file/d/16jXkeJny6L8MrC_7issz4AtANAzNDJqw/view?usp=drive_link",
+                description: "Final battle between Harry Potter and Voldemort.",
+                year: "2011"
+            },
+            {
+                title: "High School Musical",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSDXTpRrd79ne8KoMU-Z2FFD0uXpzc_Yp-RsQ9eN61_nwIbUwH_",
+                link: "https://drive.google.com/file/d/1tg84YPuUqFUMlVpGzjkhoEehBHV8W9ZF/view?usp=drive_link",
+                description: "Basketball star and brainy girl audition for musical.",
+                year: "2006"
+            },
+            {
+                title: "High School Musical 2",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSlYMhPNmBLnRZrqjqEkHeWJi31TmnGlKH0iD79dIoBo-mhy_AR",
+                link: "https://drive.google.com/file/d/1iE1foAQrNAMJJg3aOd37GECWBkXmAEi7/view?usp=share_link",
+                description: "Students work at country club for summer.",
+                year: "2007"
+            },
+            {
+                title: "High School Musical 3: Senior Year",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ3FsS105Ir9OHlK0xZ1XtDDsSG8cBkNwNLg1UoMmxf-c9uSwuG",
+                link: "https://drive.google.com/file/d/1aGq7saEhWkyACQlOmGIAmylSTeEOL864/view?usp=share_link",
+                description: "Seniors prepare for spring musical and graduation.",
+                year: "2008"
+            },
+            {
+                title: "Hairspray",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ7Wn0kgDUD-KKuzBqlHNg3Qyto8F6mDsaHR8d0hJg8JjtICX_1",
+                link: "https://drive.google.com/file/d/12X1rfnx0NrQUAhDRLRQxKdaqvAi_LqJa/view?usp=sharing",
+                description: "Teen fights for integration on TV dance show.",
+                year: "2007"
+            },
+            {
+                title: "I Know What You Did Last Summer",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbwG4c7g7A3b8b5tMfuy0HjmipBt6N_CSQMaeUyGMiwc3HO_dJ",
+                link: "https://drive.google.com/file/d/1sSPtR3lcvTcjtDHvv3sOHw8qHbuaeQY1/view?usp=sharing",
+                description: "Teens stalked by killer after covering up accident.",
+                year: "1997"
+            },
+            {
+                title: "Indiana Jones and the Dial of Destiny",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQWsCXahFpkdsfQRNJ4-OBolI2eUZ8qro3DcYjd3tmQfRcmyQw8",
+                link: "https://drive.google.com/file/d/1BuNmXFmhFBoSKvcnbi5W1_hQkVLTrzwu/view?usp=sharing",
+                description: "Indy races to retrieve dial that can change history.",
+                year: "2023"
+            },
+            {
+                title: "The Instigators",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTVxkEHSiMBgJZU66H3TUvTEMuStkAgVs7RKQqi8pHUu4BFl_NF",
+                link: "https://drive.google.com/file/d/1LPBpsJpE56zpdSZUi8f6tEkHPzaMceYo/view?usp=drive_link",
+                description: "Two robbers go on run with therapist.",
+                year: "2024"
+            },
+            {
+                title: "Thirteen",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRZr-6NLAoYeUpmlG5p8Wfg9fZeUnGSwn6pgLcbCp3SS7TUZpel",
+                link: "https://drive.google.com/file/d/10HMzcDDav-A9xTydLioxLEfcou7SICYL/view?usp=sharing",
+                description: "Teen girl descends into drugs and crime.",
+                year: "2003"
+            },
+            {
+                title: "Jurassic Park",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTcHXFtCmBOq73akbRR6lFVKje6ky8OB1KRay6qRKvYRWHT09Yz",
+                link: "https://drive.google.com/file/d/1QGXy2lJU4B0z4s7zPSOLizN8jMHfnZQm/view",
+                description: "Dinosaurs escape enclosure at theme park.",
+                year: "1993"
+            },
+            {
+                title: "Joker",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQc373yboAw6UaeuzJMGhgSN6JubsGFMgWOA_XC3jtbxvPuZ7LH",
+                link: "https://drive.google.com/file/d/1czY5u0zA3TPQh97OFth_1GkaK9nUo-Lq/view?usp=drive_link",
+                description: "Failed comedian descends into madness.",
+                year: "2019"
+            },
+            {
+                title: "Joker: Folie à Deux",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS4BJI74r_5SFzhoWMG3dO63aS9ZKmmxDvurw2VPZxkQIzW6aoN",
+                link: "https://drive.google.com/file/d/1wiipkIcZ8r4itPij4w7CpOvC6uz-2wCS/view?usp=drive_link",
+                description: "Joker finds love and music in Arkham Asylum.",
+                year: "2024"
+            },
+            {
+                title: "Jingle All the Way",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR_D3-200sB-uftpjO5ou3DG7nSr4881WrPwa_vSJS_qvIZZjy8",
+                link: "https://drive.google.com/file/d/1gdQba6i5IcBe7_a4eyU75cuAkbyJEpt4/view?usp=share_link",
+                description: "Father desperately searches for Turbo Man doll.",
+                year: "1996"
+            },
+            {
+                title: "John Wick",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT2gCKp_FAhhyFwULWedj5TJ3v997GtTNmnzI4a528rolv4Nt_v",
+                link: "https://drive.google.com/file/d/1o-u405CtHzkRFAjDRxnlwIV1MKzmpQYa/view",
+                description: "Retired hitman seeks vengeance for puppy.",
+                year: "2014"
+            },
+            {
+                title: "Kill Bill: Vol. 1",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQJfAmi0Yv1yC5KiIjnwENJR7xWFpH_R8ChhpcWmQaocwqEsGaf",
+                link: "https://drive.google.com/file/d/1O7IPP73pLpqj6qH4mfqjDhwNbeDMSU7N/view?usp=drive_link",
+                description: "The Bride seeks revenge on assassination squad.",
+                year: "2003"
+            },
+            {
+                title: "Kill Bill: Vol. 2",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkS01zo_LpuiaTbp7Pu7XbAoFGW4SRSaw6ndBWYc5jnC2zQtGr",
+                link: "https://drive.google.com/file/d/1p5DfNhB87k8bE-OQi7ELONmPkIhJIjC-/view?usp=sharing",
+                description: "The Bride continues her quest for vengeance.",
+                year: "2004"
+            },
+            {
+                title: "The Karate Kid",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSWTVXH7T24IU2aMO2KCl09NAkYuoiS81MTP5Hvw86hNkndTTb6",
+                link: "https://drive.google.com/file/d/1tMJAooF8bG9ghav9CU4GPYF3t07ySMXL/view?usp=sharing",
+                description: "Teen learns karate from handyman to defend himself.",
+                year: "1984"
+            },
+            {
+                title: "Labyrinth",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTc3VE1kltRLL2RVyE75CJQy-BNEBnYLefCUAttHONu8nwP1o6n",
+                link: "https://drive.google.com/file/d/13TgTB15A99LLWI_ROcci18FT8ijuq8RC/view?usp=drivesdk",
+                description: "Girl navigates maze to rescue baby brother.",
+                year: "1986"
+            },
+            {
+                title: "Leprechaun",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN-98t3jLkkzRPUiU83QfWpLGjtk52gFDLmNellsDB2j-YauaJ",
+                link: "https://drive.google.com/file/d/1pktrP3sKl90GQnM6wpRmxqlxgkv4sYaP/view?usp=drivesdk",
+                description: "Evil leprechaun searches for stolen gold.",
+                year: "1993"
+            },
+            {
+                title: "Leprechaun 2",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-R-JfzR64CD7aSLKaW2DWJD2ue3k0sIATw19GJ3IxtA0_ENfh",
+                link: "https://drive.google.com/file/d/1gVMT8Aad2F51JdRYkjwkTw7tH88zgZxg/view?usp=drivesdk",
+                description: "Leprechaun seeks bride on thousandth birthday.",
+                year: "1994"
+            },
+            {
+                title: "Leprechaun 3",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7RMQU0e4Tl6hbf_D8HbMP-twYteklmOgXnqRVbX3xMRL0vbDX",
+                link: "https://drive.google.com/file/d/1Tzy2eFt1almlNxZkXfiOVvA-hkGLCvch/view?usp=drivesdk",
+                description: "Leprechaun terrorizes Las Vegas.",
+                year: "1995"
+            },
+            {
+                title: "Leprechaun 4: In Space",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSAdWzqh0TdZcph7yVA8thcVhZuSD8IpM6aVK8_cGGpRy5BP4sM",
+                link: "https://drive.google.com/file/d/153R-JCEBqmgs3WrcHkEabTynjwa0Ryxs/view?usp=drivesdk",
+                description: "Leprechaun abducts alien princess.",
+                year: "1997"
+            },
+            {
+                title: "Miraculous World: New York – United HeroeZ",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRCjvDqFCJXTkYOUZUfrcV3Oerm69alJf8N5lqc3s5LtAXWRgz3",
+                link: "https://drive.google.com/file/d/1jTfxqP7BrcbIv5SVAxHP7FFIdt8A51ZJ/view?usp=share_link",
+                description: "Ladybug and Cat Noir visit New York City.",
+                year: "2020"
+            },
+            {
+                title: "Maleficent",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRpRgqNe-M0A4Q7RxPDug03C5tTdmxIyPZuvauntFLu8odAg5cA",
+                link: "https://drive.google.com/file/d/1yx66GkjBaCwjcMNoovV8w9yPNlZ7Q4Gu/view?usp=drive_link",
+                description: "Untold story of Disney's most iconic villain.",
+                year: "2014"
+            },
+            {
+                title: "Mean Girls",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgbjtg_EtFEK89VttC4Zu4y4asqjtIb02DGiu1kJtwMCFvH289",
+                link: "https://drive.google.com/file/d/1Hab49OuPK37MngOtQolLsVIzJ4AK9cNA/view?usp=sharing",
+                description: "New girl navigates social hierarchy of high school.",
+                year: "2004"
+            },
+            {
+                title: "Moana",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTq7M1d9ljrLzBxmn-vxceGdGGgoD8vg6ITrscZYUrHPANgz7-E",
+                link: "https://drive.google.com/file/d/1Zkep5HZHk6daQhYjAN5Y9fBGy-K9dCu3/view?usp=drive_link",
+                description: "Polynesian teen sets sail to save her people.",
+                year: "2016"
+            },
+            {
+                title: "Mulan",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRTp9CxshAq-rdiP3GQLuYN-xrDh9RMiW7ubZIvf4z79VOEdlpR",
+                link: "https://drive.google.com/file/d/1ye-qQ6ZmBW98Xab4sjDJw1oxmUw_piBz/view?usp=sharing",
+                description: "Girl disguises herself as man to fight in army.",
+                year: "1998"
+            },
+            {
+                title: "Norbit",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRqOuaBShpD-3pcGaBsL5bDgzNfr898Mu029eYaO9OXCWu3zuDO",
+                link: "https://drive.google.com/file/d/1PUIzjrlfRen4M7CqwIcmVdABNBpMWt5s/view",
+                description: "Meek man trapped in marriage to monstrous woman.",
+                year: "2007"
+            },
+            {
+                title: "Mighty Morphin Power Rangers: The Movie",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSRv4uj6AR7uuyy0YyYh7zFqdJ4UkiFGk1dD-XhEgQS_Oi_KuBG",
+                link: "https://drive.google.com/file/d/1e-f3lzrTrRV3iVT7Ft-KLSd6fHbyUT2i/view",
+                description: "Power Rangers lose powers and must find new source.",
+                year: "1995"
+            },
+            {
+                title: "The Peanuts Movie",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSpi_GztV05NV6T_X8SJ38nft97S_qLTIA-p-OM6znkNpAIkXvV",
+                link: "https://drive.google.com/file/d/16Ze08q_XKmANPNYreDVZnEbZEZTSLwOa/view?usp=share_link",
+                description: "Charlie Brown tries to impress Little Red-Haired Girl.",
+                year: "2015"
+            },
+            {
+                title: "The Polar Express",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRh2MtEDbfjWSqt7sSfkoro22E5JxOvU_1ShcBP-VJDPXze5LG3",
+                link: "https://drive.google.com/file/d/19KYYKqlEQyEuUTUQv32U53WoIDvKTRrx/view?usp=sharing",
+                description: "Boy takes magical train ride to North Pole.",
+                year: "2004"
+            },
+            {
+                title: "PAW Patrol: The Mighty Movie",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSPMgZRFdZuJnoNp9ZRzZAxBUF7HknfjBZFFpqp7jwgjBS2jZuw",
+                link: "https://drive.google.com/file/d/13PKSmF1dnXkByra1B5NLarzB_ux4cU0T/view?usp=drive_link",
+                description: "PAW Patrol pups gain superpowers from meteor.",
+                year: "2023"
+            },
+            {
+                title: "Power Rangers",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSXjLPkoQZ-nzSNezpXY1Mjhw2PJ08kRJ3GD4EjQZNbU08Koh6H",
+                link: "https://drive.google.com/file/d/1bAS1zgiXsYJVXzhra9Fg2PHWBbVDU8lJ/view?usp=sharing",
+                description: "Teens discover they are only hope to save world.",
+                year: "2017"
+            },
+            {
+                title: "Ready Player One",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXABLPrBzGZLTKsr-ljq0DZep8RlVArEiQ7zKeHVj9pQCYMV1N",
+                link: "https://drive.google.com/file/d/1vCPMrNGFL3Kyf1J4qaySzKnACtg8eAqj/view?usp=drivesdk",
+                description: "Gamer searches for Easter egg in virtual reality world.",
+                year: "2018"
+            },
+            {
+                title: "Rio",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRNwt48_T7xAOZ2RiDpF-ALaS1uCiUhvUlzGG7gCCcLY7YNCCn8",
+                link: "https://drive.google.com/file/d/1DIHKkPm7JVwOWWgM5RvYgOhAbFXWOAhf/view?usp=share_link",
+                description: "Domesticated macaw goes on adventure in Rio de Janeiro.",
+                year: "2011"
+            },
+            {
+                title: "Rio 2",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVzgpmxZOMe7dBUXw6F8EfNIxXiWxZcdc_m0vAJ2vAWYmFdKhW",
+                link: "https://drive.google.com/file/d/12oiUUNl2_I7l1GsXLD74FA0wJlrRX7v_/view?usp=share_link",
+                description: "Blu and family travel to Amazon rainforest.",
+                year: "2014"
+            },
+            {
+                title: "Real Steel",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB-CEqDyKq4ZlSvDj8w79lfBDZ0OQRO574m4djlt5RxkH9gd1e",
+                link: "https://drive.google.com/file/d/1zamnVJgx2cGGc4r2w9jWiEqRIG9WJREE/view",
+                description: "Former boxer trains robot fighter with son.",
+                year: "2011"
+            },
+            {
+                title: "Ratatouille",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQRUYn6k1MCkCJiy9cpwzwrmH272y6kt_GomQxiwwmqhyu0QXED",
+                link: "https://drive.google.com/file/d/1kjVDdXtZ3-O0SndMHeIwMXe4jNZJ4w2C/view?usp=sharing",
+                description: "Rat dreams of becoming a chef in Paris.",
+                year: "2007"
+            },
+            {
+                title: "Ron's Gone Wrong",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB6qRbfbRP_khKgg-MqS6n4GyNceZ55VC4fnj_ABsU-dQ_Xqj_",
+                link: "https://drive.google.com/file/d/1nKl-oBgmnWygnF7xm6CfSWikp22ElVZY/view?usp=share_link",
+                description: "Boy befriends malfunctioning robot.",
+                year: "2021"
+            },
+            {
+                title: "Rambo III",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSsTzJT8w-5JhuFp-yrjjibl89saPuRaBq0XveackrhbCl6EfLe",
+                link: "https://drive.google.com/file/d/1KDIkm6VSTb_QrvSb8Gvbus8z-L3BGySI/view?usp=sharing",
+                description: "Rambo rescues mentor from Soviet forces in Afghanistan.",
+                year: "1988"
+            },
+            {
+                title: "The Rugrats Movie",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiOAeMAk2uW2KU9usy3dKfEk46zjkLEi9u25_VnKUwXUwnIg0o",
+                link: "https://drive.google.com/file/d/157WJal3P65gdyFlDbP4DcRfNku-Oursg/view",
+                description: "Rugrats get lost in forest with new baby brother.",
+                year: "1998"
+            },
+            {
+                title: "Rugrats in Paris: The Movie",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1Ns5Kfrc1vUiFLOrXD3uanfUqTgt5J3jjO2BD3S7G5yZ6DNU",
+                link: "https://drive.google.com/file/d/1w3PdNgN0AXDmG1CYRv7v0kMYrC1Ywu_0/view",
+                description: "Rugrats travel to Paris for wedding.",
+                year: "2000"
+            },
+            {
+                title: "Romeo + Juliet",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQmmA175WYmKPVV6XjJd8DFeJ8dmt7iDoSQs2rRxx3yx-uzZAXK",
+                link: "https://drive.google.com/file/d/12_qQEuH75vHIqFjIwmDlawqQmav5RG-u/view?usp=drive_link",
+                description: "Modern retelling of Shakespeare's classic tragedy.",
+                year: "1996"
+            },
+            {
+                title: "Rush Hour",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoqWyMA-oJ1QcTyS_7Uj461RDVzXpWOIswGRsrg4jQTKY-BWTh",
+                link: "https://drive.google.com/file/d/1ZcBKqjCxKjyddbVmb8sdOtCo-14v6fTp/view?usp=drive_link",
+                description: "Hong Kong detective teams up with LAPD cop.",
+                year: "1998"
+            },
+            {
+                title: "Rush Hour 2",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV3GU_IDg_CWuOPL7VjJ7wZfLiks4euuhSXaVx7xa3qTd2uSJC",
+                link: "https://drive.google.com/file/d/1mnNpYvlG_QNVxpq8LniD4hOPLPinnBEP/view?usp=sharing",
+                description: "Detectives investigate triad leader in Hong Kong.",
+                year: "2001"
+            },
+            {
+                title: "Rush Hour 3",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT3JA11_F2PmlB8GtzIYc7R_EH4mQ0BxFEH15eu71VyiLsONOs2",
+                link: "https://drive.google.com/file/d/1fIOuM1hV1Ga0O6eQrhvozLNc35Rw-XB8/view?usp=sharing",
+                description: "Detectives travel to Paris to protect witness.",
+                year: "2007"
+            },
+            {
+                title: "Saw",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQb6EWw3r6jNkS1hOAhWEMBXIgDq1yJWn15dJSwnkSgm2B6Yc4B",
+                link: "https://drive.google.com/file/d/1nZn3QfKiiZgg4nx3GRA4-K6obuJLlepm/view?usp=drive_link",
+                description: "Two men wake up in bathroom chained to pipes.",
+                year: "2004"
+            },
+            {
+                title: "Saw II",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQRwJBLJjiLwk3Iiq_WHYRtf_kbs-jK_f54IEs9qpS3WDMRzv2L",
+                link: "https://drive.google.com/file/d/1eQLt5qFXYBjdvN05Jryfkc0MUF6eLZfS/view?usp=drive_link",
+                description: "Detective searches for Jigsaw killer's lair.",
+                year: "2005"
+            },
+            {
+                title: "Saw III",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJBYrNm7WZU0_PGxF7HVV0yqNCY8wWHGtjg0uRRS2n6W0F2DDe",
+                link: "https://drive.google.com/file/d/1afqsupX8WtCzEt3AbeKe_Ffwfb4oXzsa/view?usp=drive_link",
+                description: "Jigsaw keeps doctor hostage to keep him alive.",
+                year: "2006"
+            },
+            {
+                title: "Saw IV",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR08gfuHHprttVGmGve8B2zABdPys90DeBIy0LObnePgXQQIYRm",
+                link: "https://drive.google.com/file/d/1XmKqBrU4I1QqPnKG5WGpVImeTFvBjy0n/view?usp=drive_link",
+                description: "Jigsaw's games continue after his death.",
+                year: "2007"
+            },
+            {
+                title: "Saw V",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTZeTRVXSqiPGCezubN3vhobUFMAa0MHeESq9rqVtJEI3kaD35X",
+                link: "https://drive.google.com/file/d/1Rng7E07HcEPZmWvxYHk2gnrhArp_0MsS/view?usp=drive_link",
+                description: "Hoffman tries to protect his secret identity.",
+                year: "2008"
+            },
+            {
+                title: "Saw VI",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjTqOOAuozaHlZYWxf9aXCDNMPVMVB55b3oOHqalI50-9iDCTn",
+                link: "https://drive.google.com/file/d/1v_fqql_iAIszlP5qG5735UX8NVGXXFud/view?usp=drive_link",
+                description: "Insurance executive tested by Jigsaw's game.",
+                year: "2009"
+            },
+            {
+                title: "Scrooged",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT17VEfXZPdkqmtWv3Qqdyp9T2Tm1TpJNfw0Ct5j08K9_QayuhT",
+                link: "https://drive.google.com/file/d/1zmDJ-0X5qV2niOZe7ZsL_sPk6w7XvDnr/view?usp=drivesdk",
+                description: "Modern retelling of A Christmas Carol with TV exec.",
+                year: "1988"
+            },
+            {
+                title: "Scream 7",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFeYb9DChjSMlrefx6Di1cDkQ003gLICOVe63jn7xUB165_JQZ",
+                link: "https://drive.google.com/file/d/1RtaN8_Xsodf4Ub5K_yRp6eOx62tbj7Ap/view?usp=drivesdk",
+                description: "Ghostface returns to terrorize survivors again.",
+                year: "2026"
+            },
+            {
+                title: "Shazam!",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR4sh8JNl4f6f7KUmSWExoj6G13bJS8Vle44d5A_p9vd_qO90kz",
+                link: "https://drive.google.com/file/d/111DMVHuhGLLFunQ1ixi_OG8ui0ckXbfU/view?usp=share_link",
+                description: "Teen boy transforms into adult superhero.",
+                year: "2019"
+            },
+            {
+                title: "Shazam! Fury of the Gods",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTvoNq1HXBYEV-SPdP79CLBLxZ377JOW_77QrA9GG6mts7rkKeg",
+                link: "https://drive.google.com/file/d/1LC17KNt1pxG1zJ43CwIBNGXaCN3cmLPc/view?usp=share_link",
+                description: "Shazam family fights daughters of Atlas.",
+                year: "2023"
+            },
+            {
+                title: "Suicide Squad",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcBMCsMHdRilWB2GfG2gll0D8RKLuXBj7lOd5Q-pXD2T46QVia",
+                link: "https://drive.google.com/file/d/1m2m6kudeN5pivaeCWfMR88xXEyZg8nFK/view?usp=sharing",
+                description: "Imprisoned supervillains recruited for black ops mission.",
+                year: "2016"
+            },
+            {
+                title: "The Suicide Squad",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTrNVJ6rICHStjDqhu0ZCUD1noA3_1dD0nUxPJhM6mccDKl8XAX",
+                link: "https://drive.google.com/file/d/11nKqV7QKkATlvO7pt8eHlfS32rSHeOVZ/view?usp=sharing",
+                description: "Task Force X sent to destroy Nazi-era prison lab.",
+                year: "2021"
+            },
+            {
+                title: "Star Wars: Episode II – Attack of the Clones",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQDrLeiB4Fv66hgfkgsosdiFoDyAt9rClQWN4GifqTv5UwdJqAV",
+                link: "https://drive.google.com/file/d/1u0ZRN7s8rgAMYtvnGf3zTjpM7Fu6TmW_/view?usp=drive_link",
+                description: "Anakin and Padmé fall in love as war looms.",
+                year: "2002"
+            },
+            {
+                title: "Star Wars: Episode III – Revenge of the Sith",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTZTS3juXvMCxUdbrvxQEmfZpiCZQfNOkqeov_v2CVh4W-qljHb",
+                link: "https://drive.google.com/file/d/1lEszWnr2BinTfzBGqtoDV1W9wMIlTQtb/view?usp=drive_link",
+                description: "Anakin turns to the dark side and becomes Darth Vader.",
+                year: "2005"
+            },
+            {
+                title: "Star Wars: Episode IV – A New Hope",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRzI0IBVHQqfBNxpZy4lM6mq6biSRd9vUw7FHQPkaRQv2JEJ16r",
+                link: "https://drive.google.com/file/d/1nDgCNAuFgSI6fDKbRZFkDhzViib1ixYS/view?usp=drive_link",
+                description: "Luke Skywalker joins Rebel Alliance to destroy Death Star.",
+                year: "1977"
+            },
+            {
+                title: "Star Wars: Episode V – The Empire Strikes Back",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRR1GTV79PCln0jJ0XS0jpi-2rgOOa1Do42GZu7s98kUWKY6a2j",
+                link: "https://drive.google.com/file/d/1q0Jof59Il_So2z5Q38ANn55qB2GCpOx3/view?usp=drive_link",
+                description: "Luke trains with Yoda while friends evade Empire.",
+                year: "1980"
+            },
+            {
+                title: "Star Wars: The Last Jedi",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRlIy4GXVK2e5tkxIixayYlkMGDFGJ-GqZzHxdi6btn2ulMqkAT",
+                link: "https://drive.google.com/file/d/1vCdep3QXu8GE9IaNUdVmCGLiG24kFrWb/view?usp=drive_link",
+                description: "Rey seeks training from Luke Skywalker.",
+                year: "2017"
+            },
+            {
+                title: "Star Wars: The Force Awakens",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSobobwiNCS-SLNNTuB-wrJkaO5N0h6PmNKNG4pALt5M7J_iBCL",
+                link: "https://drive.google.com/file/d/1D-T-C4PNPbZ61wiHqXgQlQqYy_NTcsKa/view?usp=drive_link",
+                description: "New heroes rise to fight the First Order.",
+                year: "2015"
+            },
+            {
+                title: "Star Wars: The Rise of Skywalker",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQmVGbrPTbutvVAiOQtGVoo-jAZawOoog77H02_ReMnfcSXBxtz",
+                link: "https://drive.google.com/file/d/1viDV-Gu6yGHOpyaDefPH3Id9fXSHuTsi/view?usp=drive_link",
+                description: "Final battle between Jedi and Sith.",
+                year: "2019"
+            },
+            {
+                title: "Solo: A Star Wars Story",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS45q1X-awjLEUlX0P0lbFkg-WgtMjOjMI5cgYKn5jGHVsLwuZm",
+                link: "https://drive.google.com/file/d/1cVMCqyg7byeajsDkn4cyHQe7SSLfxVPL/view?usp=drive_link",
+                description: "Origin story of Han Solo and Chewbacca.",
+                year: "2018"
+            },
+            {
+                title: "Star Wars: The Clone Wars",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTi2mhuclPglqUKmZXVYzsadpnr2joqY1YxnHzC_K5PaTr9W5-s",
+                link: "https://drive.google.com/file/d/16dO2t6nMYzRFTKGBVByMPYtru6kwix7H/view?usp=drive_link",
+                description: "Anakin and Ahsoka rescue Jabba's son.",
+                year: "2008"
+            },
+            {
+                title: "Snitch",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTjU91tgPhOMiFWDodmN-odGo5vKtykRa_BTMP6qNxlg-zGEr6O",
+                link: "https://drive.google.com/file/d/17hMZl5qq3Khflm_xUYZW9b8nGCJ6OBfA/view?usp=sharing",
+                description: "Father goes undercover to save son from prison.",
+                year: "2013"
+            },
+            {
+                title: "Scary Movie",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSh8U5l6FdSR58uF2yH-1aWMvidsVB-v0994kOlaCaE7RjXWZbc",
+                link: "https://drive.google.com/file/d/1-61Fls8_MDTVq3r5dHP58joVRiUloxZQ/view?usp=drive_link",
+                description: "Parody of teen slasher films.",
+                year: "2000"
+            },
+            {
+                title: "Scary Movie 2",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--k7is8XGFIrpMxxjebnWbhQtvbjuCZlesOJyZwHh4uUN0Gy7",
+                link: "https://drive.google.com/file/d/1Jmeyjhlpg6A-W-XJPoqC8uhtWztuQe-F/view?usp=drive_link",
+                description: "Teens visit haunted house for experiment.",
+                year: "2001"
+            },
+            {
+                title: "Scary Movie 3",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ3N_lHoXqL8IDIUzZcsRHUr9MCvT9nlLpk22KxrCf4Vd7sJd6b",
+                link: "https://drive.google.com/file/d/1KN1dzjj-d6MhY47MIgWdT2Au10Ft7Bf1/view?usp=drive_link",
+                description: "Cindy investigates cursed tape and alien invasion.",
+                year: "2003"
+            },
+            {
+                title: "Scary Movie 4",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRJ2iM679lxF9AYAILe1fYYINn2W7Zm5FNoje_hOzXo8_y072q2",
+                link: "https://drive.google.com/file/d/1pgH5VfJEi5NRVEtp2y_vZMSOk_rh3Har/view?usp=drive_link",
+                description: "Cindy faces alien invasion and haunted house.",
+                year: "2006"
+            },
+            {
+                title: "Sleepy Hollow",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB66qHTJZ1TpW4oUgPQi3ITduoKcv-rGwoNnqSaoTCvzbu8Zzn",
+                link: "https://drive.google.com/file/d/18gseXON5RP2ipsWcd0XGZH9k4TyaeYYR/view?usp=drive_link",
+                description: "Detective investigates beheadings by Headless Horseman.",
+                year: "1999"
+            },
+            {
+                title: "The Lion King",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSPSpeAmNyoi3aUuqH9CBI7JTocyQgXRS1Q9rceFOUe5tpVS3sx",
+                link: "https://drive.google.com/file/d/1GrJxp4D9XrmYBG_bqRgp1UvQaapyjoV7/view",
+                description: "Lion cub flees kingdom after father's death.",
+                year: "1994"
+            },
+            {
+                title: "The Lion King II: Simba's Pride",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRSBqScQjUvLBeK7EE9BOK0XqDWqvf4FIujCLeW-znj-EtHaJBr",
+                link: "https://drive.google.com/file/d/1-sT4cdDqG6tt4wI0ba7Z3FhDoX8ded8L/view",
+                description: "Simba's daughter falls for outsider lion.",
+                year: "1998"
+            },
+            {
+                title: "The Sandlot",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTbNpqLEb51Rrfr5S6IRSDmOwLNZkH9raRMHMoC1-0MjFBAgx4f",
+                link: "https://drive.google.com/file/d/1G9qRpMiBq5HD-vqKQs9sq8csZCFccaiD/view",
+                description: "New kid joins neighborhood baseball team.",
+                year: "1993"
+            },
+            {
+                title: "The Green Mile",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3-k6Fs1JapvhcPmLikUW9X_zqVmDkIPPqg1u6t2_swGi8UDwQ",
+                link: "https://drive.google.com/drive/folders/1Yaled5HTPlCdoX_7MAhu937sGTlP7PV4",
+                description: "Death row guards encounter inmate with supernatural gift.",
+                year: "1999"
+            },
+            {
+                title: "The Brave Little Toaster",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRtOc9wuxibxMgycUhHZEDM1gjgF3ueyP0jxC337r2xhcsXWxwF",
+                link: "https://drive.google.com/file/d/1qZxoOGQTxqwlJtOQbwN8jeyD_yVvX7yc/view?usp=share_link",
+                description: "Appliances go on journey to find owner.",
+                year: "1987"
+            },
+            {
+                title: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT5qcfHWWzWW03_X_AoCseNckVNSSPcsoTSc5vKbzsg34jvDHtu",
+                link: "https://drive.google.com/file/d/14TYyfl0ogVnDyw_yKCrU_jKGPIDBM3Nu/view?usp=share_link",
+                description: "Siblings discover magical world in wardrobe.",
+                year: "2005"
+            },
+            {
+                title: "The Chronicles of Narnia: Prince Caspian",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNQIOt5NojZOPGwCa_cXX0AnnZY65EhYPDFriMoz2s9bGLgi28",
+                link: "https://drive.google.com/file/d/1DxOEqY1EzxcJYSNk2s6xXLf2SSP-hTRI/view?usp=share_link",
+                description: "Siblings return to Narnia to help Prince Caspian.",
+                year: "2008"
+            },
+            {
+                title: "The Chronicles of Narnia: The Voyage of the Dawn Treader",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSqN6ygDHiOltNd4NTsxiGxT-lh9QCJyQZlGtK1BMRf3_YNaVfu",
+                link: "https://drive.google.com/file/d/12_UK0B8umPhjw5c5WOge3PtcGoDB9Uk2/view?usp=share_link",
+                description: "Siblings sail to edge of Narnia world.",
+                year: "2010"
+            },
+            {
+                title: "The Princess Bride",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR4O1DGDc5x_3pDsKSsls9hhu7sOzDW524LQyu9QQQIgK8HrowQ",
+                link: "https://drive.google.com/file/d/1YnPym55TCYUgdEe65MHELL13ygweFutT/view?usp=drivesdk",
+                description: "Fairy tale adventure about true love.",
+                year: "1987"
+            },
+            {
+                title: "The Wizard of Oz",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTzd3g7vD23lu1PbkrsrVUUqSdbzkA0klXqx0X6esomxCpieiyZ",
+                link: "https://drive.google.com/file/d/1ZfNxrVWB0U1Nwsrc03i5v9vGJtMJ9Ts3/view?usp=drivesdk",
+                description: "Dorothy swept away to magical land of Oz.",
+                year: "1939"
+            },
+            {
+                title: "Return to Oz",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQEpSWurtvfWpPb2Yobu0aW3PZ6Ee4HGQEKULOHasXZqQTugNvP",
+                link: "https://drive.google.com/file/d/1qINcGAx8SUBfoh3O-HeVLetY_rSVueAG/view?usp=drivesdk",
+                description: "Dorothy returns to find Oz in ruins.",
+                year: "1985"
+            },
+            {
+                title: "Transformers",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQsoMJd0WyTnWOV06jp_zbsy_PfcKXIuKAHDGdaCtj1CWGdmlUs",
+                link: "https://drive.google.com/file/d/17FH0E-XliQ0VAWNnxrwkvhUrCCGLKx2A/view?usp=share_link",
+                description: "Autobots and Decepticons battle on Earth.",
+                year: "2007"
+            },
+            {
+                title: "Transformers: Dark of the Moon",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT_wf3Rkc65Zdo8kSkRBdIjuVl7_46uZcvVbGZSvyhbeg15MmY9",
+                link: "https://drive.google.com/file/d/19dfiTEEqIVE9cxVBsyNVoG5c4UebhS0F/view?usp=share_link",
+                description: "Autobots race to moon to uncover secrets.",
+                year: "2011"
+            },
+            {
+                title: "Transformers: Age of Extinction",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR4Zqyz71oScjVbQ_Fm8TgwEgAG_N8BduPMo3jCrE9Qm2x8EreF",
+                link: "https://drive.google.com/file/d/1evgnLc_0TRlHQ8_tcMcZYaYY-2_RmKWZ/view?usp=share_link",
+                description: "New cast faces ancient Transformers threat.",
+                year: "2014"
+            },
+            {
+                title: "Transformers: The Last Knight",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTcaimbsJ-RlOtxO_6xv7A_li4j1m3tab9agdmXy8gk2rjYl5Xl",
+                link: "https://drive.google.com/file/d/1b9ZHT2vDIp-JJ9JD0PWbEbyU1bDZMcPl/view?usp=share_link",
+                description: "Humans and Transformers at war as Optimus leaves.",
+                year: "2017"
+            },
+            {
+                title: "Bumblebee",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd7jrtaOp4wqOlX6orcwS65hSn9SQUeTLjbXoKWomQYA2VqDxP",
+                link: "https://drive.google.com/file/d/1wqi9Wk--koq0SqRkoVZWXLVJBtABkjPy/view?usp=share_link",
+                description: "Bumblebee finds refuge in junkyard in 1987.",
+                year: "2018"
+            },
+            {
+                title: "Tron",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSCXASaaKsH11l2GtAVigW8sRtzBkoOVsnbRjxjY0VDuFMiSd2-",
+                link: "https://drive.google.com/file/d/1hbhWcI11gA5EcXAxXGJkIjzq7VQIpZGp/view?usp=drivesdk",
+                description: "Hacker abducted into computer world.",
+                year: "1982"
+            },
+            {
+                title: "Teenage Mutant Ninja Turtles",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRvL3L_bahxM8z4nz-QnHFTvo19Rog_75lVmdBm3xskw3jFN9Ay",
+                link: "https://drive.google.com/file/d/1ivJXBaVGvN_HQJf-h46ko2DjyHHBZMH1/view",
+                description: "Mutant turtles fight Shredder in NYC.",
+                year: "1990"
+            },
+            {
+                title: "Teenage Mutant Ninja Turtles II: The Secret of the Ooze",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQe-oFfILzMrkzjz1Nz6dq7dNXhUOxv9X_copc3FJ3Ez9YzUtNx",
+                link: "https://drive.google.com/file/d/1Bp9ioxFqOCfmEbQM90cbLcFAn9bPysDu/view",
+                description: "Turtles discover origins of their mutation.",
+                year: "1991"
+            },
+            {
+                title: "Teenage Mutant Ninja Turtles III",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQbNwXgJ8rmH25hH_opHQbzD6JiNDAazHlFO7sazCAA8EXz4pxJ",
+                link: "https://drive.google.com/file/d/1gdIpjtTCHV_a8p9KPQaQg1ljIcanpu5S/view",
+                description: "Turtles travel back in time to feudal Japan.",
+                year: "1993"
+            },
+            {
+                title: "Turning Red",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQYGcDQZPX0Ghja5A8R0Vk9OT-ewrl6pbh0OPRXl0v38q74pnH9",
+                link: "https://drive.google.com/file/d/1joF2I_zdjepCD9ukmjV672HTICUfp4tO/view",
+                description: "Teen girl turns into giant red panda when excited.",
+                year: "2022"
+            },
+            {
+                title: "Teenage Mutant Ninja Turtles: Out of the Shadows",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ5s9EeJQtwO7TlBYwEI3Qv9y7kZRKyYej7Z_GHsf2fNSw3kknC",
+                link: "https://drive.google.com/file/d/1Bp9ioxFqOCfmEbQM90cbLcFAn9bPysDu/view",
+                description: "Turtles battle Shredder and Krang.",
+                year: "2016"
+            },
+            {
+                title: "TMNT",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkXkpFp8nb09lazNxAC7YhcRTT-khLQdvUqW0CePZZ480Cs2W7",
+                link: "https://drive.google.com/file/d/18iqYAOVbRHOT7jzJ3sqlyxi8RS5AH5sM/view?usp=sharing",
+                description: "Turtles reunite to defeat ancient monsters.",
+                year: "2007"
+            },
+            {
+                title: "The Good Dinosaur",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRhFB5EB5O5Y4KI08D8bNoJGisuJvhahBApemjOPLflXsMJYGTK",
+                link: "https://drive.google.com/file/d/1vELzmz9u6vQ18YtMipK9nSWJhZLP6KaH/view?usp=sharing",
+                description: "Dinosaur befriends human boy on journey home.",
+                year: "2015"
+            },
+            {
+                title: "The Little Mermaid",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQcIBCSngOPWrqGbjFB8DTlTdJXrc6NXp-qHjP-OjFniTrRl2ZJ",
+                link: "https://drive.google.com/file/d/1GM7QyJzFwEKM2fM42SWb7oIRN2UPUzqM/view?usp=sharing",
+                description: "Mermaid princess makes deal to become human.",
+                year: "1989"
+            },
+            {
+                title: "The Brady Bunch Movie",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSn-MWfPJUHnEOZjkEcwYhM-bjy0Y1a4LDHVenQVrg_QXcc9mst",
+                link: "https://drive.google.com/file/d/18i5j4gguKnfjNXVcfPKLz3GbxaiWbhrh/view?usp=drive_link",
+                description: "1970s TV family tries to save home in 1990s.",
+                year: "1995"
+            },
+            {
+                title: "A Very Brady Sequel",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS6C25A0p5vZFYIU23MnSmq4rZ3bT2_ExpPvtcPT30SRau2BVy5",
+                link: "https://drive.google.com/file/d/139xwpHkb9tF64bSc0PnKZMBGtdCHh7pW/view?usp=drive_link",
+                description: "Imposter claims to be Carol's long-lost husband.",
+                year: "1996"
+            },
+            {
+                title: "The Mask",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSo7A8VeApODwJzJ8pL2VKFGTyC__tlwe64kfna-El4rmkKZfe3",
+                link: "https://drive.google.com/file/d/13IzLS6dOFDxCk_mNWpttFncqs1hQoJ3L/view?usp=sharing",
+                description: "Bank clerk finds magical mask that transforms him.",
+                year: "1994"
+            },
+            {
+                title: "The Addams Family",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR5ehZCJ4nhEDd2QLl-FzEB-wODuejQAOul7vXwHkJDbR4ebA8G",
+                link: "https://drive.google.com/file/d/19ZYLs_076nTJtl7bEUtkwpfbwwj-GevJ/view?usp=sharing",
+                description: "Eccentric family reconnects with long-lost uncle.",
+                year: "1991"
+            },
+            {
+                title: "The Little Mermaid",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSzgEMr-b0r6azURMgMKJBsejBnyS80leit3BuXsTbNNONXcttO",
+                link: "https://drive.google.com/file/d/1sFYkkRX85JK-a2LRl8_QmZPhYkYIn6KG/view",
+                description: "Live-action retelling of mermaid princess story.",
+                year: "2023"
+            },
+            {
+                title: "The Smurfs 2",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTV4e-nTK65R73wKGqZVIxRzYpsJddKft8FDbtUBKr3LzYuAiN2",
+                link: "https://drive.google.com/file/d/1FYgtU8rAKF32RjDRgYqODXzOHV0mQuBy/view?usp=share_link",
+                description: "Smurfs rescue Smurfette from Gargamel in Paris.",
+                year: "2013"
+            },
+            {
+                title: "The Book of Life",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSi5f5iIe-zjJKQ-RI8WsFZgWAK83uExcrbw-Gwv-BtMDAt8aBg",
+                link: "https://drive.google.com/file/d/1_MkoFWTqhvJM4YNqGFzSabwKSSL4fa55/view?usp=drive_link",
+                description: "Man embarks on journey through three fantasy worlds.",
+                year: "2014"
+            },
+            {
+                title: "The Nightmare Before Christmas",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSOgiKvYkIrCXt6eUC8cDtsMci6OPlooJ3BGr5XOOMP62zhrBgd",
+                link: "https://drive.google.com/file/d/1BPYV-xYt77pQYztFM14VHk3wBZZ_l0ng/view?usp=sharing",
+                description: "Jack Skellington tries to bring Christmas to Halloween Town.",
+                year: "1993"
+            },
+            {
+                title: "Twilight",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQmjt0QnOesE-4q_MTAF4cbDr9vs5H6MUlltEBXXU_KXN90SOcC",
+                link: "https://drive.google.com/file/d/1YEIurV6IBGg7IYqTE9EX2vHLUQeEfBjH/view?usp=sharing",
+                description: "Teen girl falls in love with vampire.",
+                year: "2008"
+            },
+            {
+                title: "The Twilight Saga: Breaking Dawn – Part 1",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKJGta5x_f_d8L3xAHRml8CijY6rk4rYoB40N4U0p_KertM9wG",
+                link: "https://drive.google.com/file/d/1GTUALkIJ4mkxae00sdbQdGUhUl4i8lGm/view?usp=drive_link",
+                description: "Bella and Edward marry, but pregnancy threatens life.",
+                year: "2011"
+            },
+            {
+                title: "The Twilight Saga: Breaking Dawn – Part 2",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmm3ZE2UOm2LjJZzC_8It0YdBsCLiXvVtIbUfgJPEzaWDJN2d3",
+                link: "https://drive.google.com/file/d/12J1e35T-HQtLoTvfs70-TlZ4oJsXsxvX/view?usp=drive_link",
+                description: "Cullens gather allies to protect Renesmee.",
+                year: "2012"
+            },
+            {
+                title: "The Menu",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRATQt6BNZVdY6jntTafu1unrvk2Bkads1CNNsSI_ukqkchd41l",
+                link: "https://drive.google.com/file/d/14Audx3RqZPMTyLzErPzkKuCQPVWhTC0y/view?usp=sharing",
+                description: "Couple travels to island for exclusive dining experience.",
+                year: "2022"
+            },
+            {
+                title: "The Princess and the Frog",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTUp5AzSoG_sHJ_J2erRI0DI6pT6KCXzF1635hYMQzM2VYO4kWQ",
+                link: "https://drive.google.com/file/d/1PIQExpRvAPANHRDAZ-On7ld9je2O-5He/view?usp=sharing",
+                description: "Waitress and prince turned into frogs in New Orleans.",
+                year: "2009"
+            },
+            {
+                title: "The Greatest Showman",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRzC8YDonTuBVmDTALNQLc9476-WNyxpgBkKHziaVzQ2WeuP81a",
+                link: "https://drive.google.com/file/d/1ErElLX4tetXsqWfpivPg3JlEht4ERibn/view?usp=drive_link",
+                description: "Musical about P.T. Barnum and his circus.",
+                year: "2017"
+            },
+            {
+                title: "Tangled",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSD4LXFpI_Z1E-RnINQ3YNDiA5SWRrXWTyQH-EsJLMfkTi6Wbwh",
+                link: "https://drive.google.com/file/d/1eirKJt3ulfEusRJ6OM0jwpJ_YbL8iExC/view?usp=sharing",
+                description: "Rapunzel leaves tower with wanted thief.",
+                year: "2010"
+            },
+            {
+                title: "War Dogs",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQz118ZgeREdaftTv6pbVwDOEQFj3Eu41xL40YlUwcs-SkcyA0c",
+                link: "https://drive.google.com/drive/u/0/folders/1dAcCk18ksPVX1vOSmwuwXA8IFoYpZ6eX?ths=true",
+                description: "Two friends become international arms dealers.",
+                year: "2016"
+            },
+            {
+                title: "Wish",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTiz1j_f6CY7G4Hom1g_dOxhKeQp9y60A_mE9FNi-fmIGtLhrJw",
+                link: "https://drive.google.com/file/d/1KOmgE1jMV0jT2QkWFFd3ieEzwf4GbVOw/view?usp=drive_link",
+                description: "Girl wishes on star to save kingdom.",
+                year: "2023"
+            },
+            {
+                title: "West Side Story",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQarOYUceawAtewfDzZ_fKv41A8iqJa_a08B9x7beMyPajAVYnD",
+                link: "https://drive.google.com/file/d/1CBGr82HWTP2XM-HJPURXFGV1uqE5-ip-/view?usp=drive_link",
+                description: "Musical adaptation of Romeo and Juliet in NYC.",
+                year: "1961"
+            },
+            {
+                title: "West Side Story",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLu6vPTCNv4CIe2PjMfOUfkqx4-sr-n7N21RTeGpX-3jyz6F3y",
+                link: "https://drive.google.com/file/d/1XCfKDI8cKvYQO2UGFOKBe5qlmcL8Vsry/view?usp=drive_link",
+                description: "Steven Spielberg's adaptation of the musical.",
+                year: "2021"
+            },
+            {
+                title: "X-Men",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTs686YIkHVvGXiyOSJ6cIwZdN_rJ32xKrT3RjY3gSmPBChqD6d",
+                link: "https://drive.google.com/file/d/1BIJIiG8fdpyudl-1vXHIU3TBb3XMXJaa/view",
+                description: "Mutants fight for acceptance and against Magneto.",
+                year: "2000"
+            },
+            {
+                title: "X2",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQi7H7EH3feLf08W_zr_fhMdZEioOw4sayHEEmQnNtEMigSTeDU",
+                link: "https://drive.google.com/file/d/16fA19e1MhAZaUaosRHey_c1VAZoM1iB8/view",
+                description: "X-Men team up with Magneto against common enemy.",
+                year: "2003"
+            },
+            {
+                title: "X-Men: The Last Stand",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQBJkBF8kdLTa4fwuCtojCFtkYhE5vzUYcnI9ZYSIqMFt2nODCh",
+                link: "https://drive.google.com/file/d/176dVR22sSEaJMY5TfITCW9TIC2fNYBMm/view",
+                description: "Cure for mutations causes war between mutants.",
+                year: "2006"
+            },
+            {
+                title: "Zapped",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtBBV3nPyIgvfqzw371YvgS2hNhHObE5qzYNQT9qBSKXIP5tyg",
+                link: "https://drive.google.com/file/d/1gO0OtMfAoVUaZGxX825aH48OySgHYd5n/view?usp=sharing",
+                description: "Girl discovers app that controls boys.",
+                year: "2014"
             }
 ];
