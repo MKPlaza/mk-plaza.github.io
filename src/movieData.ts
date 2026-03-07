@@ -878,7 +878,7 @@ export const MOVIES: Movie[] = [
             },
             {
                 title: "Ant-Man and the Wasp: Quantumania",
-                imageUrl: "https://www.dropbox.com/scl/fi/zz0449lgrqllpbf0j2e52/Blue_Beetle_-film-_poster.jpg?rlkey=gnk91admj7ixeizr90iytu6es&st=r2rx3fhc&dl=1",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTFb_n_EedTIqd3fZhsA2EpMUEF710vglYt4RYNd_FXEre3NxMw",
                 link: "https://drive.google.com/file/d/1AW3Zm8256tzZ-37lmgYmIGse4knu8IdA/view",
                 description: "Scott Lang and Hope Van Dyne in Quantum Realm.",
                 year: "2023"
