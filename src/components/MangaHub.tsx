@@ -17,7 +17,7 @@ export default function MangaHub({ favorites, onToggleFavorite }: MangaHubProps)
           MK-PLAZA MANGA
         </h1>
         <p className="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">
-          Some good some bad idk you tell me
+          Aetherium Archive v2.0
         </p>
       </div>
 
@@ -63,8 +63,18 @@ export default function MangaHub({ favorites, onToggleFavorite }: MangaHubProps)
                   <Star className={`w-5 h-5 ${isFavorited ? 'fill-current' : ''}`} />
                 </button>
               </div>
-              <div className="p-5">
-                <h3 className="text-lg font-bold text-[var(--mk-gold)] text-center truncate">{manga.title}</h3>
+              <div className="p-5 flex-1 flex flex-col">
+                <h3 className="text-lg font-bold text-[var(--mk-gold)] text-center truncate mb-2">{manga.title}</h3>
+                {manga.description && (
+                  <p className="text-xs text-[var(--mk-silver)]/70 mb-4 line-clamp-3 flex-1 text-center">
+                    {manga.description}
+                  </p>
+                )}
+                {manga.year && (
+                  <div className="text-[10px] uppercase tracking-widest font-bold text-[var(--mk-gold)]/50 text-center mt-auto">
+                    {manga.year}
+                  </div>
+                )}
               </div>
             </motion.a>
           );
