@@ -58,6 +58,8 @@ export interface Manga {
   title: string;
   imageUrl: string;
   url: string;
+  description?: string;
+  year?: string;
 }
 
 export interface Game {
