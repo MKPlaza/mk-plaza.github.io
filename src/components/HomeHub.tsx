@@ -134,7 +134,7 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
                   <span style={{ color: currentTheme.gold }}>{badge.suffix}</span>
                 </div>
                 <h1 className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-[var(--mk-silver)] to-gray-500 tracking-tighter drop-shadow-sm">
-                  MK-PLAZA
+                  MKPLAZA
                 </h1>
                 <p className="text-lg lg:text-xl text-[var(--mk-silver)] opacity-70 font-medium tracking-wide max-w-xl leading-relaxed">
                   Your favorite entertainment center featuring all your favorite Meta Knight variants.
@@ -226,7 +226,7 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
                     <Zap className="w-4 h-4 text-[var(--mk-gold)]" />
                     HOW TO USE
                   </h2>
-                  <p className="text-[9px] text-[var(--mk-silver)] opacity-60 font-medium uppercase tracking-widest">Guide to MK-Plaza</p>
+                  <p className="text-[9px] text-[var(--mk-silver)] opacity-60 font-medium uppercase tracking-widest">Guide to MKPlaza</p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-2">
@@ -347,7 +347,7 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
       </section>
 
       <footer className="pt-12 border-t border-white/10 text-center text-white/30 text-sm">
-        <p>&copy; 2026 MK-PLAZA. All rights reserved.</p>
+        <p>&copy; 2026 MKPLAZA. Name is mine, but I do not own the rights to any g4me,m0v1e, etc.</p>
       </footer>
     </div>
   );
