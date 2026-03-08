@@ -278,9 +278,10 @@ export default function App() {
             {[...Array(2)].map((_, i) => (
               <React.Fragment key={i}>
                 <span>Chill Kirb Central is still peak</span>
-                <span>placeholder</span>
-                <span>Chill Kirb Central is still peak</span>
-                <span>placeholder</span>
+                <span>M0v13s Galore</span>
+                <span>MKPlaza Supermancy</span>
+                <span>ok im out of ideas</span>
+                <span>uhh</span>
               </React.Fragment>
             ))}
           </div>
