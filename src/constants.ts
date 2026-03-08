@@ -76,18 +76,18 @@ export const THEMES: Record<string, ThemePreset> = {
 };
 
 export const CLOAKS: Record<string, CloakOption> = {
-  classroom: { title: "Classes", icon: "https://ssl.gstatic.com/classroom/favicon.png" },
-  clever: { title: "Clever | Portal", icon: "https://clever.com/favicon.ico" },
-  edpuzzle: { title: "Edpuzzle", icon: "https://edpuzzle.imgix.net/favicon.png" },
-  ixl: { title: "IXL | Personalized Learning", icon: "https://www.ixl.com/favicon.ico" },
-  gmail: { title: "Gmail", icon: "https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico" },
-  docs: { title: "Google Docs", icon: "https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico" },
-  slides: { title: "Google Slides", icon: "https://ssl.gstatic.com/docs/presentations/images/slides-favicon-2023q4.ico" },
-  khan: { title: "Khan Academy", icon: "https://www.khanacademy.org/favicon.ico" },
-  desmos: { title: "Desmos | Graphing Calculator", icon: "https://www.desmos.com/favicon.ico" },
-  canvas: { title: "Dashboard", icon: "https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e1062957c5.ico" },
-  google: { title: "Google", icon: "https://www.google.com/favicon.ico" },
-  drive: { title: "My Drive - Google Drive", icon: "https://ssl.gstatic.com/docs/doclist/images/drive_2020q4_32dp.png" }
+  classroom: { title: "Classes", icon: "https://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/Google_Classroom_Logo.png" },
+  clever: { title: "Clever | Portal", icon: "https://www.google.com/s2/favicons?domain=clever.com&sz=64" },
+  edpuzzle: { title: "Edpuzzle", icon: "https://www.google.com/s2/favicons?domain=edpuzzle.com&sz=64" },
+  ixl: { title: "IXL | Personalized Learning", icon: "https://www.google.com/s2/favicons?domain=ixl.com&sz=64" },
+  gmail: { title: "Gmail", icon: "https://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/Gmail_icon_(2020).svg.webphttps://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/Gmail_icon_(2020).svg.webp" },
+  docs: { title: "Google Docs", icon: "https://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/google-docs-icon-logo-symbol-free-png.webp" },
+  slides: { title: "Google Slides", icon: "https://www.google.com/s2/favicons?domain=slides.google.com&sz=64" },
+  khan: { title: "Khan Academy", icon: "https://www.google.com/s2/favicons?domain=khanacademy.org&sz=64" },
+  desmos: { title: "Desmos | Graphing Calculator", icon: "https://www.google.com/s2/favicons?domain=desmos.com&sz=64" },
+  canvas: { title: "Dashboard", icon: "https://www.google.com/s2/favicons?domain=canvas.instructure.com&sz=64" },
+  google: { title: "Google", icon: "https://www.google.com/s2/favicons?domain=google.com&sz=64" },
+  drive: { title: "My Drive - Google Drive", icon: "https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_4.ico" }
 };
 
 export const PLAYLIST: Song[] = [
