@@ -63,7 +63,8 @@ const SPECIAL_THANKS = [
   { name: 'GN-Math', reason: 'Free use of their webports, other games, etc.' },
   { name: 'Ultimate Game Stash', reason: 'Wide variety of emulator games and flash games' },
   { name: 'Slay3r', reason: 'Original owner of the predecessor' },
-  { name: 'Kirby Arcade', reason: 'The predecessor, the original site!' }
+  { name: 'Kirby Arcade', reason: 'The predecessor, the original site!' },
+  { name: 'Chillzone Docs', reason: 'Movies, TV Shows, Manga and Anime help aside from my own!' }
 ];
 
 const INSTRUCTIONS = [
@@ -147,7 +148,6 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
             </div>
           </motion.div>
 
-          {/* Special Thanks Marquee */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -172,7 +172,6 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
           </motion.div>
         </div>
 
-        {/* Meta Knight Picture & Instructions */}
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
