@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Search, Star, Box, Play, Puzzle, Bomb, Beer, Plane, Leaf, Skull, Bike, Trophy, Zap, Hand, Target, Sprout, Rocket, Ghost, Gamepad2, Swords, Dribbble, Eye, Camera, Crown, Triangle, Bug, Pizza } from 'lucide-react';
 import { GAMES } from '../gameData';
 import { FavoriteItem, Game } from '../types';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 
 interface GamesHubProps {
   favorites: FavoriteItem[];
@@ -11,17 +11,77 @@ interface GamesHubProps {
 }
 
 const iconMap: Record<string, any> = {
-  Puzzle, Bomb, Beer, Plane, Leaf, Skull, Bike, Trophy, Zap, Hand, Target, Sprout, Rocket, Ghost, Gamepad2, Swords, Dribbble, Eye, Camera, Crown, Box, Triangle, Bug, Pizza
+  "fa-puzzle-piece": Puzzle,
+  "fa-bomb": Bomb,
+  "fa-beer-mug-empty": Beer,
+  "fa-plane": Plane,
+  "fa-leaf": Leaf,
+  "fa-skull": Skull,
+  "fa-motorcycle": Bike,
+  "fa-futbol": Dribbble,
+  "fa-bolt": Zap,
+  "fa-hand-pointer": Hand,
+  "fa-gun": Target,
+  "fa-seedling": Sprout,
+  "fa-user-astronaut": Rocket,
+  "fa-ghost": Ghost,
+  "fa-gamepad": Gamepad2,
+  "fa-hammer": Swords,
+  "fa-folder-open": Box,
+  "fa-mask": Ghost,
+  "fa-house": Box,
+  "fa-moon": Eye,
+  "fa-mushroom": Pizza,
+  "fa-face-laugh-squint": Eye,
+  "fa-bone": Skull,
+  "fa-subway": Rocket,
+  "fa-drumstick-bite": Pizza,
+  "fa-cat": Ghost,
+  "fa-hat-wizard": Crown,
+  "fa-microphone-lines": Hand,
+  "fa-face-smile": Eye,
+  "fa-rabbit": Ghost,
+  "fa-face-laugh": Eye,
+  "fa-cookie-bite": Pizza,
+  "fa-compact-disc": Target,
+  "fa-spray-can": Rocket,
+  "fa-piggy-bank": Box,
+  "fa-shuffle": Swords,
+  "fa-rotate": Swords,
+  "fa-horse": Ghost,
+  "fa-circle-exclamation": Eye,
+  "fa-user-ninja": Swords,
+  "fa-bug": Bug,
+  "fa-microchip": Box,
+  "fa-cloud-meatball": Pizza,
+  "fa-cube": Box,
+  "fa-question": Eye,
+  "fa-virus": Bug,
+  "fa-hand-fist": Hand,
+  "fa-fingerprint": Hand,
+  "fa-bed": Box,
+  "fa-eye": Eye,
+  "fa-dragon": Ghost,
+  "fa-droplet": Leaf,
+  "fa-anchor": Target,
+  "fa-mitten": Hand,
+  "fa-feather": Leaf,
+  "fa-bottle-water": Beer,
+  "fa-laptop": Box,
 };
 
 export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame }: GamesHubProps) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredGames = GAMES.filter(game => {
-    const matchesSearch = game.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      game.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      game.system.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesSearch;
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      (game.title?.toLowerCase().includes(searchLower) || false) ||
+      (game.desc?.toLowerCase().includes(searchLower) || false) ||
+      (game.system?.toLowerCase().includes(searchLower) || false) ||
+      (game.platform?.toLowerCase().includes(searchLower) || false) ||
+      (game.year?.includes(searchLower) || false)
+    );
   });
 
   return (
@@ -57,18 +117,20 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredGames.map((game) => {
-          const isFavorited = favorites.some(f => f.id === game.id);
-          const IconComponent = iconMap[game.icon] || Gamepad2;
-          
-          return (
-            <motion.div
-              key={game.id}
-              layout
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="group relative bg-[#0a1128] border border-white/10 rounded-3xl overflow-hidden flex flex-col min-h-[300px] hover:border-[var(--mk-gold)]/40 hover:bg-[#0e1a3d] transition-all duration-500 shadow-2xl"
-            >
+        <AnimatePresence mode="popLayout">
+          {filteredGames.map((game) => {
+            const isFavorited = favorites.some(f => f.id === game.id);
+            const IconComponent = iconMap[game.icon] || Gamepad2;
+            
+            return (
+              <motion.div
+                key={game.id}
+                layout
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
+                className="group relative bg-[#0a1128] border border-white/10 rounded-3xl overflow-hidden flex flex-col min-h-[300px] hover:border-[var(--mk-gold)]/40 hover:bg-[#0e1a3d] transition-all duration-500 shadow-2xl"
+              >
               <div className={`relative z-10 h-1.5 w-full bg-gradient-to-r ${game.color} opacity-80`}></div>
               
               <div className="relative z-10 p-8 flex-grow flex flex-col justify-between">
@@ -122,6 +184,7 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
             </motion.div>
           );
         })}
+        </AnimatePresence>
       </div>
 
       {filteredGames.length === 0 && (
