@@ -76,18 +76,18 @@ export const THEMES: Record<string, ThemePreset> = {
 };
 
 export const CLOAKS: Record<string, CloakOption> = {
-  classroom: { title: "Classes", icon: "https://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/Google_Classroom_Logo.png" },
+  classroom: { title: "Classes", icon: "https://www.google.com/s2/favicons?domain=classroom.google.com&sz=64" },
   clever: { title: "Clever | Portal", icon: "https://www.google.com/s2/favicons?domain=clever.com&sz=64" },
   edpuzzle: { title: "Edpuzzle", icon: "https://www.google.com/s2/favicons?domain=edpuzzle.com&sz=64" },
   ixl: { title: "IXL | Personalized Learning", icon: "https://www.google.com/s2/favicons?domain=ixl.com&sz=64" },
-  gmail: { title: "Gmail", icon: "https://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/Gmail_icon_(2020).svg.webphttps://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/Gmail_icon_(2020).svg.webp" },
-  docs: { title: "Google Docs", icon: "https://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/google-docs-icon-logo-symbol-free-png.webp" },
+  gmail: { title: "Gmail", icon: "https://www.google.com/s2/favicons?domain=mail.google.com&sz=64" },
+  docs: { title: "Google Docs", icon: "https://www.google.com/s2/favicons?domain=docs.google.com&sz=64" },
   slides: { title: "Google Slides", icon: "https://www.google.com/s2/favicons?domain=slides.google.com&sz=64" },
   khan: { title: "Khan Academy", icon: "https://www.google.com/s2/favicons?domain=khanacademy.org&sz=64" },
   desmos: { title: "Desmos | Graphing Calculator", icon: "https://www.google.com/s2/favicons?domain=desmos.com&sz=64" },
   canvas: { title: "Dashboard", icon: "https://www.google.com/s2/favicons?domain=canvas.instructure.com&sz=64" },
   google: { title: "Google", icon: "https://www.google.com/s2/favicons?domain=google.com&sz=64" },
-  drive: { title: "My Drive - Google Drive", icon: "https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_4.ico" }
+  drive: { title: "My Drive - Google Drive", icon: "https://www.google.com/s2/favicons?domain=drive.google.com&sz=64" }
 };
 
 export const PLAYLIST: Song[] = [
