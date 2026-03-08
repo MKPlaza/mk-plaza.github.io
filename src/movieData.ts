@@ -1389,14 +1389,14 @@ export const MOVIES: Movie[] = [
             },
             {
                 title: "Friday",
-                imageUrl: "",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmPlQJ0P8q0Th4Widyxcr61BI9Ylv-8ZMwBgOxRTZMX_N4W8oO",
                 link: "https://drive.google.com/file/d/1SKE9sQ-DnHRRVGxU10Qk2QJ1Ws2jvv5M/view?usp=share_link",
                 description: "Two friends spend Friday smoking and dealing with neighbors.",
                 year: "1995"
             },
             {
                 title: "Finding Nemo",
-                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmPlQJ0P8q0Th4Widyxcr61BI9Ylv-8ZMwBgOxRTZMX_N4W8oO",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPMuT84H7cjZKS_L6KLxTDZA_12G-zUMA7w0xLO9hHj275KFAa",
                 link: "https://drive.google.com/file/d/1jP7PoHapLf_S_n75Afdc0RvzSwRqPcwm/view?usp=sharing",
                 description: "Clownfish searches for captured son.",
                 year: "2003"
