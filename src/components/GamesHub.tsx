@@ -99,7 +99,7 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
         <div className="flex items-center justify-center gap-3 mt-4">
           <div className="h-px w-8 bg-white/10"></div>
           <span className="text-[11px] font-black tracking-[0.3em] uppercase text-neutral-400">
-            {filteredGames.length.toString().padStart(2, '0')} <span className="text-red-600/60">TITLES</span> IN THE VAULT
+            {filteredGames.length.toString().padStart(2, '0')} <span className="text-red-600/60">TITLES</span> IN THE COLLECTION
           </span>
           <div className="h-px w-8 bg-white/10"></div>
         </div>
@@ -109,7 +109,7 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--mk-gold)] w-5 h-5" />
         <input 
           type="text" 
-          placeholder="Search the vault (Title, system, or tag)..." 
+          placeholder="Search the Collection (Title, system, or tag)... Currently broken, still works, but search results are glitched" 
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full bg-white/5 border border-white/10 text-white py-4 pl-14 pr-6 rounded-full outline-none focus:border-[var(--mk-gold)]/50 focus:bg-white/10 transition-all font-medium"
