@@ -25,17 +25,17 @@ interface HomeHubProps {
 
 const CHANGELOG = [
   {
-    version: ' Beta v1.0',
-    date: 'MAR 05',
+    version: 'v1.0',
+    date: 'MAR 07',
     updates: [
-      'test release, still not final changes lmao'
+      'Welcome to MKPlaza!'
     ]
   },
   {
-    version: 'v0.9.1',
-    date: 'idrk',
+    version: 'Beta v1.0',
+    date: 'MAR 05',
     updates: [
-      'i forgot'
+      'test release, still not final changes lmao'
     ]
   },
   {
