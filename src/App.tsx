@@ -280,6 +280,7 @@ export default function App() {
                 <span>Chill Kirb Central is still peak</span>
                 <span>M0v13s Galore</span>
                 <span>MKPlaza Supermancy</span>
+                <span>Please check the instructions before clicking the hide button gng</span>
                 <span>ok im out of ideas</span>
                 <span>uhh</span>
               </React.Fragment>
