@@ -233,8 +233,8 @@ export default function App() {
               />
             </div>
             <div>
-              <h3 className="text-[var(--mk-gold)] font-bold text-sm uppercase tracking-widest">Tab Open!</h3>
-              <p className="text-[var(--mk-silver)] text-xs font-medium">Welcome to MK-Plaza</p>
+              <h3 className="text-[var(--mk-gold)] font-bold text-sm uppercase tracking-widest">Tab Opened!</h3>
+              <p className="text-[var(--mk-silver)] text-xs font-medium">Welcome to MKPlaza!</p>
             </div>
             <button 
               onClick={() => setShowWelcome(false)}
@@ -258,7 +258,7 @@ export default function App() {
           <div 
             className="text-xl font-black uppercase tracking-[3px] text-[var(--mk-gold)] drop-shadow-[0_0_12px_var(--mk-gold)] select-none"
           >
-            MK-Plaza
+            MKPlaza
           </div>
           
           <div className="flex items-center gap-5 bg-yellow-400/5 px-4 py-1.5 rounded-full border border-yellow-400/10 font-orbitron text-[11px] text-[var(--mk-gold)] shadow-[0_0_8px_rgba(255,215,0,0.1)]">
