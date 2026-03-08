@@ -317,13 +317,13 @@ export default function App() {
       >
         {[
           { id: 'hide', label: 'Hide', icon: EyeOff, action: () => setActiveHub(null) },
-          { id: 'movies', label: 'Movies', icon: Film, count: MOVIES.length },
-          { id: 'tv', label: 'TV Shows', icon: Tv, count: TV_SHOWS.length },
-          { id: 'anime', label: 'Anime', icon: Ghost, count: ANIME.length },
-          { id: 'manga', label: 'Manga', icon: BookOpenText, count: MANGA.length },
-          { id: 'games', label: 'Games', icon: Gamepad2, count: GAMES.length },
-          { id: 'music', label: 'Music', icon: Music },
-          { id: 'proxies', label: 'Proxies', icon: Shield, count: PROXIES.length },
+          { id: 'movies', label: 'M0v1es', icon: Film, count: MOVIES.length },
+          { id: 'tv', label: 'TV Sh0w5', icon: Tv, count: TV_SHOWS.length },
+          { id: 'anime', label: 'An1m3', icon: Ghost, count: ANIME.length },
+          { id: 'manga', label: 'M4ng4', icon: BookOpenText, count: MANGA.length },
+          { id: 'games', label: 'G4me5', icon: Gamepad2, count: GAMES.length },
+          { id: 'music', label: 'Mu51c', icon: Music },
+          { id: 'proxies', label: 'Prox135', icon: Shield, count: PROXIES.length },
           { id: 'partners', label: 'Partners', icon: Handshake, count: PARTNERS.length },
         ].map((item) => (
           <button
