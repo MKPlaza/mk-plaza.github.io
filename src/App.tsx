@@ -81,14 +81,12 @@ export default function App() {
     });
   };
   
-  // Music Player State
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isLooping, setIsLooping] = useState(false);
   const [isPlayerCollapsed, setIsPlayerCollapsed] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Cloak State
   const [cloakTarget, setCloakTarget] = useState('classroom');
   const [customCloakTitle, setCustomCloakTitle] = useState('');
   const [customCloakFavicon, setCustomCloakFavicon] = useState('');
@@ -96,7 +94,6 @@ export default function App() {
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
     
-    // Battery API
     if ('getBattery' in navigator) {
       (navigator as any).getBattery().then((batt: any) => {
         const updateBattery = () => {
@@ -112,14 +109,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    // Show welcome message
     setShowWelcome(true);
     const timer = setTimeout(() => setShowWelcome(false), 5000);
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    // Apply theme variables to root
     const root = document.documentElement;
     root.style.setProperty('--mk-midnight', currentTheme.midnight);
     root.style.setProperty('--mk-eye-glow', currentTheme.eyes);
@@ -146,7 +141,6 @@ export default function App() {
     const nextIndex = (currentSongIndex + dir + PLAYLIST.length) % PLAYLIST.length;
     setCurrentSongIndex(nextIndex);
     setIsPlaying(true);
-    // Audio source update is handled by useEffect or direct ref update
   };
 
   useEffect(() => {
@@ -179,17 +173,27 @@ export default function App() {
     const win = window.open('about:blank', '_blank');
     if (win) {
       const doc = win.document;
-      doc.open();
-      doc.write(document.documentElement.outerHTML);
-      doc.close();
+      doc.title = finalTitle;
       
-      setTimeout(() => {
-        win.document.title = finalTitle;
-        const link = win.document.createElement('link');
-        link.rel = 'icon';
-        link.href = finalIcon;
-        win.document.head.appendChild(link);
-      }, 100);
+      const link = doc.createElement('link');
+      link.rel = 'icon';
+      link.href = finalIcon;
+      doc.head.appendChild(link);
+
+      const iframe = doc.createElement('iframe');
+      iframe.style.width = '100vw';
+      iframe.style.height = '100vh';
+      iframe.style.border = 'none';
+      iframe.style.position = 'fixed';
+      iframe.style.top = '0';
+      iframe.style.left = '0';
+      iframe.style.margin = '0';
+      iframe.style.padding = '0';
+      iframe.src = window.location.href;
+      
+      doc.body.appendChild(iframe);
+      doc.body.style.margin = '0';
+      doc.body.style.overflow = 'hidden';
     }
     setIsSettingsOpen(false);
   };
