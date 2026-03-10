@@ -6,6 +6,8 @@ export interface ThemePreset {
   bg: string;
   logo: string;
   name: string;
+  fontFamily?: string;
+  fontStyle?: string;
 }
 
 export interface CloakOption {
