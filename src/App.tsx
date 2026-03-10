@@ -237,7 +237,7 @@ export default function App() {
             </div>
             <div>
               <h3 className="text-[var(--mk-gold)] font-bold text-sm uppercase tracking-widest">Tab Open!</h3>
-              <p className="text-[var(--mk-silver)] text-xs font-medium">Welcome to MK-Plaza</p>
+              <p className="text-[var(--mk-silver)] text-xs font-medium">Welcome to MKPlaza</p>
             </div>
             <button 
               onClick={() => setShowWelcome(false)}
@@ -321,14 +321,14 @@ export default function App() {
       >
         {[
           { id: 'hide', label: 'Hide', icon: EyeOff, action: () => setActiveHub(null) },
-          { id: 'movies', label: 'Movies', icon: Film, count: MOVIES.length },
-          { id: 'tv', label: 'TV Shows', icon: Tv, count: TV_SHOWS.length },
-          { id: 'anime', label: 'Anime', icon: Ghost, count: ANIME.length },
-          { id: 'manga', label: 'Manga', icon: BookOpenText, count: MANGA.length },
-          { id: 'games', label: 'Games', icon: Gamepad2, count: GAMES.length },
-          { id: 'music', label: 'Music', icon: Music },
-          { id: 'proxies', label: 'Proxies', icon: Shield, count: PROXIES.length },
-          { id: 'partners', label: 'Partners', icon: Handshake, count: PARTNERS.length },
+          { id: 'movies', label: 'M0v135', icon: Film, count: MOVIES.length },
+          { id: 'tv', label: 'TV 5h0w5', icon: Tv, count: TV_SHOWS.length },
+          { id: 'anime', label: 'An1m3', icon: Ghost, count: ANIME.length },
+          { id: 'manga', label: 'M4ng4', icon: BookOpenText, count: MANGA.length },
+          { id: 'games', label: 'G4m35', icon: Gamepad2, count: GAMES.length },
+          { id: 'music', label: 'Mu51c', icon: Music },
+          { id: 'proxies', label: 'Pr0x135', icon: Shield, count: PROXIES.length },
+          { id: 'partners', label: 'P4rtn3r5', icon: Handshake, count: PARTNERS.length },
         ].map((item) => (
           <button
             key={item.id}
@@ -434,6 +434,10 @@ export default function App() {
                 <button onClick={() => {
                   if (selectedGame?.link) {
                     window.open(selectedGame.link, '_blank');
+                  } else if (selectedGame && GAME_PAYLOADS[selectedGame.id]?.customHtml) {
+                    const blob = new Blob([GAME_PAYLOADS[selectedGame.id].customHtml], { type: 'text/html' });
+                    const url = URL.createObjectURL(blob);
+                    window.open(url, '_blank');
                   }
                 }} className="p-2 text-neutral-400 hover:text-white transition-colors">
                   <ExternalLink className="w-4 h-4" />
