@@ -58,6 +58,7 @@ export default function App() {
   const [activeHub, setActiveHub] = useState<string | null>('home');
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isCreditsOpen, setIsCreditsOpen] = useState(false);
   const [time, setTime] = useState(new Date());
   const [battery, setBattery] = useState<{ level: number; charging: boolean } | null>(null);
   const [showWelcome, setShowWelcome] = useState(false);
@@ -505,9 +506,9 @@ export default function App() {
               initial={{ x: 100, opacity: 0, scale: 0.95 }}
               animate={{ x: 0, opacity: 1, scale: 1 }}
               exit={{ x: 100, opacity: 0, scale: 0.95 }}
-              className="w-[400px] bg-[var(--glass-heavy)] backdrop-blur-2xl border border-yellow-400/30 rounded-2xl p-6 shadow-2xl max-h-[90vh] overflow-y-auto text-[var(--mk-silver)]"
+              className="w-[400px] bg-[var(--glass-heavy)] backdrop-blur-2xl border border-yellow-400/30 rounded-2xl shadow-2xl max-h-[90vh] flex flex-col text-[var(--mk-silver)]"
             >
-              <div className="flex justify-between items-center mb-6 border-b border-yellow-400/15 pb-3">
+              <div className="flex justify-between items-center p-6 border-b border-yellow-400/15 shrink-0">
                 <h2 className="text-sm font-bold text-[var(--mk-gold)] uppercase flex items-center gap-2">
                   <Terminal className="w-4 h-4" /> Settings
                 </h2>
@@ -516,8 +517,9 @@ export default function App() {
                 </button>
               </div>
 
-              <div className="mb-8">
-                <div className="text-[11px] text-[var(--mk-eye-glow)] uppercase mb-4 font-bold flex items-center gap-2">
+              <div className="p-6 overflow-y-auto flex-1">
+                <div className="mb-8">
+                  <div className="text-[11px] text-[var(--mk-eye-glow)] uppercase mb-4 font-bold flex items-center gap-2">
                   <Palette className="w-4 h-4" /> Knight Presets
                 </div>
                 <div className="p-3 bg-white/5 rounded-xl border border-yellow-400/5 flex flex-col gap-2">
@@ -600,6 +602,41 @@ export default function App() {
                   </button>
                 </div>
               </div>
+              </div>
+
+              <div className="p-6 border-t border-yellow-400/15 shrink-0">
+                <button 
+                  onClick={() => setIsCreditsOpen(true)}
+                  className="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-[var(--mk-silver)] py-3 rounded-xl font-bold transition-colors"
+                >
+                  Credits
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isCreditsOpen && (
+          <div 
+            className="fixed inset-0 bg-black/50 z-[4000] flex items-center justify-center p-4 backdrop-blur-sm"
+            onClick={(e) => e.target === e.currentTarget && setIsCreditsOpen(false)}
+          >
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="bg-[var(--mk-midnight)] border border-[var(--mk-gold)]/30 rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl shadow-[var(--mk-gold)]/10"
+            >
+              <h3 className="text-2xl font-bold text-[var(--mk-gold)] mb-4">Credits</h3>
+              <p className="text-[var(--mk-silver)] text-lg">made by samtheskeleton.</p>
+              <button 
+                onClick={() => setIsCreditsOpen(false)}
+                className="mt-8 px-6 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-sm font-bold transition-colors"
+              >
+                Close
+              </button>
             </motion.div>
           </div>
         )}
