@@ -11,7 +11,7 @@ interface MovieHubProps {
 
 export default function MovieHub({ favorites, onToggleFavorite }: MovieHubProps) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [modalVideo, setModalVideo] = useState<string | null>(null);
+  const [modalVideo, setModalVideo] = useState<Movie | null>(null);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const iframeContainerRef = useRef<HTMLDivElement>(null);
 
@@ -155,7 +155,7 @@ export default function MovieHub({ favorites, onToggleFavorite }: MovieHubProps)
                 <div className="flex flex-col gap-3">
                   <button 
                     onClick={() => {
-                      setModalVideo(selectedMovie.link);
+                      setModalVideo(selectedMovie);
                       setSelectedMovie(null);
                     }}
                     className="w-full flex items-center justify-center gap-2 py-4 bg-[var(--mk-gold)] hover:bg-yellow-400 text-black rounded-xl text-sm font-black tracking-widest uppercase transition-colors"
@@ -187,40 +187,51 @@ export default function MovieHub({ favorites, onToggleFavorite }: MovieHubProps)
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[9999] bg-black/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
           >
-            <div className="absolute top-6 right-6 flex items-center gap-3 z-50">
-              <a 
-                href={modalVideo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/50 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
-                title="Open in Drive"
-              >
-                <ExternalLink className="w-5 h-5" />
-              </a>
-              <button 
-                onClick={toggleFullscreen}
-                className="text-white/50 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
-                title="Fullscreen"
-              >
-                <Maximize className="w-5 h-5" />
-              </button>
-              <button 
-                onClick={() => setModalVideo(null)}
-                className="text-white/50 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
-                title="Close"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
             <motion.div 
               ref={iframeContainerRef}
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="w-full max-w-6xl aspect-video bg-black rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 relative"
+              className="w-full max-w-6xl aspect-video bg-black rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 relative group"
             >
+              <div className="absolute top-0 left-0 right-0 p-4 flex items-center justify-between z-50 bg-black/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button 
+                  onClick={() => setModalVideo(null)}
+                  className="flex items-center gap-2 text-white/80 hover:text-white transition-colors uppercase tracking-widest text-sm font-bold"
+                >
+                  <X className="w-5 h-5" />
+                  Back
+                </button>
+                
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-4">
+                    <button 
+                      onClick={toggleFullscreen}
+                      className="text-white/80 hover:text-white transition-colors"
+                      title="Fullscreen"
+                    >
+                      <Maximize className="w-5 h-5" />
+                    </button>
+                    <a 
+                      href={modalVideo.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/80 hover:text-white transition-colors"
+                      title="Open in Drive"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  </div>
+                  
+                  <div className="flex items-center gap-2 text-white font-bold tracking-widest uppercase text-sm">
+                    <span className="w-2 h-2 rounded-full bg-[var(--mk-gold)]"></span>
+                    {modalVideo.title}
+                  </div>
+                </div>
+              </div>
+
               <iframe 
-                src={modalVideo.replace('/view', '/preview').replace('?usp=sharing', '').replace('?usp=share_link', '').replace('?usp=drivesdk', '')} 
+                src={modalVideo.link.replace('/view', '/preview').replace('?usp=sharing', '').replace('?usp=share_link', '').replace('?usp=drivesdk', '')} 
                 className="w-full h-full border-0" 
                 allowFullScreen 
               />
