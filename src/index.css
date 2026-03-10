@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Press+Start+2P&family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400&family=Uncial+Antiqua&family=Exo+2:ital,wght@1,400;1,700&display=swap');
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Kirsty';
+  src: url('https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/kirsty__.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
   --font-cinzel: "Cinzel Decorative", serif;
   --font-pixel: "Press Start 2P", cursive;
