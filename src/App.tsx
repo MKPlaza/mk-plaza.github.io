@@ -523,10 +523,17 @@ export default function App() {
                   <select 
                     value={Object.keys(THEMES).find(key => THEMES[key] === currentTheme)}
                     onChange={(e) => setCurrentTheme(THEMES[e.target.value])}
-                    className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs font-sans"
+                    className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs"
+                    style={{ fontFamily: currentTheme.fontFamily, fontStyle: currentTheme.fontStyle || 'normal' }}
                   >
                     {Object.entries(THEMES).map(([key, theme]) => (
-                      <option key={key} value={key}>{theme.name}</option>
+                      <option 
+                        key={key} 
+                        value={key}
+                        style={{ fontFamily: currentTheme.fontFamily, fontStyle: currentTheme.fontStyle || 'normal' }}
+                      >
+                        {theme.name}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -542,7 +549,8 @@ export default function App() {
                     <select 
                       value={cloakTarget}
                       onChange={(e) => setCloakTarget(e.target.value)}
-                      className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs font-sans"
+                      className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs"
+                      style={{ fontFamily: currentTheme.fontFamily, fontStyle: currentTheme.fontStyle || 'normal' }}
                     >
                       {Object.entries(CLOAKS).map(([key, cloak]) => (
                         <option key={key} value={key}>{cloak.title}</option>
@@ -564,7 +572,8 @@ export default function App() {
                           value={customCloakTitle}
                           onChange={(e) => setCustomCloakTitle(e.target.value)}
                           placeholder="Enter custom title"
-                          className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2 rounded-lg w-full outline-none text-xs font-sans"
+                          className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2 rounded-lg w-full outline-none text-xs"
+                          style={{ fontFamily: currentTheme.fontFamily, fontStyle: currentTheme.fontStyle || 'normal' }}
                         />
                       </div>
                       <div className="flex flex-col gap-1.5">
@@ -574,7 +583,8 @@ export default function App() {
                           value={customCloakFavicon}
                           onChange={(e) => setCustomCloakFavicon(e.target.value)}
                           placeholder="https://example.com/favicon.ico"
-                          className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2 rounded-lg w-full outline-none text-xs font-sans"
+                          className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2 rounded-lg w-full outline-none text-xs"
+                          style={{ fontFamily: currentTheme.fontFamily, fontStyle: currentTheme.fontStyle || 'normal' }}
                         />
                       </div>
                     </motion.div>
