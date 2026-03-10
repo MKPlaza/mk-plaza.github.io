@@ -208,12 +208,14 @@ export default function App() {
 
   return (
     <div 
-      className="min-h-screen w-full relative transition-all duration-700 font-cinzel"
+      className="min-h-screen w-full relative transition-all duration-700"
       style={{ 
         backgroundImage: `url(${currentTheme.bg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        fontFamily: currentTheme.fontFamily || 'var(--font-cinzel)',
+        fontStyle: currentTheme.fontStyle || 'normal'
       }}
     >
       <AnimatePresence>
@@ -233,8 +235,8 @@ export default function App() {
               />
             </div>
             <div>
-              <h3 className="text-[var(--mk-gold)] font-bold text-sm uppercase tracking-widest">Tab Opened!</h3>
-              <p className="text-[var(--mk-silver)] text-xs font-medium">Welcome to MKPlaza!</p>
+              <h3 className="text-[var(--mk-gold)] font-bold text-sm uppercase tracking-widest">Tab Open!</h3>
+              <p className="text-[var(--mk-silver)] text-xs font-medium">Welcome to MK-Plaza</p>
             </div>
             <button 
               onClick={() => setShowWelcome(false)}
@@ -258,7 +260,7 @@ export default function App() {
           <div 
             className="text-xl font-black uppercase tracking-[3px] text-[var(--mk-gold)] drop-shadow-[0_0_12px_var(--mk-gold)] select-none"
           >
-            MKPlaza
+            MK-Plaza
           </div>
           
           <div className="flex items-center gap-5 bg-yellow-400/5 px-4 py-1.5 rounded-full border border-yellow-400/10 font-orbitron text-[11px] text-[var(--mk-gold)] shadow-[0_0_8px_rgba(255,215,0,0.1)]">
@@ -278,11 +280,9 @@ export default function App() {
             {[...Array(2)].map((_, i) => (
               <React.Fragment key={i}>
                 <span>Chill Kirb Central is still peak</span>
-                <span>M0v13s Galore</span>
-                <span>MKPlaza Supermancy</span>
-                <span>Please check the instructions before clicking the hide button gng</span>
-                <span>ok im out of ideas</span>
-                <span>uhh</span>
+                <span>placeholder</span>
+                <span>Chill Kirb Central is still peak</span>
+                <span>placeholder</span>
               </React.Fragment>
             ))}
           </div>
@@ -318,13 +318,13 @@ export default function App() {
       >
         {[
           { id: 'hide', label: 'Hide', icon: EyeOff, action: () => setActiveHub(null) },
-          { id: 'movies', label: 'M0v1es', icon: Film, count: MOVIES.length },
-          { id: 'tv', label: 'TV Sh0w5', icon: Tv, count: TV_SHOWS.length },
-          { id: 'anime', label: 'An1m3', icon: Ghost, count: ANIME.length },
-          { id: 'manga', label: 'M4ng4', icon: BookOpenText, count: MANGA.length },
-          { id: 'games', label: 'G4me5', icon: Gamepad2, count: GAMES.length },
-          { id: 'music', label: 'Mu51c', icon: Music },
-          { id: 'proxies', label: 'Prox135', icon: Shield, count: PROXIES.length },
+          { id: 'movies', label: 'Movies', icon: Film, count: MOVIES.length },
+          { id: 'tv', label: 'TV Shows', icon: Tv, count: TV_SHOWS.length },
+          { id: 'anime', label: 'Anime', icon: Ghost, count: ANIME.length },
+          { id: 'manga', label: 'Manga', icon: BookOpenText, count: MANGA.length },
+          { id: 'games', label: 'Games', icon: Gamepad2, count: GAMES.length },
+          { id: 'music', label: 'Music', icon: Music },
+          { id: 'proxies', label: 'Proxies', icon: Shield, count: PROXIES.length },
           { id: 'partners', label: 'Partners', icon: Handshake, count: PARTNERS.length },
         ].map((item) => (
           <button
@@ -367,7 +367,7 @@ export default function App() {
       </AnimatePresence>
 
       <main 
-        className={`absolute left-0 w-full transition-all duration-500 z-50 bg-[var(--mk-midnight)]/90 overflow-y-auto ${activeHub ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        className={`absolute left-0 w-full transition-all duration-500 z-50 ${activeHub === 'partners' ? 'bg-[var(--mk-midnight)]/60' : 'bg-[var(--mk-midnight)]/90'} overflow-y-auto ${activeHub ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
         style={{ 
           top: isNavCollapsed ? '80px' : '140px',
           height: isNavCollapsed ? 'calc(100% - 80px)' : 'calc(100% - 140px)'
@@ -523,7 +523,7 @@ export default function App() {
                   <select 
                     value={Object.keys(THEMES).find(key => THEMES[key] === currentTheme)}
                     onChange={(e) => setCurrentTheme(THEMES[e.target.value])}
-                    className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs"
+                    className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs font-sans"
                   >
                     {Object.entries(THEMES).map(([key, theme]) => (
                       <option key={key} value={key}>{theme.name}</option>
@@ -542,7 +542,7 @@ export default function App() {
                     <select 
                       value={cloakTarget}
                       onChange={(e) => setCloakTarget(e.target.value)}
-                      className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs"
+                      className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs font-sans"
                     >
                       {Object.entries(CLOAKS).map(([key, cloak]) => (
                         <option key={key} value={key}>{cloak.title}</option>
@@ -564,7 +564,7 @@ export default function App() {
                           value={customCloakTitle}
                           onChange={(e) => setCustomCloakTitle(e.target.value)}
                           placeholder="Enter custom title"
-                          className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2 rounded-lg w-full outline-none text-xs"
+                          className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2 rounded-lg w-full outline-none text-xs font-sans"
                         />
                       </div>
                       <div className="flex flex-col gap-1.5">
@@ -574,7 +574,7 @@ export default function App() {
                           value={customCloakFavicon}
                           onChange={(e) => setCustomCloakFavicon(e.target.value)}
                           placeholder="https://example.com/favicon.ico"
-                          className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2 rounded-lg w-full outline-none text-xs"
+                          className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2 rounded-lg w-full outline-none text-xs font-sans"
                         />
                       </div>
                     </motion.div>
