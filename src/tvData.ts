@@ -232,19 +232,134 @@ export const TV_SHOWS: TVShow[] = [
         link: "https://drive.google.com/drive/folders/15O2LLhprQNEUGA73u-jdNp3kL8UAHZUB?usp=sharing"
       },
       {
-        title: "Pokemon Indigo League",
+        title: "Pokémon: Indigo League 1997",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSN6UmgyAs2ys-Oj-z7xBq-U9WE0LPmKBrKP_TNFwyKeX7iP2Rs",
         link: "https://drive.google.com/drive/folders/1IPI30EquEp-SAFzT_piu4ROEK-N5F_MN?usp=sharing"
       },
       {
-        title: "Pokemon Horizons",
-        imageUrl: "https://m.media-amazon.com/images/M/MV5BNDRiNzNiNjAtMWU5OS00ODYwLWI0NTAtZjYwNjVhMDE1NDhmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        title: "Pokémon: Adventures on the Orange Islands",
+        imageUrl: "https://m.media-amazon.com/images/I/71hw1ZpL1cL._AC_UF894,1000_QL80_.jpg",
+        link: "https://drive.google.com/drive/folders/1w3zSI3aceZwV9rTfW6rFFtEXCt7CpP4C?usp=drive_link"
+      },
+      {
+        title: "Pokémon: The Johto Journeys",
+        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTp7tXfXovYQNUKQA7xsebEm_yntsfWH-cr9_1Q_JvZ9lMrR2_p",
+        link: "https://drive.google.com/drive/folders/1R61bvEzEQNqqArO8X3P7WIDzl51NbL2u?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Johto League Champions",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/2/2b/Pokemonseason4DVDvol1.jpg",
+        link: "https://drive.google.com/drive/folders/15UwDr3yFoUUHC0If6TAwhI6bUNy27-RV?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Master Quest",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/b/b4/Pokemonseason5DVDBoxSet.jpg",
+        link: "https://drive.google.com/drive/folders/1DVgMJ8byBYNY4u8Tbozb3y3vYFyaaKWY?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Advanced",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRsPdQFuPNH5MNsllsTTQQuHCJ_Km6O8aP5cZbbT--TsC8CZgDv",
+        link: "https://drive.google.com/drive/folders/1viWFHdfeZD83732j5O9TarHPwKzwg7gk?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Advanced Challenge",
+        imageUrl: "https://m.media-amazon.com/images/I/81Mtn7Si7NL._AC_UF894,1000_QL80_.jpg",
+        link: "https://drive.google.com/drive/folders/1C_AhLMQGSfWl8S8yWuhAQM0lTfTbzLEm?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Advanced Battle",
+        imageUrl: "https://m.media-amazon.com/images/I/8134U8-xeSL._AC_UF894,1000_QL80_.jpg",
+        link: "https://drive.google.com/drive/folders/1b_Boq9c-2JaQENUht994IdEwGxMMaf4-?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Battle Frontier",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/2/27/Pok%C3%A9mon_Battle_Frontier_Complete_Collection_DVD.jpg",
+        link: "https://drive.google.com/drive/folders/18JqFJFKlu-DgIuSuwmr5dcAhOdkJl_4v?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Diamond and Pearl",
+        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRe_K1W3nXyDIuRoxLg0Tk7GOKgIbC3siDRS3A03lOslKwkKXH_",
+        link: "https://drive.google.com/drive/folders/1JqlS4GFiv35J0uNi2ac7M1aY_UWeMp4O?usp=drive_link"
+      },
+      {
+        title: "Pokémon: DP Battle Dimension",
+        imageUrl: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9419422_b_v13_ag.jpg",
+        link: "https://drive.google.com/drive/folders/1AWtvL-38qkaUUdym0fDbQEAV0Gq-YpQ-?usp=drive_link"
+      },
+      {
+        title: "Pokémon: DP Galactic Battles",
+        imageUrl: "https://m.media-amazon.com/images/I/814FKzt9w2L._AC_UF894,1000_QL80_.jpg",
+        link: "https://drive.google.com/drive/folders/1ROtMgoc6fkSZHkYEFyfwax1C5xJTRyfm?usp=drive_link"
+      },
+      {
+        title: "Pokémon: DP Sinnoh League Victors",
+        imageUrl: "https://m.media-amazon.com/images/I/81e0dvUpCXL._AC_UF894,1000_QL80_.jpg",
+        link: "https://drive.google.com/drive/folders/1uLr5MqHGx4Ac4BbJU_iIjcjd3HCnBFH0?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Black & White Complete",
+        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRp_jHpvXtCnvvhfCY0aHnoVD_NaqpYGpGKOz43nPHsLvSo9XbJ",
+        link: "https://drive.google.com/drive/folders/1diP15uMwjHiLcTOExHYM3vs0-BozvXeT?usp=drive_link"
+      },
+      {
+        title: "Pokémon: XY",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSZFuNikZaGuPS-fYpNtsC0wN8SEkVCFoLlm--MIKBE8SlnyDwk",
+        link: "https://drive.google.com/drive/folders/1_gC2TGwpgM4FOrLYKhZgaqbpC6aStDOZ?usp=drive_link"
+      },
+      {
+        title: "Pokémon: XY Kalos Quest",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBB_cTazgVvMguN4Jsxi2mKpbmuas0fgmehS2sXYMn76Glr5mF",
+        link: "https://drive.google.com/drive/folders/1B3lkLsMvzY46jNm3cW-oecLT3cV24wkj?usp=drive_link"
+      },
+      {
+        title: "Pokémon: XYZ Complete",
+        imageUrl: "https://m.media-amazon.com/images/I/71tWpr9TCfL._AC_UF894,1000_QL80_.jpg",
+        link: "https://drive.google.com/drive/folders/1GdptdijSMfbxlo_Q_pe1P2xe4rkGgGP8?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Sun & Moon Complete",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTW9SrkJfMkeK8dBR3LMl774Nkc4s3cy3MNQqNuTACKAQze2zdB",
+        link: "https://drive.google.com/drive/folders/1knAcoOB7X5G2_luxTOEFcsqaRMjEwhio?usp=sharing"
+      },
+      {
+        title: "Pokémon: Ultra Adventures",
+        imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQMpd6uO3eNiGRLSj3eKW22hFJSrcB6yGKCwlAkFpC6EE8-4myO",
+        link: "https://drive.google.com/drive/folders/1Jdp67kPk2JUX3OhE5veQgRyo4kX2fvyw?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Ultra Legends",
+        imageUrl: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p16663197_b_v8_aa.jpg",
+        link: "https://drive.google.com/drive/folders/1XlhK3uNYxZMPeNsU8zZk-dtrR_MLcFze?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Horizons Complete",
+        imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Pokemon_Horizons_-_The_Search_for_Laqua_2025_Poster.webp",
         link: "https://drive.google.com/drive/folders/1zA-jxsnYr9NVEgsr7TfQeMAdB7MS7BjF"
       },
       {
-        title: "Pokemon Sun and Moon",
-        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTW9SrkJfMkeK8dBR3LMl774Nkc4s3cy3MNQqNuTACKAQze2zdB",
-        link: "https://drive.google.com/drive/folders/1knAcoOB7X5G2_luxTOEFcsqaRMjEwhio?usp=sharing"
+        title: "Pokémon: Horizons: The Search for Laqua",
+        imageUrl: "https://m.media-amazon.com/images/M/MV5BNjU1YjM2YzAtZWE2Ny00ZWNiLWFkZWItMDJhM2JiNDQwMmI1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        link: "https://drive.google.com/drive/folders/1MaFFrLyA6NY92qJz6-mKnyAIH5B08V9E?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Journeys Series",
+        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTv-Eg4tjVkmHk31IykBtJemKrZatPmUTRChapmJ3NoVrjyMj-y",
+        link: "https://drive.google.com/drive/folders/1882yNi6g-xIqsp6rvzG3jIq9vOgcZv7O?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Master Journeys",
+        imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Pok%C3%A9mon_S24_-_Posters.png",
+        link: "https://drive.google.com/drive/folders/1sjzp8LdYsHaVF6UTmjJwH2EYafFZBBlW?usp=drive_link"
+      },
+      {
+        title: "Pokémon: Ultimate Journeys",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Pok%C3%A9mon_S25_-_Posters.png/250px-Pok%C3%A9mon_S25_-_Posters.png",
+        link: "https://drive.google.com/drive/folders/1owl3LPBqYHedZUU56V6ryIKaOXwsLtgG?usp=drive_link"
+      },
+      {
+        title: "Pokémon: To Be a Pokémon Master Series",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Aim_to_be_a_Pok%C3%A9mon_Master_poster.jpg/250px-Aim_to_be_a_Pok%C3%A9mon_Master_poster.jpg",
+        link: "https://drive.google.com/drive/folders/1Dxj1dB0i6By3jIYjpOtF27Kbfy5B3V9A?usp=drive_link"
       },
       {
         title: "Reccess",
