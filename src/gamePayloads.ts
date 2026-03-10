@@ -11690,7 +11690,7 @@ export const GAME_PAYLOADS: Record<string, { title: string; customHtml: string }
             document.getElementById("startButton").addEventListener("click", startGame);
             function loadGame() {
                 var script = document.createElement("script");
-                script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+                script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
                 document.body.appendChild(script);
             }
 	<\/script>
@@ -33622,14 +33622,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/banjokazooie/banjokazooie.zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -33691,14 +33691,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/banjotooie/Banjo-Tooie%20(USA).n64";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -33760,11 +33760,11 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/ROMs/bombermanhero.zip";
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -33999,14 +33999,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/diddykongracing/Diddy%20Kong%20Racing%20(USA)%20(En%2CFr).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34179,14 +34179,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/doom64/Doom%2064%20(USA)%20(Rev%20A).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34248,14 +34248,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/excitebike64/Excitebike%2064%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34317,14 +34317,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@8df9a7774878060fa6c566ac063ca482bed1f06c/FIFA%2099%20(USA)%20(En%2CFr%2CDe%2CEs%2CIt%2CNl%2CPt%2CSv).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34386,14 +34386,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@00a3d67c0fd4d32c1c80cfaac2ebcc308c83bf7a/World%20Cup%2098%20(USA)%20(En%2CFr%2CDe%2CEs%2CIt%2CNl%2CSv%2CDa).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34455,14 +34455,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/fzerox/f-zero-x.zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34524,14 +34524,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@a5636f3fc4cced4928e0298dd54f1dc371080c85/Glover%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34593,14 +34593,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/goldeneye007/goldeneye.zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34662,14 +34662,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@fe59348d4ccfc61b12a433dfddb557db8ba93801/Harvest%20Moon%2064%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34731,14 +34731,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/jetforcegemini/Jet%20Force%20Gemini%20(USA).n64";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34800,14 +34800,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/kirby64/kirby64.zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34869,14 +34869,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@30884886205950003acc451da53cbb940cbda522/Madden%20Football%2064%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -34938,14 +34938,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@30884886205950003acc451da53cbb940cbda522/Madden%20NFL%202000%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -35007,14 +35007,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@30884886205950003acc451da53cbb940cbda522/Madden%20NFL%202001%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -35076,14 +35076,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@30884886205950003acc451da53cbb940cbda522/Madden%20NFL%202002%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -35145,14 +35145,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@30884886205950003acc451da53cbb940cbda522/Madden%20NFL%2099%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -35214,14 +35214,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/eazy-man/shHH@main/Mario%20Odyssey%2064.zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -35283,14 +35283,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/ROMs/mortalkombat4.zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -35352,14 +35352,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@ab523c866a5d0dda4ea9801dd4d96457e880cbcd/NBA%20Hangtime%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -35561,14 +35561,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@c468528b0cbb54e359a93df28257509537caf351/NFL%20Blitz%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -35783,14 +35783,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/pokemonsnap/Pokemon%20Snap%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -36005,14 +36005,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/Stinkalistic/junk@main/Portal%2064%20v0.90.z64";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -36777,7 +36777,7 @@ let joystick = nipplejs.create({
             window.EJS_core = "parallel_n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/n64/Somari%2064%20DASH%20-%20v.1.0.7z";
             window.EJS_defaultOptions = {
                 vsync: "disabled",
@@ -36785,7 +36785,7 @@ let joystick = nipplejs.create({
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -36847,7 +36847,7 @@ let joystick = nipplejs.create({
             window.EJS_core = "parallel_n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/n64/South%20Park%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled",
@@ -36855,7 +36855,7 @@ let joystick = nipplejs.create({
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -37070,7 +37070,7 @@ let joystick = nipplejs.create({
             window.EJS_core = "parallel_n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/n64/Super%20Mario%2064%20Last%20Impact.zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled",
@@ -37078,7 +37078,7 @@ let joystick = nipplejs.create({
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -37140,7 +37140,7 @@ let joystick = nipplejs.create({
             window.EJS_core = "parallel_n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/n64/SM64%20Liminal%20Dream.7z";
             window.EJS_defaultOptions = {
                 vsync: "disabled",
@@ -37148,7 +37148,7 @@ let joystick = nipplejs.create({
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -37290,14 +37290,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/eazy-man/shHH@main/Super%20Mario%20Sunshine%2064.zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -38444,7 +38444,7 @@ let joystick = nipplejs.create({
         document.getElementById("startButton").addEventListener("click", startGame);
         function loadGame() {
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
     <\/script>
@@ -38529,7 +38529,7 @@ let joystick = nipplejs.create({
         document.getElementById("startButton").addEventListener("click", startGame);
         function loadGame() {
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
     <\/script>
@@ -39148,7 +39148,7 @@ let joystick = nipplejs.create({
             window.EJS_core = "parallel_n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/n64/Super%20Mario%20Star%20Road.7z";
             window.EJS_defaultOptions = {
                 vsync: "disabled",
@@ -39156,7 +39156,7 @@ let joystick = nipplejs.create({
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -39218,7 +39218,7 @@ let joystick = nipplejs.create({
             window.EJS_core = "parallel_n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/n64/Super%20Mario%2064%20Star%20Road%20Retooled.7z";
             window.EJS_defaultOptions = {
                 vsync: "disabled",
@@ -39226,7 +39226,7 @@ let joystick = nipplejs.create({
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -39288,14 +39288,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/supersmashbros/supersmashbros.zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -39355,11 +39355,11 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#00000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/ROMs/TelocationFinal.n64";
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -39727,14 +39727,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@509f1fd0eae4bd6fb0bb9c1bd3a146b0265a6a26/Triple%20Play%202000%20(USA).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -39794,11 +39794,11 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#00000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/ROMs/Turok%20-%20Dinosaur%20Hunter%20(USA).zip";
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
@@ -39860,14 +39860,14 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/waverace64/Wave%20Race%2064%20(USA)%20(Rev%20A).zip";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
             
             var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
             document.body.appendChild(script);
         }
         
