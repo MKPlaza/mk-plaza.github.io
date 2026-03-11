@@ -372,6 +372,20 @@ export const TV_SHOWS: TVShow[] = [
         link: "https://drive.google.com/drive/folders/1EhzdG061fossyvUWpAWzDB_b6WhAWvbS?dmr=1&ec=wgc-drive-hero-goto"
       },
       {
+        title: "What's New, Scooby-Doo?",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSj5YWjjoWlnf82LQTLp8AFbtIyjMyurAMdnuVmfDW1tMzN163n",
+        description: "Scooby and the gang solve modern mysteries.",
+        year: "2002",
+        link: "https://drive.google.com/drive/folders/1lzhZ7zI8txmOQxERhfNrFewiU96kpnxZ?usp=drive_link"
+      },
+      {
+        title: "Scooby-Doo, Where Are You!",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHBU_JBUES9RevRrrnp6Il66Div_VS5hTlkpQ4YSyIwO6Bie-j",
+        description: "The original mystery-solving adventures.",
+        year: "1969",
+        link: "https://drive.google.com/drive/folders/1dq_qrg51SMtVW7SWAeYYrx-nKbfwKkXl?usp=drive_link"
+      },
+      {
         title: "Scott Pilgrim Takes Off",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTldh0ID83lXukg4i4_2vKaguLHhDia9gC3WRXvnfaIAZaqhfn8",
         link: "https://drive.google.com/drive/folders/1HojWqmuk_1nHQkiYQ2oynmgjBUFkR2Eh"
