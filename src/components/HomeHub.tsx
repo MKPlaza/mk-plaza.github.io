@@ -21,19 +21,20 @@ interface HomeHubProps {
   favorites: FavoriteItem[];
   onRemoveFavorite: (id: string) => void;
   currentTheme: ThemePreset;
+  onOpenItem?: (item: FavoriteItem) => void;
 }
 
 const CHANGELOG = [
   {
     version: 'v1.0',
-    date: 'Mar10, 2026',
+    date: 'Mar 10, 2026',
     updates: [
       'Truly, Welcome to MKPlaza',
       'Happy Mar10 Day!'
     ]
   },
   {
-    version: ' Beta v2.0',
+    version: 'Beta v2.0',
     date: 'MAR 07, 2026',
     updates: [
       'Welcome to MKPlaza!'
@@ -79,7 +80,7 @@ const INSTRUCTIONS = [
   { title: 'Music players', desc: 'The pill shaped one only plays meta knight variant themes but the tabbed one plays more then just meta knight themes.' }
 ];
 
-export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemoveFavorite, currentTheme }: HomeHubProps) {
+export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemoveFavorite, currentTheme, onOpenItem }: HomeHubProps) {
   const [isInstructionsOpen, setIsInstructionsOpen] = useState(false);
   const themeKey = Object.keys(THEMES).find(key => THEMES[key] === currentTheme) || 'original';
   const metaKnightImage = THEME_IMAGES[themeKey] || THEME_IMAGES.original;
@@ -265,16 +266,25 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
 
         {favorites.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {favorites.map((item) => (
+            {favorites.map((item) => {
+              const handleClick = (e: React.MouseEvent) => {
+                if (item.type === 'movie' || item.type === 'game' || item.link === '#' || item.link === '') {
+                  e.preventDefault();
+                  if (onOpenItem) onOpenItem(item);
+                }
+              };
+
+              return (
               <motion.a
                 key={item.id}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                href={item.link}
-                target="_blank"
+                href={item.type === 'movie' || item.type === 'game' || item.link === '#' || item.link === '' ? undefined : item.link}
+                target={item.type === 'movie' || item.type === 'game' || item.link === '#' || item.link === '' ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                className="group relative bg-black/40 border border-white/10 rounded-2xl overflow-hidden hover:border-[var(--mk-gold)]/50 transition-all shadow-xl"
+                onClick={handleClick}
+                className="group relative bg-black/40 border border-white/10 rounded-2xl overflow-hidden hover:border-[var(--mk-gold)]/50 transition-all shadow-xl cursor-pointer"
               >
                 <div className="aspect-[3/4] relative">
                   <img 
@@ -304,7 +314,8 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
                   </div>
                 </div>
               </motion.a>
-            ))}
+            );
+            })}
           </div>
         ) : (
           <div className="h-40 flex flex-col items-center justify-center border border-dashed border-white/10 rounded-[2rem] bg-black/20">
@@ -347,7 +358,7 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
       </section>
 
       <footer className="pt-12 border-t border-white/10 text-center text-white/30 text-sm">
-        <p>&copy; 2026 MKPLAZA. Name is mine, but I do not own the rights to any g4me,m0v1e, etc.</p>
+        <p>&copy; 2026 MKPLAZA. Name is mine, but I do not own the rights to any game, movie, etc.</p>
       </footer>
     </div>
   );
