@@ -7,11 +7,25 @@ import { Anime, FavoriteItem } from '../types';
 interface AnimeHubProps {
   favorites: FavoriteItem[];
   onToggleFavorite: (item: FavoriteItem) => void;
+  initialSelectedId?: string | null;
+  onClearSelectedId?: () => void;
 }
 
-export default function AnimeHub({ favorites, onToggleFavorite }: AnimeHubProps) {
+export default function AnimeHub({ favorites, onToggleFavorite, initialSelectedId, onClearSelectedId }: AnimeHubProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedAnime, setSelectedAnime] = useState<Anime | null>(null);
+
+  React.useEffect(() => {
+    if (initialSelectedId) {
+      const anime = ANIME.find(a => a.title === initialSelectedId);
+      if (anime) {
+        setSelectedAnime(anime);
+      }
+      if (onClearSelectedId) {
+        onClearSelectedId();
+      }
+    }
+  }, [initialSelectedId, onClearSelectedId]);
 
   const filteredAnime = ANIME.filter(item => 
     item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -26,7 +40,7 @@ export default function AnimeHub({ favorites, onToggleFavorite }: AnimeHubProps)
           MKPlaza's An1m3
         </h1>
         <p className="text-[var(--mk-silver)] opacity-70 italic">
-          Explore the world of animation
+          For all the weebs and weirdos
         </p>
       </div>
 
@@ -37,7 +51,7 @@ export default function AnimeHub({ favorites, onToggleFavorite }: AnimeHubProps)
           placeholder="Search anime..." 
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] py-3 pl-12 pr-4 rounded-xl outline-none focus:border-[var(--mk-gold)] transition-all shadow-xl"
+          className="w-full bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] py-3 pl-12 pr-4 rounded-xl outline-none focus:border-[var(--mk-gold)] transition-all shadow-xl font-sans"
         />
       </div>
 
