@@ -56,6 +56,7 @@ export default function App() {
   const [currentTheme, setCurrentTheme] = useState<ThemePreset>(THEMES.original);
   const [isNavCollapsed, setIsNavCollapsed] = useState(false);
   const [activeHub, setActiveHub] = useState<string | null>('home');
+  const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isCreditsOpen, setIsCreditsOpen] = useState(false);
@@ -155,6 +156,23 @@ export default function App() {
 
   const loadHub = (type: string) => {
     setActiveHub(type);
+  };
+
+  const handleClearSelectedId = React.useCallback(() => {
+    setSelectedItemId(null);
+  }, []);
+
+  const handleOpenItem = (item: FavoriteItem) => {
+    if (item.type === 'game') {
+      const game = GAMES.find(g => g.id === item.id);
+      if (game) {
+        setSelectedGame(game);
+        loadHub('games');
+      }
+    } else {
+      setSelectedItemId(item.id);
+      loadHub(item.type);
+    }
   };
 
   const goHome = () => {
@@ -261,7 +279,7 @@ export default function App() {
           <div 
             className="text-xl font-black uppercase tracking-[3px] text-[var(--mk-gold)] drop-shadow-[0_0_12px_var(--mk-gold)] select-none"
           >
-            MKPlaza
+            MK-Plaza
           </div>
           
           <div className="flex items-center gap-5 bg-yellow-400/5 px-4 py-1.5 rounded-full border border-yellow-400/10 font-orbitron text-[11px] text-[var(--mk-gold)] shadow-[0_0_8px_rgba(255,215,0,0.1)]">
@@ -383,11 +401,12 @@ export default function App() {
             favorites={favorites}
             onRemoveFavorite={(id) => setFavorites(prev => prev.filter(f => f.id !== id))}
             currentTheme={currentTheme}
+            onOpenItem={handleOpenItem}
           />
         )}
-        {activeHub === 'movies' && <MovieHub favorites={favorites} onToggleFavorite={toggleFavorite} />}
-        {activeHub === 'tv' && <TVHub favorites={favorites} onToggleFavorite={toggleFavorite} />}
-        {activeHub === 'anime' && <AnimeHub favorites={favorites} onToggleFavorite={toggleFavorite} />}
+        {activeHub === 'movies' && <MovieHub favorites={favorites} onToggleFavorite={toggleFavorite} initialSelectedId={selectedItemId} onClearSelectedId={handleClearSelectedId} />}
+        {activeHub === 'tv' && <TVHub favorites={favorites} onToggleFavorite={toggleFavorite} initialSelectedId={selectedItemId} onClearSelectedId={handleClearSelectedId} />}
+        {activeHub === 'anime' && <AnimeHub favorites={favorites} onToggleFavorite={toggleFavorite} initialSelectedId={selectedItemId} onClearSelectedId={handleClearSelectedId} />}
         {activeHub === 'manga' && <MangaHub favorites={favorites} onToggleFavorite={toggleFavorite} />}
         {activeHub === 'games' && <GamesHub favorites={favorites} onToggleFavorite={toggleFavorite} setSelectedGame={setSelectedGame} />}
         {activeHub === 'music' && (
