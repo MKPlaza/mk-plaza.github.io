@@ -7,13 +7,27 @@ import { FavoriteItem, Movie } from '../types';
 interface MovieHubProps {
   favorites: FavoriteItem[];
   onToggleFavorite: (item: FavoriteItem) => void;
+  initialSelectedId?: string | null;
+  onClearSelectedId?: () => void;
 }
 
-export default function MovieHub({ favorites, onToggleFavorite }: MovieHubProps) {
+export default function MovieHub({ favorites, onToggleFavorite, initialSelectedId, onClearSelectedId }: MovieHubProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [modalVideo, setModalVideo] = useState<Movie | null>(null);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const iframeContainerRef = useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    if (initialSelectedId) {
+      const movie = MOVIES.find(m => m.title === initialSelectedId);
+      if (movie) {
+        setSelectedMovie(movie);
+      }
+      if (onClearSelectedId) {
+        onClearSelectedId();
+      }
+    }
+  }, [initialSelectedId, onClearSelectedId]);
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
