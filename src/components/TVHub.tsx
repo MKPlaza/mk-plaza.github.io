@@ -7,11 +7,25 @@ import { TVShow, FavoriteItem } from '../types';
 interface TVHubProps {
   favorites: FavoriteItem[];
   onToggleFavorite: (item: FavoriteItem) => void;
+  initialSelectedId?: string | null;
+  onClearSelectedId?: () => void;
 }
 
-export default function TVHub({ favorites, onToggleFavorite }: TVHubProps) {
+export default function TVHub({ favorites, onToggleFavorite, initialSelectedId, onClearSelectedId }: TVHubProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedShow, setSelectedShow] = useState<TVShow | null>(null);
+
+  React.useEffect(() => {
+    if (initialSelectedId) {
+      const show = TV_SHOWS.find(s => s.title === initialSelectedId);
+      if (show) {
+        setSelectedShow(show);
+      }
+      if (onClearSelectedId) {
+        onClearSelectedId();
+      }
+    }
+  }, [initialSelectedId, onClearSelectedId]);
 
   const filteredShows = TV_SHOWS.filter(show => 
     show.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -37,7 +51,7 @@ export default function TVHub({ favorites, onToggleFavorite }: TVHubProps) {
           placeholder="Search TV shows..." 
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] py-3 pl-12 pr-4 rounded-xl outline-none focus:border-[var(--mk-gold)] transition-all shadow-xl"
+          className="w-full bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] py-3 pl-12 pr-4 rounded-xl outline-none focus:border-[var(--mk-gold)] transition-all shadow-xl font-sans"
         />
       </div>
 
