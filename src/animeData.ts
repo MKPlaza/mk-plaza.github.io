@@ -1,8 +1,8 @@
 import { Anime } from './types';
 
 export const ANIME: Anime[] = [
-  {
-    title: "Afro Samurai",
+            {
+                title: "Afro Samurai",
                 imageUrl: "https://m.media-amazon.com/images/M/MV5BMjRlZGMwZmMtZjA0YS00NjUzLTk1OGYtNDhjZjM3ZmJkNGRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/drive/folders/1enWphPUwgRPYnGj2TD7XVNrG8HCc3CDm?usp=drive_link"
             },
@@ -434,6 +434,11 @@ export const ANIME: Anime[] = [
                         url: "https://drive.google.com/file/d/1mwu1cqa92ShQu9fj_e-88z_5rxkCIvxU/view?usp=share_link"
                     }
                 ]
+            },
+            {
+                title: "Dragon Ball Super",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRBCliNChyakDgBQXw1wXDSbfx2S0TiQxGW7vFIrus56xBj3u1h",
+                link: "https://drive.google.com/drive/folders/1pBeEXAWh8tneZc2KtwqTfP0AYJGKLKiO"
             },
             {
                 title: "FLCL",
