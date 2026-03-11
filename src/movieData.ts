@@ -135,6 +135,90 @@ export const MOVIES: Movie[] = [
                 year: "2015"
             },
             {
+                title: "Scooby-Doo! and the Witch's Ghost",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQVsxspVRryos59ijGqPcRiyKkmxXZbHVXboKCPkcoSaJuZO6fa",
+                link: "https://drive.google.com/file/d/1_hkjpVLPviBFV8320Drj4jjC9DfSzueB/view?usp=drive_link",
+                description: "The gang visits Oakhaven and encounters a real ghost.",
+                year: "1999"
+            },
+            {
+                title: "Scooby-Doo! and Krypto, Too!",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAHISH3_gLAP4ACIZXSRtTxXMbFsb9Rya89s1iX_szQAkiOuQn",
+                link: "https://drive.google.com/file/d/1A3KkhmxtAok0WhO2iaSR4GPwOWBs_T6w/view?usp=drive_link",
+                description: "Scooby-Doo meets Superman's dog, Krypto.",
+                year: "2023"
+            },
+            {
+                title: "Scooby-Doo! Music of the Vampire",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSRE3QdVIF94LtWH8Wu2-abqOT1LFpzdaHU24l-Tg1a7FLoZR-z",
+                link: "https://drive.google.com/file/d/1w88R5d11KA2RHZjDMF44PGiVTC-aSOVU/view?usp=drive_link",
+                description: "The gang attends a vampire festival.",
+                year: "2012"
+            },
+            {
+                title: "Straight Outta Nowhere: Scooby-Doo! Meets Courage the Cowardly Dog",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjTx5NAhcCnK8vduTG0z5PP3Nxc79t5Pa8yhcAs0uJQgIZrspB",
+                link: "https://drive.google.com/file/d/1Zh_wuLiteAQpM9MYo3CKdmjvPv11QDtB/view?usp=drive_link",
+                description: "Scooby meets Courage in Nowhere, Kansas.",
+                year: "2021"
+            },
+            {
+                title: "Scooby-Doo! Frankencreepy",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcToCujbfSAL1lC5eAoUyH72vTO9e_JmlU8IaATBfw5tviqYavpc",
+                link: "https://drive.google.com/file/d/16C2WJoTqTo_6uk28EHxGW0ZP3IhHv8XW/view?usp=drive_link",
+                description: "Velma inherits a cursed castle.",
+                year: "2014"
+            },
+            {
+                title: "Scooby-Doo! Haunted Holidays",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy1REfyPBNIkPfuvSHfXgsTBEzpfZcuIGLrt0fYlWj0wEKHrpdCpj-rlMnj3ktLr_uVhvFVw&s",
+                link: "https://drive.google.com/file/d/1ZfMbvwDt282Fy6R0lkPxxdg80sdGInqt/view?usp=drive_link",
+                description: "A sinister snowman haunts a toy store.",
+                year: "2012"
+            },
+            {
+                title: "Scooby-Doo! in Where's My Mummy?",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSB71tzCjWmiG8bVzzhS0Q-uaXu_Wt3FTjyQMrcH9tFNafugXwv",
+                link: "https://drive.google.com/file/d/1xsSHSR4XkvHqsJBgFVxBDnBgfS24JUvA/view?usp=drive_link",
+                description: "The gang travels to Egypt and faces a mummy's curse.",
+                year: "2005"
+            },
+            {
+                title: "Scooby-Doo! Moon Monster Madness",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe-utTMNm14-vPMY4LJFQ3KPKqd31bhim9szqIqxMAlrSBiIqN",
+                link: "https://drive.google.com/file/d/1uCF6cq6_ZVy5TSNX2FRQAC923Q7qMW1J/view?usp=drive_link",
+                description: "The gang goes to space.",
+                year: "2015"
+            },
+            {
+                title: "Scooby-Doo! and the Legend of the Vampire",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCPQAIrKJx6dJ9ZTqcZdj73vbfADGTft5Ct0boJczZvuAoCQ5k",
+                link: "https://drive.google.com/file/d/1V7dZ668NX5phvFK2jK_TnLH4ouoTSwxp/view?usp=drive_link",
+                description: "The gang visits Vampire Rock in Australia.",
+                year: "2003"
+            },
+            {
+                title: "Scooby-Doo and the Cyber Chase",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSirsUYg6wGyqE1hsBWtjHo7ZijQ4KClRqBxtFZtbWelCXJ4wD2",
+                link: "https://drive.google.com/file/d/1Yy740jq-YYGWMqLOMafB0ihcL11HVdO4/view?usp=drive_link",
+                description: "The gang is zapped into a video game.",
+                year: "2001"
+            },
+            {
+                title: "Scooby-Doo and the Alien Invaders",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSP1C4j5gz9wMG30Yt4B-83ysgcNXheQGLTQkfXs33DYtM6a2Jl",
+                link: "https://drive.google.com/file/d/1ESXgNjFYNYCwCsoMRxPRlZuhNNYaxZDz/view?usp=drive_link",
+                description: "The gang encounters aliens in a desert town.",
+                year: "2000"
+            },
+            {
+                title: "Scooby-Doo Goes Hollywood",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSgpQWv2QJVG7bQw7iuJae6Qv2O_SiW8PrM6L4IM_s5KsbxkTb",
+                link: "https://drive.google.com/file/d/1GkXfdC_nRSW_7esZeydw59kPjHhc7m3z/view?usp=drive_link",
+                description: "Scooby tries to become a movie star.",
+                year: "1979"
+            },
+            {
                 title: "Five Nights at Freddy's",
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/Fnaf_Movie_Poster.png",
                 link: "https://drive.google.com/file/d/1tyzXrXFux15AXpZxtiM61p1R1zO6NbSF/view",
