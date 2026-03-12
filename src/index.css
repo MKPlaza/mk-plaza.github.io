@@ -71,3 +71,23 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #ffea00;
 }
+
+.game-card {
+  background: #0a1128;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-card:hover {
+  border-color: rgba(255, 204, 0, 0.4); 
+  background: #0e1a3d;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.launch-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
