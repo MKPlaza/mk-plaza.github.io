@@ -274,7 +274,9 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
                 }
               };
 
-              return (
+              const isGame = item.type === 'game';
+
+            return (
               <motion.a
                 key={item.id}
                 layout
@@ -284,16 +286,28 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
                 target={item.type === 'movie' || item.type === 'game' || item.link === '#' || item.link === '' ? undefined : "_blank"}
                 rel="noopener noreferrer"
                 onClick={handleClick}
-                className="group relative bg-black/40 border border-white/10 rounded-2xl overflow-hidden hover:border-[var(--mk-gold)]/50 transition-all shadow-xl cursor-pointer"
+                className={`group relative ${isGame ? 'bg-[#0a1128] game-card' : 'bg-black/40'} border border-white/10 rounded-2xl overflow-hidden hover:border-[var(--mk-gold)]/50 transition-all shadow-xl cursor-pointer`}
               >
                 <div className="aspect-[3/4] relative">
-                  <img 
-                    src={item.imageUrl} 
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                  {isGame ? (
+                    <>
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center transition-all duration-700 opacity-20 group-hover:opacity-60 group-hover:scale-110 z-0" 
+                        style={{ backgroundImage: `url('${item.imageUrl}')` }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-[#0f0f0f]/80 to-transparent z-0 pointer-events-none" />
+                    </>
+                  ) : (
+                    <>
+                      <img 
+                        src={item.imageUrl} 
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                    </>
+                  )}
                   
                   <button 
                     onClick={(e) => {
@@ -310,7 +324,7 @@ export default function HomeHub({ onNavigate, onOpenSettings, favorites, onRemov
                   </div>
                   
                   <div className="absolute bottom-0 left-0 w-full p-4 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                    <h3 className="text-sm font-bold text-white line-clamp-2 leading-tight">{item.title}</h3>
+                    <h3 className="text-sm font-bold text-white line-clamp-2 leading-tight group-hover:text-[var(--mk-gold)] transition-colors">{item.title}</h3>
                   </div>
                 </div>
               </motion.a>
