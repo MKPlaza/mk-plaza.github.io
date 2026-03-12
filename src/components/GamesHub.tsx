@@ -95,9 +95,15 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="p-8 max-w-7xl mx-auto pb-32"
+      className="p-8 max-w-7xl mx-auto pb-32 relative"
     >
-      <div className="text-center mb-12">
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-yellow-400/15 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-blue-600/20 blur-[120px] rounded-full"></div>
+      </div>
+
+      <div className="relative z-10">
+        <div className="text-center mb-12">
         <h1 className="text-6xl md:text-8xl font-black italic tracking-tighter mb-4 leading-none text-white select-none">
           MK'S GAME <span className="text-[var(--mk-gold)]" style={{ textShadow: '0 0 15px rgba(255,204,0,0.4)' }}>COLLECTION</span>
         </h1>
@@ -110,14 +116,14 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
         </div>
       </div>
 
-      <div className="relative max-w-2xl mx-auto mb-8">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500 w-5 h-5 transition-colors focus-within:text-[var(--mk-gold)]" />
+      <div className="relative max-w-2xl mx-auto mb-8 group">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500 w-5 h-5 transition-colors group-focus-within:text-[var(--mk-gold)]" />
         <input 
           type="text" 
           placeholder="Search the vault (Title, system, or tag)..." 
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full bg-white/5 border border-white/10 text-white py-4 pl-14 pr-6 rounded-full outline-none focus:border-[var(--mk-gold)]/50 focus:bg-white/10 transition-all font-sans font-medium placeholder:text-neutral-600"
+          className="w-full bg-white/5 border border-white/10 text-white py-4 pl-14 pr-6 rounded-full outline-none focus:border-[var(--mk-gold)]/50 focus:bg-white/10 focus:shadow-[0_0_20px_rgba(255,204,0,0.1)] transition-all font-sans font-medium placeholder:text-neutral-600"
         />
       </div>
 
@@ -150,61 +156,70 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
-                className="group relative bg-[#0a1128] border border-white/10 rounded-3xl overflow-hidden flex flex-col min-h-[300px] hover:border-[var(--mk-gold)]/40 hover:bg-[#0e1a3d] transition-all duration-500 shadow-2xl"
+                className="game-card group relative rounded-3xl overflow-hidden flex flex-col min-h-[300px] border border-white/10 transition-all duration-500"
               >
-              <div className={`relative z-10 h-1.5 w-full bg-gradient-to-r ${game.color} opacity-80`}></div>
-              
-              <div className="relative z-10 p-8 flex-grow flex flex-col justify-between">
-                <div>
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="p-3 bg-white/5 backdrop-blur-sm rounded-2xl transition-colors group-hover:bg-white/10">
-                      <IconComponent className={`w-6 h-6 ${game.iconColor} drop-shadow-md`} />
-                    </div>
-                    <div className="flex flex-col items-end gap-2">
-                      <span className="text-[10px] font-black text-white/40 tracking-widest uppercase drop-shadow-md">{game.system}</span>
-                      <span className="text-[10px] font-bold text-red-500 bg-red-600/10 backdrop-blur-md px-2 py-0.5 rounded-md border border-red-600/20">{game.year}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex justify-between items-start gap-4">
-                    <h3 className="text-2xl font-bold mb-3 text-white drop-shadow-lg">{game.title}</h3>
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onToggleFavorite({
-                          id: game.id,
-                          type: 'game',
-                          title: game.title,
-                          imageUrl: game.image || 'https://picsum.photos/seed/game/400/600',
-                          link: game.link || '#'
-                        });
-                      }}
-                      className={`p-2 rounded-full backdrop-blur-md border transition-all ${
-                        isFavorited 
-                          ? 'bg-[var(--mk-gold)] border-[var(--mk-gold)] text-[var(--mk-midnight)]' 
-                          : 'bg-black/40 border-white/10 text-white hover:border-[var(--mk-gold)] hover:text-[var(--mk-gold)]'
-                      }`}
-                    >
-                      <Star className={`w-4 h-4 ${isFavorited ? 'fill-current' : ''}`} />
-                    </button>
-                  </div>
-                  
-                  <p className="text-sm text-neutral-400 mb-8 leading-relaxed italic h-12 line-clamp-2 drop-shadow-md">"{game.desc}"</p>
-                </div>
+                {game.image && (
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-all duration-500 opacity-20 group-hover:opacity-60 group-hover:scale-105 z-0" 
+                    style={{ backgroundImage: `url('${game.image}')` }}
+                  />
+                )}
                 
-                <button 
-                  onClick={() => setSelectedGame(game)}
-                  className="relative w-full py-4 bg-white text-black rounded-2xl font-black text-[11px] tracking-[0.15em] transition-all active:scale-[0.98] mt-auto overflow-hidden group/btn"
-                >
-                  <div className="absolute inset-0 bg-[var(--mk-gold)] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
-                  <span className="relative z-10 flex items-center justify-center gap-2 group-hover/btn:text-black transition-colors">
-                    LAUNCH GAME! <Play className="w-3 h-3 fill-current" />
-                  </span>
-                </button>
-              </div>
-            </motion.div>
-          );
-        })}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-[#0f0f0f]/80 to-transparent z-0 pointer-events-none" />
+
+                <div className={`relative z-10 h-1.5 w-full bg-gradient-to-r ${game.color} opacity-80`}></div>
+                
+                <div className="relative z-10 p-8 flex-grow flex flex-col justify-between">
+                  <div>
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="p-3 bg-white/5 backdrop-blur-sm rounded-2xl transition-colors group-hover:bg-white/10">
+                        <IconComponent className={`w-6 h-6 ${game.iconColor} drop-shadow-md`} />
+                      </div>
+                      <div className="flex flex-col items-end">
+                        <span className="text-[10px] font-black text-white/40 tracking-widest uppercase mb-1 drop-shadow-md">{game.system}</span>
+                        <span className="text-[10px] font-bold text-red-500 bg-red-600/10 backdrop-blur-md px-2 py-0.5 rounded-md border border-red-600/20">{game.year}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex justify-between items-start gap-4 mb-3">
+                      <h3 className="text-2xl font-bold text-white drop-shadow-lg">{game.title}</h3>
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onToggleFavorite({
+                            id: game.id,
+                            type: 'game',
+                            title: game.title,
+                            imageUrl: game.image || 'https://picsum.photos/seed/game/400/600',
+                            link: game.link || '#'
+                          });
+                        }}
+                        className={`p-2 rounded-full backdrop-blur-md border transition-all ${
+                          isFavorited 
+                            ? 'bg-[var(--mk-gold)] border-[var(--mk-gold)] text-[var(--mk-midnight)]' 
+                            : 'bg-black/40 border-white/10 text-white hover:border-[var(--mk-gold)] hover:text-[var(--mk-gold)]'
+                        }`}
+                      >
+                        <Star className={`w-4 h-4 ${isFavorited ? 'fill-current' : ''}`} />
+                      </button>
+                    </div>
+                    
+                    <p className="text-sm text-neutral-400 mb-8 leading-relaxed italic h-12 line-clamp-2 drop-shadow-md">"{game.desc}"</p>
+                  </div>
+                  
+                  <button 
+                    onClick={() => setSelectedGame(game)}
+                    className="launch-btn relative w-full py-4 bg-white text-black rounded-2xl font-black text-[11px] tracking-[0.15em] transition-all active:scale-[0.98] mt-auto overflow-hidden group/btn"
+                  >
+                    <div className="absolute inset-0 bg-[var(--mk-gold)] translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+                    <span className="relative z-10 flex items-center justify-center gap-2 group-hover/btn:text-black group-hover/btn:font-black transition-all">
+                      PLAY NOW! <Play className="w-3 h-3 fill-current" />
+                    </span>
+                  </button>
+                </div>
+              </motion.div>
+            );
+          })}
         </AnimatePresence>
       </div>
 
@@ -224,6 +239,7 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
           </button>
         </div>
       )}
+      </div>
     </motion.div>
   );
 }
