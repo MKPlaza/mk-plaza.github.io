@@ -217,6 +217,11 @@ export const TV_SHOWS: TVShow[] = [
         link: "https://drive.google.com/folderview?id=15GtJc8NKaGoZyPoRXcJjTs6ZSQfKJ-xb"
       },
       {
+        title: "One Piece Live Action",
+        imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/images/one-piece-live.jpg",
+        link: "https://drive.google.com/drive/folders/1SIvo_3pKpUesX4ZDY2Y7Z59kXe632XWe?usp=sharing"
+      },
+      {
         title: "PJs",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BN2RiZTE5OWUtMDUxZC00ZGNmLTk1YTYtNzMxN2Y5MDdmZDU4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         link: "https://drive.google.com/drive/u/0/folders/1RUQMqskS3ybzT6w5WQGouH9EBd5pEcTh"
