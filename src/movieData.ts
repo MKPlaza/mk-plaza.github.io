@@ -465,7 +465,7 @@ export const MOVIES: Movie[] = [
             },
             {
                 title: "Detective Pikachu",
-                imageUrl: "https://www.dropbox.com/scl/fi/re37586v68y8y0qq7kyl0/Pok-mon_Detective_Pikachu_teaser_poster.jpg?rlkey=zlwb1mjl98m4dppujehri1otx&st=grggi7r0&dl=1",
+                imageUrl: "https://www.dropbox.com/scl/fi/re37586v68y8y0qq7kyl0/-mon_Detective_Pikachu_teaser_poster.jpg?rlkey=zlwb1mjl98m4dppujehri1otx&st=grggi7r0&dl=1",
                 link: "https://drive.google.com/file/d/1q5wcbuy536XQKTBAF7ImApMAlNMVHM5T/view",
                 description: "Boy meets talking Pikachu who wants to be detective.",
                 year: "2019"
@@ -1246,6 +1246,13 @@ export const MOVIES: Movie[] = [
                 link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlDmHizn_nTe3EtICFKQglF-b6-xOkKfWsr4o-lFB_RYaKi0ZzRs_efGJl6-lQOzcaJtFR&s",
                 description: "A young man teams up with a talking Pikachu to solve the mystery of his father's disappearance.",
                 year: "2019"
+            },
+            {
+                title: "Pokémon the Movie: Coco",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSPBAdxWEMQ56pojv9yJ-zLEIVzJ7eGFj3LaMZjW8AWkODPNy41",
+                link: "https://drive.google.com/file/d/1NS6XiRHS5qWzGr8ynDfaiaW7s0fMAaAP/view?usp=sharing",
+                description: "In the Forest of Okoya, the Mythical Pokémon Zarude finds an infant boy in a cradle washed up on a riverbank.",
+                year: "2020"
             },
             {
                 title: "Pokémon: Mewtwo Returns",
