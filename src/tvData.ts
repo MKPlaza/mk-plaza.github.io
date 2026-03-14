@@ -137,6 +137,11 @@ export const TV_SHOWS: TVShow[] = [
         link: "https://drive.google.com/drive/folders/140J4Jyv5DvSnrcM7bI9kvqMPUmTR6vZS"
       },
       {
+        title: "Hazbin Hotel",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTCsC5plwy8AHI6JOBacDs0NqcDDV-C2J4I-jzr2PPyEXwX2nrm",
+        link: "https://drive.google.com/drive/folders/1FnnwXwhzJgxIFFjp9I0uW6EFknZ8l6U7?usp=drive_link"
+      },
+      {
         title: "Hey Arnold",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYzhiYTYwM2QtNTlmNy00MGM1LTllM2UtOGJmZTUxMmJmZjdiXkEyXkFqcGc@._V1_.jpg",
         link: "https://drive.google.com/drive/folders/1tvjU4AqKfPOM_wPZA-pJsjYaOKguNaDD?usp=sharing"
@@ -205,6 +210,11 @@ export const TV_SHOWS: TVShow[] = [
         title: "Moon Knight",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BNDAzNmYwZjgtNDc3YS00ZDMyLTk0MjktMTg4MGNmNGU3MjlhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         link: "https://drive.google.com/drive/folders/1nW610bRzpYobTHqK5k13LRkiZrRvDmZ8?usp=sharing"
+      },
+      {
+        title: "Murder Drones",
+        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTtDtu47UDguN2fsOWROWE6gg7nI78kItNa5-6xR1gcr-s__vNK",
+        link: "https://drive.google.com/drive/folders/1QAiFXO6iG-IB2A2oGModfBP74aVHa6S8?usp=drive_link"
       },
       {
         title: "My Adventures with Superman",
@@ -462,7 +472,10 @@ export const TV_SHOWS: TVShow[] = [
       {
           title: "Stranger Things",
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/b/b1/Stranger_Things_season_1.jpg",
-        link: "https://drive.google.com/drive/folders/1nvlUoxv5y_55eN0yjkIGJ3u84p9wQGxm?usp=sharing"
+        links: [
+          { part: "Season 1", url: "https://drive.google.com/drive/folders/1nvlUoxv5y_55eN0yjkIGJ3u84p9wQGxm?usp=sharing" },
+          { part: "Season 5", url: "https://drive.google.com/drive/folders/1y2ynRtvKVJFoOiXtNxPj098z33ymZquc" }
+        ]
       },
       {
         title: "Steven Universe",
