@@ -30,7 +30,7 @@ const CHANGELOG = [
     date: 'MAR 14, 2026',
     updates: [
       'THE DAY THAT MR. KRABS FRIES',
-      'Added more m0v135, 4n1m3, and 7v 5h0w5'
+      'Added more m0v135, 4n1m3, 7v 5h0w5, and m4ng4'
     ]
   },
   {
