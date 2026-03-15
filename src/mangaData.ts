@@ -73,13 +73,6 @@ export const MANGA: Manga[] = [
         year: "1984"
     },
     {
-        title: "Dragon Ball Z",
-        imageUrl: "https://m.media-amazon.com/images/I/81-1jqVHePL._AC_UF1000,1000_QL80_.jpg",
-        url: "https://drive.google.com/drive/u/0/folders/1iSzHqkCiW5S44-_97x_6x_pTTMJrPrMH",
-        description: "Goku and his friends defend the Earth against extraterrestrial threats.",
-        year: "1989"
-    },
-    {
         title: "Dragon Ball Super",
         imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Dragon-Ball-Super-Monochrome.jpg",
         url: "https://drive.google.com/drive/folders/1hyV1oaf6Cj-DiwYljSNt10xHOnAxjila",
