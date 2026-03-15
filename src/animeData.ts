@@ -2,6 +2,11 @@ import { Anime } from './types';
 
 export const ANIME: Anime[] = [
             {
+                title: "Accel World",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQrrCMEsZr3GVvc8C-ABixg_cNz23Jcy9nIg4dc24tSTtAWmrBr",
+                link: "https://drive.google.com/drive/folders/1Y-I63Mj1TcYOCo2m9wAUD-hfG8y8xd6y?usp=drive_link"
+            },
+            {
                 title: "Ace Attorney",
                 imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStUoURKAa2teG8QpCcTv4btkQRfI9xQ0lT_6HYkqAhEwOE-BDU",
                 link: "https://drive.google.com/drive/u/3/folders/1oiTD4MSCwf8IEJdNk-mJGq_NZ5xRMkA1"
