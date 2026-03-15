@@ -189,6 +189,39 @@ export const GAME_PAYLOADS: Record<string, { title: string; customHtml: string }
   </body>
 </html>`
             },
+	'offline-html': {
+    title: "Offline Games",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Viewer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        src="https://drive.google.com/embeddedfolderview?id=1Gg7fmesMNF7J5hTrGl2ZOHTQVsm9V93T#list" 
+        allowfullscreen>
+    </iframe>
+</body>
+</html>
+`
+},
 'look-outside': {
                 title: "Look Outside",
                 customHtml: `<!DOCTYPE html>
