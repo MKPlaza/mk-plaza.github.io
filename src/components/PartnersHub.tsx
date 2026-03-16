@@ -99,7 +99,7 @@ export default function PartnersHub() {
                         Partner
                       </span>
                       <span className="text-xs text-[var(--mk-silver)] opacity-40 font-bold uppercase tracking-widest">
-                        Est. 2024 &bull; Made by {selectedPartner.operatedBy}
+                        Est. 2026 &bull; Made by {selectedPartner.operatedBy}
                       </span>
                     </div>
                   </div>
