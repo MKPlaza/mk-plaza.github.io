@@ -155,7 +155,7 @@ export default function PartnersHub() {
               </div>
 
               <footer className="mt-auto pt-20 text-[var(--mk-silver)] opacity-20 font-bold text-[9px] uppercase tracking-[0.5em]">
-                &copy; 2026 MK-Plaza Alliance. All rights reserved.
+                &copy; 2026 MKPlaza. Name is mine.
               </footer>
             </motion.div>
           ) : (
