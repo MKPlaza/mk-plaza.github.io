@@ -33556,44 +33556,50 @@ let joystick = nipplejs.create({
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Banjo-Tooie</title>
+    <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
             overflow: hidden;
             background: #000000;
             margin: 0;
-            color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        #game {
+            width: 100%;
+            height: 100%;
+            display: none;
         }
         #startButton {
             display: block;
-            width: 160px;
-            height: 40px;
+            width: 200px;
+            padding: 15px;
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            text-decoration: none;
             font-size: 16px;
-            margin: 20px auto;
-            padding: 10px 20px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             font-family: 'Press Start 2P', cursive;
-            box-shadow: 0px 0px 10px 2px #000000;
+            box-shadow: 0px 0px 15px rgba(76, 175, 80, 0.5);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        #startButton:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <div style="width: 100vw; height: 100vh; max-width: 100%;">
-        <div id="game" style="display: none; width: 100%; height: 100%;"></div>
-        <button id="startButton">PLAY</button>
-    </div>
-    
+    <div id="game"></div>
+    <button id="startButton">PLAY</button>
+
     <script>
-        document.getElementById("game").style.display = "none";
-        
         function startGame() {
             document.getElementById("game").style.display = "block";
             document.getElementById("startButton").style.display = "none";
@@ -33602,15 +33608,19 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/banjotooie/Banjo-Tooie%20(USA).n64";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
-            
-            var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
-            document.body.appendChild(script);
+
+            const loader = document.createElement("script");
+            loader.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            document.body.appendChild(loader);
+
+            const cloak = document.createElement("script");
+            cloak.src = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/storage/js/cloak.js";
+            document.body.appendChild(cloak);
         }
         
         document.getElementById("startButton").addEventListener("click", startGame);
