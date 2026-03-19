@@ -41682,6 +41682,951 @@ let joystick = nipplejs.create({
 </html>
 `
 },
+'scary-shawarma-anomaly': {
+    title: "Scary Shawarma 3D",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Scary Shawarma 3D</title>
+    <style>
+        html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; background: #000; }
+        #unity-canvas { width: 100%; height: 100%; background: #000; display: block; }
+        #loading-text {
+            font-weight: bold;
+            background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow 3s ease infinite;
+            font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;
+            position: absolute; width: 100%; top: 40%;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-text"> LOADING... </div>
+    <canvas id="unity-canvas"></canvas>
+    <script>
+        const hash = "2d3cf8131a7cd9525c77b35f421c7100c2682d65";
+        const base = "https://cdn.jsdelivr.net/gh/shayderrr/idk@" + hash + "/scary/";
+        const loadingText = document.querySelector("#loading-text");
+        var ysdk = null, ygGameInstance = null;
+        let loadedBytes = 0;
+
+        async function fetchWithProgress(url) {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("HTTP " + response.status);
+            const reader = response.body.getReader();
+            let chunks = [];
+            let received = 0;
+            while (true) {
+                const {done, value} = await reader.read();
+                if (done) break;
+                received += value.length;
+                loadedBytes += value.length;
+                chunks.push(value);
+                loadingText.textContent = "LOADING... " + (loadedBytes / 1048576).toFixed(2) + " MB";
+            }
+            let fullBuffer = new Uint8Array(received);
+            let offset = 0;
+            for (let chunk of chunks) { fullBuffer.set(chunk, offset); offset += chunk.length; }
+            return fullBuffer.buffer;
+        }
+
+        async function mergeFiles(parts) {
+            const buffers = await Promise.all(parts.map(part => fetchWithProgress(part)));
+            return URL.createObjectURL(new Blob(buffers, { type: 'application/octet-stream' }));
+        }
+
+        function YG2Instance(m, a) {
+            if (ygGameInstance) {
+                if (a !== undefined) ygGameInstance.SendMessage('YG2Instance', m, a);
+                else ygGameInstance.SendMessage('YG2Instance', m);
+            }
+        }
+
+        (async () => {
+            try {
+                // Load Unity Loader
+                const loaderScript = document.createElement('script');
+                loaderScript.src = base + "Build/Builds.loader.js";
+                document.head.appendChild(loaderScript);
+                
+                await new Promise(r => loaderScript.onload = r);
+
+                const [dataUrl, wasmUrl, frameworkUrl] = await Promise.all([
+                    mergeFiles([base + "Build/Builds.data.br"]),
+                    mergeFiles([base + "Build/Builds.wasm.br.part1", base + "Build/Builds.wasm.br.part2"]),
+                    mergeFiles([base + "Build/Builds.framework.js.br"])
+                ]);
+
+                createUnityInstance(document.querySelector("#unity-canvas"), {
+                    dataUrl: dataUrl,
+                    frameworkUrl: frameworkUrl,
+                    codeUrl: wasmUrl,
+                    streamingAssetsUrl: base + "StreamingAssets",
+                    companyName: "DefaultCompany",
+                    productName: "ScaryShawarma3D",
+                    productVersion: "1.0",
+                }).then(i => {
+                    ygGameInstance = i;
+                    loadingText.remove();
+                    YG2Instance('InitSDKComplete');
+                });
+            } catch (e) {
+                loadingText.textContent = "Load Error: " + e.message;
+            }
+        })();
+    <\/script>
+</body>
+</html>
+`
+},
+'duck-life-1': {
+    title: "Duck Life 1",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Duck Life</title>
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; background-color: #000; 
+        }
+        #ruffle-container { width: 100%; height: 100%; }
+        
+        /* Sidebar layout preserved from original source */
+        .sidebar-ad {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 9999;
+        }
+        #left-ad { left: 0; }
+        #right-ad { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            background: rgba(0,0,0,0.7); color: #fff; text-align: center;
+            cursor: pointer; font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\/script>
+
+    <div id="ruffle-container"></div>
+
+    <div id="left-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="right-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
+            player.load("https://cdn.jsdelivr.net/gh/markrosenbaum/some-repo@aeb3030a3fb90987658ff4ee1063c64f6206152f/dl/duck-life.swf");
+            player.style.width = "100%";
+            player.style.height = "100%";
+        });
+    <\/script>
+</body>
+</html>
+`
+},
+'duck-life-2': {
+    title: "Duck Life 2: World Champion",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Duck Life 2</title>
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; background-color: #000; 
+        }
+        #ruffle-container { width: 100%; height: 100%; }
+        
+        .sidebar-ad {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 9999;
+        }
+        #left-ad { left: 0; }
+        #right-ad { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            background: rgba(0,0,0,0.7); color: #fff; text-align: center;
+            cursor: pointer; font-family: sans-serif; line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\/script>
+
+    <div id="ruffle-container"></div>
+
+    <div id="left-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="right-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
+            // Specific SWF path for Duck Life 2 World Champion
+            player.load("https://cdn.jsdelivr.net/gh/markrosenbaum/some-repo@aeb3030a3fb90987658ff4ee1063c64f6206152f/dl2/ducklife2worldchampion.swf");
+            player.style.width = "100%";
+            player.style.height = "100%";
+        });
+    <\/script>
+</body>
+</html>
+`
+},
+'duck-life-3': {
+    title: "Duck Life 3: Evolution",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Duck Life 3</title>
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; background-color: #000; 
+        }
+        #ruffle-container { width: 100%; height: 100%; }
+        
+        .sidebar-ad {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 9999;
+        }
+        #left-ad { left: 0; }
+        #right-ad { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            background: rgba(0,0,0,0.7); color: #fff; text-align: center;
+            cursor: pointer; font-family: sans-serif; line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\/script>
+
+    <div id="ruffle-container"></div>
+
+    <div id="left-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="right-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
+            // Specific SWF path for Duck Life 3 Evolution
+            player.load("https://cdn.jsdelivr.net/gh/markrosenbaum/some-repo@aeb3030a3fb90987658ff4ee1063c64f6206152f/dl3/ducklife3game.swf");
+            player.style.width = "100%";
+            player.style.height = "100%";
+        });
+    <\/script>
+</body>
+</html>
+`
+},
+'duck-life-5': {
+    title: "Duck Life 5: Treasure Hunt",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <title>Duck Life 5</title>
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; background-color: #000; 
+        }
+        #ruffle-container { width: 100%; height: 100%; }
+        
+        /* Sidebar layout preserved from Duck Life 5 source */
+        #sidebarad1, #sidebarad2 {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            line-height: 22px; text-align: center; background: rgba(0,0,0,0.7);
+            color: #fff; font-size: 14px; cursor: pointer; user-select: none; z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\/script>
+
+    <div id="ruffle-container"></div>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
+            // Specific SWF path for Duck Life 5: Treasure Hunt
+            player.load("https://cdn.jsdelivr.net/gh/jackilyna/web-flash@eeca0ee340c64e455095970004dfce5a9c6e791a/webfl/dlife.swf");
+            player.style.width = "100%";
+            player.style.height = "100%";
+        });
+    <\/script>
+</body>
+</html>
+`
+},
+'duck-life-8': {
+    title: "Duck Life 8: Adventure",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Duck Life 8: Adventure</title>
+    <style>
+        html, body { 
+            margin: 0; padding: 0; height: 100%; 
+            overflow: hidden; background: #231F20; 
+        }
+        #unity-container { 
+            width: 100%; height: 100%; 
+            position: fixed; top: 0; left: 0; 
+        }
+        #loading-text {
+            color: white; font-size: 32px; font-family: cursive; 
+            text-align: center; margin-top: 50px; position: relative; z-index: 10;
+        }
+        #sidebarad1, #sidebarad2 {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            line-height: 22px; text-align: center; background: rgba(0,0,0,0.7);
+            color: #fff; font-size: 14px; cursor: pointer; z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-text"> LOADING ASSETS... </div>
+    <div id="unity-container">
+        <canvas id="unity-canvas" width="960" height="600" tabindex="-1"></canvas>
+    </div>
+
+    <script>
+        const base = "https://cdn.jsdelivr.net/gh/web-ports/duck-8@main/";
+        const loadingText = document.querySelector("#loading-text");
+        let loadedBytes = 0;
+
+        async function fetchWithProgress(url) {
+            const response = await fetch(base + url);
+            const reader = response.body.getReader();
+            let chunks = [];
+            let received = 0;
+            while (true) {
+                const {done, value} = await reader.read();
+                if (done) break;
+                received += value.length;
+                loadedBytes += value.length;
+                chunks.push(value);
+                loadingText.textContent = "LOADING... " + (loadedBytes / (1024 * 1024)).toFixed(2) + " MB / 178.06 MB";
+            }
+            let fullBuffer = new Uint8Array(received);
+            let offset = 0;
+            for (let chunk of chunks) {
+                fullBuffer.set(chunk, offset);
+                offset += chunk.length;
+            }
+            return fullBuffer.buffer;
+        }
+
+        async function mergeFiles(filePrefix, start, end) {
+            let parts = [];
+            for (let i = start; i <= end; i++) {
+                parts.push(filePrefix + ".part" + i);
+            }
+            const buffers = await Promise.all(parts.map(part => fetchWithProgress(part)));
+            return URL.createObjectURL(new Blob(buffers));
+        }
+
+        (async () => {
+            // Load Unity Loader first
+            const loaderScript = document.createElement('script');
+            loaderScript.src = base + "Build/UnityLoader.js";
+            document.head.appendChild(loaderScript);
+            await new Promise(r => loaderScript.onload = r);
+
+            // Fetch and Merge binary parts
+            const [dataUrl, wasmUrl] = await Promise.all([
+                mergeFiles("Build/dl8.data.unityweb", 1, 8),
+                mergeFiles("Build/dl8.wasm.code.unityweb", 1, 2)
+            ]);
+
+            // Proxy XHR to use our Blob URLs
+            const originalOpen = XMLHttpRequest.prototype.open;
+            XMLHttpRequest.prototype.open = function (method, url, ...rest) {
+                if (url.includes("dl8.data.unityweb")) url = dataUrl;
+                else if (url.includes("dl8.wasm.code.unityweb")) url = wasmUrl;
+                return originalOpen.call(this, method, url, ...rest);
+            };
+
+            UnityLoader.instantiate("unity-container", base + "Build/dl8.json", {
+                onProgress: (gameInstance, progress) => {
+                    if (progress === 1) loadingText.remove();
+                }
+            });
+        })();
+    <\/script>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'time-shooter-1': {
+    title: "Time Shooter",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <base href="https://cdn.jsdelivr.net/gh/gn-math/assets@main/199/">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Time Shooter</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+        body { margin: 0; background-color: #000; overflow: hidden; }
+        #unity-container { width: 100%; height: 100%; position: absolute; }
+        #unity-canvas { width: 100%; height: 100%; background: #231f20; }
+        
+        #sidebarad1, #sidebarad2 {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; padding: 0; margin: 0; z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            line-height: 22px; text-align: center; background: rgba(0,0,0,0.7);
+            color: #fff; font-size: 14px; cursor: pointer; user-select: none; z-index: 10;
+        }
+        
+        #loading-cover { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: #000; display: flex; justify-content: center; align-items: center; z-index: 10; 
+        }
+        .spinner { 
+            border: 5px solid #f3f3f3; border-top: 5px solid #3498db; 
+            border-radius: 50%; width: 50px; height: 50px; animation: spin 2s linear infinite; 
+            margin: 0 auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="dark">
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas"></canvas>
+    </div>
+    
+    <div id="loading-cover">
+        <div id="unity-loading-bar">
+            <div id="unity-logo"><img src="logo.png"></div>
+            <div id="unity-progress-bar-empty" style="display: none;">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
+
+    <script>
+        const hideFullScreenButton = "1";
+        const buildUrl = "Build";
+        const loaderUrl = buildUrl + "/TimeGD.loader.js";
+        const config = {
+            dataUrl: buildUrl + "/TimeGD.data.unityweb",
+            frameworkUrl: buildUrl + "/TimeGD.framework.js.unityweb",
+            codeUrl: buildUrl + "/TimeGD.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "g80g",
+            productName: "Time Shooter",
+            productVersion: "1.0",
+        };
+
+        const container = document.querySelector("#unity-container");
+        const canvas = document.querySelector("#unity-canvas");
+        const loadingCover = document.querySelector("#loading-cover");
+        const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+        const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        const spinner = document.querySelector('.spinner');
+
+        const canFullscreen = (function() {
+            for (const key of [
+                'exitFullscreen', 'webkitExitFullscreen', 'webkitCancelFullScreen',
+                'mozCancelFullScreen', 'msExitFullscreen',
+            ]) {
+                if (key in document) {
+                    return true;
+                }
+            }
+            return false;
+        }());
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            container.className = "unity-mobile";
+            config.devicePixelRatio = 1;
+        }
+        canvas.style.background = "url('" + buildUrl + "/TimeGD.jpg') center / cover";
+
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                spinner.style.display = "none";
+                progressBarEmpty.style.display = "";
+                progressBarFull.style.width = \`\${100 * progress}%\`;
+            }).then((unityInstance) => {
+                loadingCover.style.display = "none";
+                if (canFullscreen) {
+                    if (!hideFullScreenButton) {
+                        fullscreenButton.style.display = "";
+                    }
+                    fullscreenButton.onclick = () => {
+                        unityInstance.SetFullscreen(1);
+                    };
+                }
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+    <\/script>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'time-shooter-2': {
+    title: "Time Shooter 2",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <base href="https://cdn.jsdelivr.net/gh/gn-math/assets@main/200/">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Time Shooter 2</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+        #sidebarad1,
+        #sidebarad2 {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            height: 600px;
+            padding: 0;
+            margin: 0;
+            z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+        }
+        .sidebar-frame {
+            width: 160px;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas"></canvas>
+    </div>
+    <div id="loading-cover" style="display:none;">
+        <div id="unity-loading-bar">
+            <div id="unity-logo"><img src="logo.png"></div>
+            <div id="unity-progress-bar-empty" style="display: none;">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
+
+    <script>
+        const hideFullScreenButton = "1";
+        const buildUrl = "Build";
+        const loaderUrl = buildUrl + "/TimeShooter2_GD.loader.js";
+        const config = {
+            dataUrl: buildUrl + "/TimeShooter2_GD.data.unityweb",
+            frameworkUrl: buildUrl + "/TimeShooter2_GD.framework.js.unityweb",
+            codeUrl: buildUrl + "/TimeShooter2_GD.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "g80g",
+            productName: "Time Shooter 2",
+            productVersion: "0.1",
+        };
+
+        const container = document.querySelector("#unity-container");
+        const canvas = document.querySelector("#unity-canvas");
+        const loadingCover = document.querySelector("#loading-cover");
+        const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+        const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        const spinner = document.querySelector('.spinner');
+
+        const canFullscreen = (function() {
+            for (const key of [
+                    'exitFullscreen',
+                    'webkitExitFullscreen',
+                    'webkitCancelFullScreen',
+                    'mozCancelFullScreen',
+                    'msExitFullscreen',
+                ]) {
+                if (key in document) {
+                    return true;
+                }
+            }
+            return false;
+        }());
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            container.className = "unity-mobile";
+            config.devicePixelRatio = 1;
+        }
+        canvas.style.background = "url('" + buildUrl + "/TimeShooter2_GD.jpg') center / cover";
+        loadingCover.style.display = "";
+
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                spinner.style.display = "none";
+                progressBarEmpty.style.display = "";
+                progressBarFull.style.width = \`\${100 * progress}%\`;
+            }).then((unityInstance) => {
+                loadingCover.style.display = "none";
+                if (canFullscreen) {
+                    if (!hideFullScreenButton) {
+                        fullscreenButton.style.display = "";
+                    }
+                    fullscreenButton.onclick = () => {
+                        unityInstance.SetFullscreen(1);
+                    };
+                }
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+    <\/script>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'time-shooter-3': {
+    title: "Time Shooter 3: SWAT",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Time Shooter 3 SWAT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/style.css">
+    <style>
+        #sidebarad1,
+        #sidebarad2 {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            height: 600px;
+            padding: 0;
+            margin: 0;
+            z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+        }
+        .sidebar-frame {
+            width: 160px;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body class="dark">
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas"></canvas>
+    </div>
+    <div id="loading-cover" style="display:none;">
+        <div id="unity-loading-bar">
+            <div id="unity-logo"><img src="https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/logo.png"></div>
+            <div id="unity-progress-bar-empty" style="display: none;">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
+    
+    <script>
+        const hideFullScreenButton = "1";
+        const buildUrl = "https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3";
+        const loaderUrl = buildUrl + "/ts3.loader.js";
+        const config = {
+            dataUrl: buildUrl + "/ts3.data",
+            frameworkUrl: buildUrl + "/ts3.framework.js",
+            codeUrl: buildUrl + "/ts3.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "GoGoMan",
+            productName: "Time Shooter SWAT",
+            productVersion: "0.03",
+        };
+
+        const container = document.querySelector("#unity-container");
+        const canvas = document.querySelector("#unity-canvas");
+        const loadingCover = document.querySelector("#loading-cover");
+        const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+        const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        const spinner = document.querySelector('.spinner');
+
+        const canFullscreen = (function() {
+            for (const key of [
+                    'exitFullscreen',
+                    'webkitExitFullscreen',
+                    'webkitCancelFullScreen',
+                    'mozCancelFullScreen',
+                    'msExitFullscreen',
+                ]) {
+                if (key in document) {
+                    return true;
+                }
+            }
+            return false;
+        }());
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            container.className = "unity-mobile";
+            config.devicePixelRatio = 1;
+        }
+        canvas.style.background = "url('" + buildUrl + "/ts3.jpg') center / cover";
+        loadingCover.style.display = "";
+
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                spinner.style.display = "none";
+                progressBarEmpty.style.display = "";
+                progressBarFull.style.width = \`\${100 * progress}%\`;
+            }).then((unityInstance) => {
+                loadingCover.style.display = "none";
+                if (canFullscreen) {
+                    if (!hideFullScreenButton) {
+                        fullscreenButton.style.display = "";
+                    }
+                    fullscreenButton.onclick = () => {
+                        unityInstance.SetFullscreen(1);
+                    };
+                }
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+    <\/script>
+    
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'minecraft-web': {
+    title: "Minecraft",
+    customHtml: `
+<!doctype html>
+<html lang="en-us">
+<head>
+    <base href="https://cdn.jsdelivr.net/gh/genizy/mcpeweb@latest/">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+    <title>Minecraft</title>
+    <link href="manifest.json" rel="manifest">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: none;
+        }
+        canvas.emscripten {
+            display: block;
+            outline: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+    
+    <script>
+        var Module = {
+            canvas: document.getElementById("canvas")
+        };
+        ! function() {
+            var e = document.getElementById("canvas");
+            e.addEventListener("mousedown", (function(t) {
+                !t.isTrusted || document.pointerLockElement || window.mcMenuOpen || e.requestPointerLock()
+            }));
+            e.addEventListener("touchstart", (function(e) {
+                e.preventDefault()
+            }), {
+                passive: !1
+            });
+            document.addEventListener("touchstart", (function(e) {
+                var t = e.target.tagName;
+                "INPUT" !== t && "TEXTAREA" !== t && "BUTTON" !== t && "SELECT" !== t && "OPTION" !== t && e.preventDefault()
+            }), {
+                passive: !1
+            })
+        }();
+    <\/script>
+    
+    <script>
+        "serviceWorker" in navigator && window.addEventListener("load", (() => {
+            navigator.serviceWorker.register("./sw.js").then((e => {
+                console.log("ServiceWorker registration successful with scope: ", e.scope)
+            }), (e => {
+                console.log("ServiceWorker registration failed: ", e)
+            }))
+        }))
+    <\/script>
+    
+    <script async src="index.js"><\/script>
+</body>
+</html>
+`
+},
 'pizza-tower-scoutdigo': {
     title: "Pizza Tower: Scoutdigo Mod",
     customHtml: `
@@ -41692,76 +42637,447 @@ let joystick = nipplejs.create({
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    <link rel="icon" type="x-icon" href="favicon.png">
-    <title>Pizza Tower: Scoutdigo Mod</title>
+	<link rel="icon" type="x-icon" href="favicon.png">
+	<title>Pizza Tower: Scoutdigo Mod</title>
     <style>
-      @keyframes rotation { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      html { background: #FFFFFF; }
+      @-webkit-keyframes rotation {
+        from {
+          -webkit-transform: rotate(0deg);
+        }
+
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @-moz-keyframes rotation {
+        from {
+          -moz-transform: rotate(0deg);
+        }
+
+        to {
+          -moz-transform: rotate(360deg);
+        }
+      }
+
+      @-o-keyframes rotation {
+        from {
+          -o-transform: rotate(0deg);
+        }
+
+        to {
+          -o-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      html {
+        background: #FFFFFF;
+      }
+
       body {
-        font-family: arial; margin: 0; padding: 0; min-height: 100vh; width: 100vw;
-        background-color: black; display: flex; flex-direction: column; overflow-x: hidden; place-items: center;
+        font-family: arial;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        min-height: fill-available;
+        min-height: 100vh; /* Otherwise contents can be covered by an address bar in Safari on iOS 15 */
+        min-width: 100vw;
+        background: radial-gradient(
+          56.63% 56.63% at 50% 43.37%,
+          transparent 0%,
+          transparent 100%
+        );
+		background-color: black;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+		place-items: center;
       }
-      .emscripten { padding-right: 0; display: block; text-align: center; font-family: "Lucida Console", Monaco, monospace; }
+
+      body.scrollingDisabled {
+        overflow: hidden;
+      }
+
+      .emscripten {
+        padding-right: 0;
+        display: block;
+      }
+
+      div.emscripten {
+        text-align: center;
+		font-family: "Lucida Console", Monaco, monospace;
+      }
+
+      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
       canvas.emscripten {
-        display: none; background-color: black; transition: opacity 5s ease-in; opacity: 0;
-        image-rendering: pixelated; -ms-interpolation-mode: nearest-neighbor;
+        display: none;
+        background-color: black;
+        position: flex;
+        transition: opacity 5s ease-in;
+        -webkit-transition: opacity 5s ease-in;
+        opacity: 0;
+        filter: blur(0) grayscale(0);
+        image-rendering: optimizeSpeed;             /* Older versions of FF         */
+        image-rendering: -moz-crisp-edges;          /* FF 6.0+                      */
+        image-rendering: -webkit-optimize-contrast; /* Safari                       */
+        image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+        image-rendering: pixelated;                 /* Awesome future-browsers       */
+        -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
       }
-      canvas.active { animation: fadeIn 2s; opacity: 1; }
-      @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+      canvas.active {
+        animation-name: fadeIn;
+        animation-duration: 2s;
+        opacity: 1;
+      }
+
+      canvas.paused {
+        animation-name: blur;
+        animation-duration: 0.5s;
+        filter: blur(2px) grayscale(1);
+      }
+
+      canvas.unpaused {
+        animation-name: none;
+      }
+
+      canvas.animatedSizeTransitions {
+        transition: width 0.3s ease, height 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes blur {
+        0% {
+          filter: blur(0) grayscale(0);
+        }
+
+        100% {
+          filter: blur(2px) grayscale(1);
+        }
+      }
+
       .spinner {
-        height: 30px; width: 30px; animation: rotation 0.8s linear infinite;
-        border: 5px solid #bdff00; border-top: 5px solid #719900; border-radius: 100%;
+        height: 30px;
+        width: 30px;
+
+        -webkit-animation: rotation 0.8s linear infinite;
+        -moz-animation: rotation 0.8s linear infinite;
+        -o-animation: rotation 0.8s linear infinite;
+        animation: rotation 0.8s linear infinite;
+
+        border: 5px solid #bdff00;
+        border-top: 5px solid #719900;
+        border-radius: 100%;
       }
-      #status { font-weight: bold; color: white; }
-      progress { width: 250px; height: 10px; appearance: none; padding: 5px; }
-      progress::-webkit-progress-bar { background-color: #8492a6; border-radius: 15px; }
-      progress::-webkit-progress-value { background-image: -webkit-linear-gradient(left, #719900, #bdff00); border-radius: 15px; }
-      div.loading { position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; pointer-events: none; }
-      .output-container { text-align: center; margin-top: auto; padding-bottom: 20px; }
-      .output-button { border: none; width: 200px; height: 25px; margin: 5px; border-radius: 5px; cursor: pointer; background-color: black; color: white; outline: 2px dashed #20c20e; font-family: "Lucida Console", Monaco, monospace; }
-      #pauseMenuContainer { position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; align-items: center; z-index: 1000; }
-      #pauseMenu { display: flex; flex-direction: column; padding: 40px; background: #2E273F; border-radius: 4px; }
-      #pauseMenu button { background: #FA1E4E; color: white; border: none; padding: 12px; margin: 5px; cursor: pointer; border-radius: 6px; }
-    </style>
+
+      #status {
+        display: inline-block;
+        vertical-align: top;
+        font-weight: bold;
+        color: white;
+      }
+
+      #progress {
+        width: 250px;
+        height: 10px;
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 5px;
+      }
+
+      /* Determines the style of the background of the progress bar */
+      progress[value]::-webkit-progress-bar {
+        background-color: #8492a6;
+        height: 10px;
+        border-radius: 15px;
+      }
+      /* Determines the style of the completed part of the progress bar */
+      progress[value]::-webkit-progress-value {
+        background-image: -webkit-linear-gradient(left, #719900, #bdff00);
+        height: 10px;
+        border-radius: 15px;
+      }
+
+      div.loading {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+      }
+      div.loading > * {
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .output-container {
+        text-align: center;
+        margin-top: auto;
+      }
+      .output-button {
+        border: none;
+        width: 200px;
+        height: 25px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+		outline-color: #20c20e;
+		outline-style: dashed;
+        font-family: "Lucida Console", Monaco, monospace;
+      }
+
+      #output {
+        display: none;
+        height: 200px;
+        background-color: black;
+        color: white;
+        font-family: "Lucida Console", Monaco, monospace;
+        outline: none;
+        border: none;
+        padding: 0;
+        width: 100%;
+      }
+
+      #message-container {
+        display: none;
+        min-height: 50px;
+        background-color: rgba(20, 20, 20, 0.5);
+        outline: none;
+        border: none;
+        padding: 0;
+        width: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      #messages {
+        margin-left: 50px;
+        color: white;
+        font-family: "Lucida Console", Monaco, monospace;
+        outline: none;
+        border: none;
+        padding: 0;
+      }
+
+      img.qrCode {
+         opacity: 1.0;
+         width: 50%;
+         height: 50%;
+      }
+
+      #pauseMenuContainer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #pauseMenuContainer[hidden] {
+        display: none !important;
+        opacity: 0;
+      }
+
+      #pauseMenuBorder {
+        background: linear-gradient(135deg, #FA1E4E, transparent 40%);
+        padding: 1px;
+        border-radius: 4px;
+        clip-path: polygon(10.5px 0, 100% 0, 100% 100%, 0 100%, 0 10.5px);
+        width: 70vw;
+        max-width: 400px;
+      }
+
+      #pauseMenu {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 30px 60px 30px;
+        background: linear-gradient(180deg, #2E273F 16.15%, rgba(46, 39, 63, 0.79) 56.25%, #2E273F 91.15%);
+        border-radius: 4px;
+        clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        opacity: 1;
+      }
+
+      #pauseMenu button {
+        font-weight: 500;
+        font-size: 17px;
+        color: white;
+        background: #FA1E4E;
+        border: 1px solid #FA1E4E;
+        border-radius: 6px;
+        padding: 12px 24px;
+        margin: 5px 0;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      #pauseMenu button#quitButton {
+        background: #FA1E4E40;
+      }
+
+      #pauseMenu button:hover {
+        filter: brightness(1.15);
+      }
+
+      #pauseMenu button:active {
+        filter: brightness(0.85);
+      }
+
+      #pauseMenu button[hidden] {
+        display: none;
+      }
+    #sidebarad1,
+#sidebarad2 {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  height: 600px;
+  padding: 0;
+  margin: 0;
+  z-index: 999999;
+}
+#sidebarad1 {
+  left: 0;
+}
+#sidebarad2 {
+  right: 0;
+}
+.sidebar-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+}
+.sidebar-frame {
+  width: 160px;
+  height: 600px;
+  border: none;
+  display: block;
+}
+</style>
   </head>
   <body>
     <div id="loading-text" style="color: white; font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;"> LOADING... </div>
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
-    
+    <canvas
+      class="emscripten"
+      id="canvas"
+      oncontextmenu="event.preventDefault()"
+      tabindex="-1"
+    >
+    </canvas>
     <div id="pauseMenuContainer" hidden>
+      <div id="pauseMenuBorder">
         <div id="pauseMenu">
-          <button onclick="resume()">Resume</button>
-          <button onclick="quitIfSupported()">Quit</button>
+          <button id="resumeButton" onclick="resume()">
+            Resume
+          </button>
+          <button id="quitButton" onclick="quitIfSupported()">
+            Quit
+          </button>
+        </div>
         </div>
     </div>
-
     <div class="loading">
       <div class="spinner" id="spinner"></div>
-      <div id="status">Downloading...</div>
+      <div class="emscripten" id="status">Downloading...</div>
+
       <progress value="0" max="100" id="progress" hidden="1"></progress>
     </div>
-
-    <div class="output-container">
-      <button class="output-button" onclick="toggleConsole()">Toggle Console</button>
-      <button class="output-button" onclick="togglegithub()">Visit Github Repo</button>
-      <button class="output-button" onclick="toggleclear_site_cache()">Clear Site Cache</button>
-      <button class="output-button" onclick="toggleFPS()">Enable FPS Counter</button>
-      <button class="output-button" onclick="togglewebports()">View All Web Ports</button>
-      <button class="output-button" onclick="togglejoin_discord()">Join Discord Server</button>
-      <input id="colorpicker" type="color" onchange="changecolor(this)">
+    <div class="output-container" id="output-container">
+	  <button class="output-button" onclick="toggleConsole()" title="Lists Console Output and Loading Progress"+>
+        Toggle Console
+      </button>
+	  <button id="QRButton" class="output-button" onclick="togglegithub()" title="Sends you to My Github Repository of this Project"+>
+        Visit Github Repo
+      </button>
+	  <button id="QR2Button" class="output-button" onclick="toggleclear_site_cache()" title="Fixes Crashes due to the Website being Updated, but also Deletes ALL Saves, so Continue with Caution"+>
+        Clear Site Cache
+      </button>
+		<button class="output-button" id="stats-button" onclick="toggleFPS()" title="Enables External FPS Counter"+>
+        Enable FPS Counter
+      </button>
+	    <button class="output-button" id="share-button" onclick="togglewebports()" title="Sends you to My Personal Website with a List of All My Web Ports"+>
+        View All Web Ports
+      </button>
+	    <button class="output-button" onclick="togglejoin_discord()" title="Press to Join My Discord Server for Info and Updates"+>
+        Join Discord Server
+      </button>
+	    <input id="colorpicker" type="color" onchange="changecolor(this)" title="Changes Color of the Website's Background"+>
+      <textarea id="output" rows="8"></textarea>
     </div>
 
-    <script>
-      const loadingText = document.querySelector("#loading-text");
+    <div id="message-container">
+      <div id="messages">
+      </div>
+    </div>
+	<script async
+     data-ad-client="ca-pub-123"
+     data-ad-frequency-hint="30s"
+     data-adbreak-test="on"
+     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+   <\/script>
+
+   <script>
+     window.adsbygoogle = window.adsbygoogle || [];
+     const adBreak =  adConfig = function(o) {adsbygoogle.push(o);}
+   <\/script>
+<script>
+        const loadingText = document.querySelector("#loading-text");
       let totalBytes = 315181892;
       let loadedBytes = 0;
 
       function formatSize(bytes) {
-        if (bytes > 1073741824) return (bytes / 1073741824).toFixed(2) + " GB";
-        if (bytes > 1048576) return (bytes / 1048576).toFixed(2) + " MB";
-        return (bytes / 1024).toFixed(2) + " KB";
+        if (bytes > 1024 * 1024 * 1024) {
+          return (bytes / (1024 * 1024 * 1024)).toFixed(2) + " GB";
+        } else if (bytes > 1024 * 1024) {
+          return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+        } else if (bytes > 1024) {
+          return (bytes / 1024).toFixed(2) + " KB";
+        } else {
+          return bytes + " B";
+        }
       }
-
       async function fetchWithProgress(url) {
         const response = await fetch(url);
         const reader = response.body.getReader();
@@ -41773,43 +43089,87 @@ let joystick = nipplejs.create({
           received += value.length;
           loadedBytes += value.length;
           chunks.push(value);
-          const percent = ((loadedBytes / totalBytes) * 100).toFixed(1);
-          loadingText.textContent = \`LOADING... \${formatSize(loadedBytes)} / \${formatSize(totalBytes)} (\${percent}%)\`;
+          const doneText = formatSize(loadedBytes);
+          const totalText = formatSize(totalBytes);
+          const percent =
+            totalBytes > 0
+              ? ((loadedBytes / totalBytes) * 100).toFixed(1)
+              : "?";
+          loadingText.textContent = \`LOADING... \${doneText} / \${totalText} (\${percent}%)\`;
         }
         let fullBuffer = new Uint8Array(received);
         let offset = 0;
-        for (let chunk of chunks) { fullBuffer.set(chunk, offset); offset += chunk.length; }
+        for (let chunk of chunks) {
+          fullBuffer.set(chunk, offset);
+          offset += chunk.length;
+        }
         return fullBuffer.buffer;
       }
-
       async function mergeFiles(parts) {
         const buffers = await Promise.all(parts.map(fetchWithProgress));
         return URL.createObjectURL(new Blob(buffers));
       }
 
-      (async () => {
+      function getParts(file, count) {
         let parts = [];
-        for (let i = 1; i <= 16; i++) { parts.push("game.unx.part" + i); }
-        const gameurl = await mergeFiles(parts);
-        window.gameUnxUrl = gameurl;
+        for (let i = 1; i <= count; i++) {
+          parts.push(file + ".part" + i);
+        }
+        return parts;
+      }
+      function resizeUnityContainer() {
+        var container = document.getElementById("gameContainer");
+        container.style.width = window.innerWidth + "px";
+        container.style.height = window.innerHeight + "px";
+      }
+      (async () => {
+        const gameunx = getParts("game.unx", 16);
+        const gameunxs = [...gameunx];
+        const [gameurl] = await Promise.all([mergeFiles(gameunxs)]);
 
-        const originalFetch = window.fetch;
-        window.fetch = async function (...args) {
-            let [url, options] = args;
-            if (typeof url === 'string' && url.includes("game.unx")) url = window.gameUnxUrl;
-            return originalFetch.call(this, url, options);
-        };
+            window.gameUnxUrl = gameurl;
 
-        loadingText.remove();
-        ["index.js", "runner.js"].forEach(src => {
-            var s = document.createElement("script");
-            s.src = src;
-            s.async = (src === "runner.js");
-            document.body.appendChild(s);
-        });
+      const originalFetch = window.fetch;
+      window.fetch = async function (...args) {
+          let [url, options] = args;
+          if (typeof url === 'string' && url.includes("game.unx")) {
+              console.log("fetch:", url);
+              url = window.gameUnxUrl;
+          } else if (url instanceof Request && url.url.includes("game.unx")) {
+              console.log("fetch request:", url.url);
+              url = new Request(window.gameUnxUrl, url);
+          }
+          return originalFetch.call(this, url, options);
+      };
+
+      const originalOpen = XMLHttpRequest.prototype.open;
+      XMLHttpRequest.prototype.open = function (method, url, ...rest) {
+          if (url.includes("game.unx")) {
+              console.log("XHR:", url);
+              url = window.gameUnxUrl;
+          }
+          return originalOpen.call(this, method, url, ...rest);
+      };
+      loadingText.remove();
+          var indexscript = document.createElement("script");
+  indexscript.src= "index.js";
+  indexscript.type="text/javascript";
+
+    var runnerscript = document.createElement("script");
+  runnerscript.src= "runner.js";
+  runnerscript.async= true;
+  runnerscript.type="text/javascript";
+
+  document.body.appendChild(indexscript);
+    document.body.appendChild(runnerscript);
       })();
-    <\/script>
-  </body>
+  <\/script>
+  <div id="sidebarad1">
+  <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+</div>
+<div id="sidebarad2">
+  <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+</div>
 </html>
 `
 },
