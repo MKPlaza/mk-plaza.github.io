@@ -26,6 +26,13 @@ interface HomeHubProps {
 
 const CHANGELOG = [
   {
+    version: 'v1.1.5',
+    date: 'MAR 19, 2026',
+    updates: [
+      'Added Invincible Season 4 fr'
+    ]
+  },
+  {
     version: 'v1.1',
     date: 'MAR 14, 2026',
     updates: [
@@ -39,13 +46,6 @@ const CHANGELOG = [
     updates: [
       'Truly, Welcome to MKPlaza',
       'Happy Mar10 Day!'
-    ]
-  },
-  {
-    version: 'Beta v2.0',
-    date: 'MAR 07, 2026',
-    updates: [
-      'Welcome to MKPlaza!'
     ]
   }
 ];
