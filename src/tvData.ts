@@ -152,7 +152,8 @@ export const TV_SHOWS: TVShow[] = [
         links: [
           { part: "Season 1", url: "https://drive.google.com/drive/folders/1S5OH4Rs78nCVUJX7CDrv9OEuW9UOYnvl" },
           { part: "Season 2", url: "https://drive.google.com/drive/folders/1BXvMJEsw-zNzRc4JHwSSOJUCv0tyee3s" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1k_nWuyVsCfmIcHAuWfrpysdHE2gwBKDK" }
+          { part: "Season 3", url: "https://drive.google.com/drive/folders/1k_nWuyVsCfmIcHAuWfrpysdHE2gwBKDK" },
+          { part: "Season 4", url: "https://drive.google.com/drive/folders/1wz5Ftg5Y8sRfRxplk57oLKRhscw-eSxu" }
         ]
       },
       {
